@@ -8,4 +8,4 @@ $idPush = 'U508e825223e51da193359f03da202555';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-echo "Hello LINE BOT";
+echo "Hello LINE BOT2";
