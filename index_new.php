@@ -8,9 +8,9 @@ $idPush = 'U0e5b5c3f0cb7345f8234f2d8bf6ce20b';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('ยืนยันการสั่งซื้อน้ำมัน');
 $response = $bot->pushMessage($idPush, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
-echo "Hello LINE BOT3";
+echo "Hello LINE BOT4";
