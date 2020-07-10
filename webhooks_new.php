@@ -42,7 +42,7 @@ if (!is_null($events['events'])) {
 				$firststr = strtok($event['message']['text'], ' ');
 				$secondstr = strtok(' ');
 				if ($secondstr != "") {
-					file_put_contents($txt_file, $secondstr . "|" . $event['source']['userId'] . "\n", FILE_APPEND);
+					file_put_contents($txt_file, $secondstr . "\t" . $event['source']['userId'] . "\n", FILE_APPEND);
 					$text = "registered";
 				}
 				else {
