@@ -20,11 +20,13 @@ if (!file_exists($txt_file)) {
 else {
 	$text = "found";
 }
-//$fp = fopen($txt_file, "r");
+$fp = fopen($txt_file, "r");
 
-//$content = fread($fp, filesize($txt_file));
+$content = fread($fp, filesize($txt_file));
+$line = fgets($fp)
 //$lines = explode("\n", $content);
-//fclose($fp);
+$text = $text . $line;
+fclose($fp);
 
 // Parse JSON
 $events = json_decode($content, true);
