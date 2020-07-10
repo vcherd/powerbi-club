@@ -13,6 +13,13 @@ $content = file_get_contents('php://input');
 $log_file = 'vendor/log.txt';
 file_put_contents($log_file, $content . PHP_EOL, FILE_APPEND);
 
+$txt_file = "vendor/test.txt";
+$fp = fopen($txt_file, "r");
+
+$content = fread($fp, filesize($txt_file));
+$lines = explode("\n", $content);
+fclose($fp);
+
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
@@ -23,7 +30,8 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			
-			$text = 'Your id = ' . $event['source']['userId'];
+			//$text = 'Your id = ' . $event['source']['userId'];
+			$text = $lines;
 			//$text = 'Hello Pimchanok';
 			
 			// Get replyToken
