@@ -40,8 +40,9 @@ if (!is_null($events['events'])) {
 			*/
 			if (strpos($event['message']['text'], 'register') !== false) {  //register
 				$firststr = strtok($event['message']['text'], ' ');
+				$secondstr = strtok(' ');
 				//if !empty($strtok[1]) {
-					file_put_contents($txt_file, "SDR" . "|" . $event['source']['userId'] . "\n", FILE_APPEND);
+					file_put_contents($txt_file, $secondstr . "|" . $event['source']['userId'] . "\n", FILE_APPEND);
 					$text = "registered";
 				//}
 				//else {
