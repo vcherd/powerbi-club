@@ -27,7 +27,7 @@ if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			if (str_contains($event['message']['text'], 'register')) {
+			/*if (str_contains($event['message']['text'], 'register')) {
 				//$text = $event['source']['userId'];
 				//$text = 'Hello Pimchanok';
 				file_put_contents($txt_file, $event['source']['userId'] . "\n", FILE_APPEND);
@@ -38,6 +38,8 @@ if (!is_null($events['events'])) {
 			else {
 				$text = "hi there"
 			}
+			*/
+			$text = "hi";
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
