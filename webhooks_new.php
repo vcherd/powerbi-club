@@ -41,13 +41,13 @@ if (!is_null($events['events'])) {
 			if (strpos($event['message']['text'], 'register') !== false) {  //register
 				$firststr = strtok($event['message']['text'], ' ');
 				$secondstr = strtok(' ');
-				//if !empty($strtok[1]) {
+				if !empty($secondstr) {
 					file_put_contents($txt_file, $secondstr . "|" . $event['source']['userId'] . "\n", FILE_APPEND);
 					$text = "registered";
-				//}
-				//else {
-				//	$text = "missing argument";
-				//}
+				}
+				else {
+					$text = "missing argument";
+				}
 			}	
 			elseif (strpos($event['message']['text'], 'query') !== false) { // query
 				$array = file($txt_file);
