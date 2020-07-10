@@ -43,10 +43,10 @@ if (!is_null($events['events'])) {
 				//if !empty($strtok[1]) {
 				//	file_put_contents($txt_file, $strtok[1] . "|" . $event['source']['userId'] . "\n", FILE_APPEND);
 					$text = "registered";
-				}
-				else {
-					$text = "missing argument";
-				}
+				//}
+				//else {
+				//	$text = "missing argument";
+				//}
 			}	
 			elseif (strpos($event['message']['text'], 'query') !== false) { // query
 				$array = file($txt_file);
