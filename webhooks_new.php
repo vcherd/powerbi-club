@@ -41,7 +41,7 @@ if (!is_null($events['events'])) {
 			if (strpos($event['message']['text'], 'register') !== false) {  //register
 				$firststr = strtok($event['message']['text'], ' ');
 				$secondstr = strtok(' ');
-				if !empty($secondstr) {
+				if ($secondstr != "") {
 					file_put_contents($txt_file, $secondstr . "|" . $event['source']['userId'] . "\n", FILE_APPEND);
 					$text = "registered";
 				}
