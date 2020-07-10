@@ -39,7 +39,13 @@ if (!is_null($events['events'])) {
 				$text = "hi there"
 			}
 			*/
-			$text = $event['message']['text'];
+			//$text = $event['message']['text'];
+			if (str_contains($event['message']['text'], 'register')) {
+				$text = "yeah";
+			}	
+			else {
+				$text = $event['message']['text'];
+			}
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
