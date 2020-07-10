@@ -27,14 +27,19 @@ if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			// Get text sent
+			if (str_contains($event['message']['text'], 'register') {
+				// Get text sent
+				
+				//$text = $event['source']['userId'];
+				//$text = 'Hello Pimchanok';
+				file_put_contents($txt_file, $event['source']['userId'] . "\n", FILE_APPEND);
+				
+				$array = file($txt_file);
+				$text = join("",$array);
+			}
+			else {
 			
-			//$text = $event['source']['userId'];
-			//$text = 'Hello Pimchanok';
-			file_put_contents($txt_file, $event['source']['userId'] . "\n", FILE_APPEND);
-			
-			$array = file($txt_file);
-			$text = join("",$array);
+			}
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
@@ -64,6 +69,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
+			
 		}
 	}
 }
