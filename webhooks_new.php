@@ -24,7 +24,7 @@ else {
 	$array = file($txt_file);
 	
 	//$lines = explode("\n", $content);
-	$text = $text . @array[0];
+	$text = $text . $array[0];
 }
 //fclose($fp);
 
