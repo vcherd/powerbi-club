@@ -21,9 +21,10 @@ else {
 	$text = "found";
 	$fp = fopen($txt_file, "r");
 
-	$line = fgets($fp)
+	$array = file($txt_file);
+	
 	//$lines = explode("\n", $content);
-	//$text = $text . $line;
+	//$text = $text . @array(0);
 }
 //fclose($fp);
 
