@@ -22,7 +22,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			
-			$text = 'your id is ' . $event['source']['userId'];
+			$text = 'Your id is ' . $event['source']['userId'];
 			//$text = 'Hello Pimchanok';
 			
 			// Get replyToken
