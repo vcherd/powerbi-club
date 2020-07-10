@@ -40,7 +40,8 @@ if (!is_null($events['events'])) {
 			}
 			*/
 			//$text = $event['message']['text'];
-			if (str_contains($event['message']['text'], 'register')) {
+			//if (str_contains($event['message']['text'], 'register')) {
+			if (strpos($event['message']['text'], 'register') !== false) {
 				$text = "yeah";
 			}	
 			else {
