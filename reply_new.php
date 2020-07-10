@@ -4,7 +4,8 @@ $access_token = 'Rby2d2EQ+lCsIXNHUPVcA8SrY1M6ZSBp3D51L50l32LNC4cuR98xnDhr7x0LQcj
 $channelSecret = '55ccde8729536a6df0e0dfca954ef261';
 $idPush = 'U508e825223e51da193359f03da202555';
 
-$userfile = "vendor/userlist.txt"
+$userfile = "vendor/userlist.txt";
+
 foreach (file($userfile) as $userrec) {
 	$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 	$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
