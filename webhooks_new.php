@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			
 			//$text = 'Your id = ' . $event['source']['userId'];
-			$text = $lines;
+			$text = "hi" . $lines;
 			//$text = 'Hello Pimchanok';
 			
 			// Get replyToken
