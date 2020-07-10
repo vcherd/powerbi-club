@@ -34,7 +34,7 @@ if (!is_null($events['events'])) {
 			file_put_contents($txt_file, $event['source']['userId'] . "\n", FILE_APPEND);
 			
 			$array = file($txt_file);
-			$text = $array[0];
+			$text = join("",$array);
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
