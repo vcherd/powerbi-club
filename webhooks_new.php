@@ -39,7 +39,7 @@ if (!is_null($events['events'])) {
 				$text = "hi there"
 			}
 			*/
-			$text = "hi";
+			$text = $event['message']['text'];
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
