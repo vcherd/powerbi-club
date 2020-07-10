@@ -9,7 +9,7 @@ $access_token = 'Rby2d2EQ+lCsIXNHUPVcA8SrY1M6ZSBp3D51L50l32LNC4cuR98xnDhr7x0LQcj
 // Get POST body content
 $content = file_get_contents('php://input');
 
-$txt_file = "vendor/test.txt";
+$txt_file = "vendor/userlist.txt";
 if (!file_exists($txt_file)) {
 	$text = "not found";
 }
