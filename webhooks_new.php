@@ -8,6 +8,10 @@ $access_token = 'Rby2d2EQ+lCsIXNHUPVcA8SrY1M6ZSBp3D51L50l32LNC4cuR98xnDhr7x0LQcj
 
 // Get POST body content
 $content = file_get_contents('php://input');
+
+// write in log file
+file_put_contents('log.txt', file_get_contents('php://input') . PHP_EOL, FILE_APPEND);
+
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
@@ -17,6 +21,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
+			
 			$text = 'your id is ' . $event['source']['userId'];
 			//$text = 'Hello Pimchanok';
 			
