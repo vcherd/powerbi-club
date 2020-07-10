@@ -22,7 +22,6 @@ else {
 }
 $fp = fopen($txt_file, "r");
 
-$content = fread($fp, filesize($txt_file));
 $line = fgets($fp)
 //$lines = explode("\n", $content);
 $text = $text . $line;
