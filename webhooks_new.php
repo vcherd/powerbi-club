@@ -32,18 +32,20 @@ if (!is_null($events['events'])) {
 				//$text = 'Hello Pimchanok';
 				file_put_contents($txt_file, $event['source']['userId'] . "\n", FILE_APPEND);
 				
-				$array = file($txt_file);
-				$text = join("",$array);	
+					
 			}
 			else {
 				$text = "hi there"
 			}
 			*/
-			//$text = $event['message']['text'];
-			//if (str_contains($event['message']['text'], 'register')) {
-			if (strpos($event['message']['text'], 'register') !== false) {
-				$text = "yeah";
+			if (strpos($event['message']['text'], 'register') !== false) {  //register
+				file_put_contents($txt_file, $event['source']['userId'] . "\n", FILE_APPEND);
+				$text = "registered";
 			}	
+			elseif (strpos($event['message']['text'], 'query') !== false) { // query
+				$array = file($txt_file);
+				$text = join("",$array);
+			}
 			else {
 				$text = $event['message']['text'];
 			}
