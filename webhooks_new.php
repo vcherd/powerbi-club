@@ -19,14 +19,11 @@ if (!file_exists($txt_file)) {
 }
 else {
 	$text = "found";
-	// $fp = fopen($txt_file, "r");
-
 	$array = file($txt_file);
-	
-	//$lines = explode("\n", $content);
 	$text = $text . $array[0];
+	
+	file_put_contents($txt_file, 'yeah\n', FILE_APPEND);
 }
-//fclose($fp);
 
 // Parse JSON
 $events = json_decode($content, true);
