@@ -14,11 +14,17 @@ $log_file = 'vendor/log.txt';
 file_put_contents($log_file, $content . PHP_EOL, FILE_APPEND);
 
 $txt_file = "vendor/test.txt";
-$fp = fopen($txt_file, "r");
+if (!file_exists($txt_file)) {
+	$text = "not found";
+}
+else {
+	$text = "found";
+}
+//$fp = fopen($txt_file, "r");
 
-$content = fread($fp, filesize($txt_file));
-$lines = explode("\n", $content);
-fclose($fp);
+//$content = fread($fp, filesize($txt_file));
+//$lines = explode("\n", $content);
+//fclose($fp);
 
 // Parse JSON
 $events = json_decode($content, true);
@@ -31,7 +37,6 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			
 			//$text = 'Your id = ' . $event['source']['userId'];
-			$text = "hello " . $lines;
 			//$text = 'Hello Pimchanok';
 			
 			// Get replyToken
