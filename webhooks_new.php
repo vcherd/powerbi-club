@@ -10,7 +10,7 @@ $access_token = 'Rby2d2EQ+lCsIXNHUPVcA8SrY1M6ZSBp3D51L50l32LNC4cuR98xnDhr7x0LQcj
 $content = file_get_contents('php://input');
 
 // write in log file
-$log_file = 'log/log.txt';
+$log_file = 'vendor/log.txt';
 file_put_contents($log_file, $content . PHP_EOL, FILE_APPEND);
 
 // Parse JSON
