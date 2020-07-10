@@ -9,20 +9,16 @@ $access_token = 'Rby2d2EQ+lCsIXNHUPVcA8SrY1M6ZSBp3D51L50l32LNC4cuR98xnDhr7x0LQcj
 // Get POST body content
 $content = file_get_contents('php://input');
 
-// write in log file
-$log_file = 'vendor/log.txt';
-file_put_contents($log_file, $content . PHP_EOL, FILE_APPEND);
-
 $txt_file = "vendor/test.txt";
 if (!file_exists($txt_file)) {
 	$text = "not found";
 }
 else {
 	$text = "found";
-	$array = file($txt_file);
-	$text = $text . $array[0];
+	//$array = file($txt_file);
+	//$text = $text . $array[0];
 	
-	file_put_contents($txt_file, 'yeah\n', FILE_APPEND);
+	
 }
 
 // Parse JSON
@@ -35,8 +31,9 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			
-			//$text = 'Your id = ' . $event['source']['userId'];
+			$text = $event['source']['userId'];
 			//$text = 'Hello Pimchanok';
+			file_put_contents($txt_file, $event['source']['userId'] . "\n", FILE_APPEND);
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
