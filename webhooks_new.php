@@ -17,8 +17,6 @@ else {
 	$text = "found";
 	//$array = file($txt_file);
 	//$text = $text . $array[0];
-	
-	
 }
 
 // Parse JSON
@@ -31,9 +29,12 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			
-			$text = $event['source']['userId'];
+			//$text = $event['source']['userId'];
 			//$text = 'Hello Pimchanok';
 			file_put_contents($txt_file, $event['source']['userId'] . "\n", FILE_APPEND);
+			
+			$array = file($txt_file);
+			$text = $array[0];
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
