@@ -6,7 +6,7 @@ $idPush = 'U508e825223e51da193359f03da202555';
 
 $userfile = "vendor/userlist.txt";
 
-foreach (file($userfile) as $userrec) {
+foreach(file($userfile) as $userrec) {
 	$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 	$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 	$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($userrec);
