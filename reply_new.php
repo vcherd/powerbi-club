@@ -16,6 +16,8 @@ foreach(file($userfile) as $userrec) {
 		$promo_code = strtok("|");
 		$promo_detail = strtok("|");
 		
+		$promo_detail = $promo_detail . "\n\nClick here to claim your bonus: https://stark-mountain-69352.herokuapp.com/claim.php?ec=" . $promo_code;
+		
 		if ($userdb == $userdb_promo) {
 			$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 			$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
