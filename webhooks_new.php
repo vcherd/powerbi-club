@@ -43,9 +43,21 @@ if (!is_null($events['events'])) {
 				$secondstr = strtok(' ');
 				if ($secondstr != "") {
 					//check if user exists
+					$found = false;
 					
-					file_put_contents($user_file, $secondstr . "|" . $event['source']['userId'] . "\n", FILE_APPEND);
-					$text = "Registered, thank you.";
+					foreach(file($user_file) as $userrec) {
+						$userdb = strtok($userrec,"|");
+						$idPush = strtok("|");
+						if ($userdb == $secondstr) then $found = true;
+					}
+					
+					if ($found = false) {
+						file_put_contents($user_file, $secondstr . "|" . $event['source']['userId'] . "\n", FILE_APPEND);
+						$text = "Registered, thank you.";
+					}
+					else {
+						$text = "User exists.";
+					}
 				}
 				else {
 					$text = "Information is missing.\nPlease use 'register <your initial>'";
