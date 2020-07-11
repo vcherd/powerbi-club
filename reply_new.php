@@ -9,15 +9,17 @@ $promotionfile = "vendor/promotion.txt";
 
 foreach(file($userfile) as $userrec) {
 	$userdb = strtok($userrec,"|");
-	$promocode = strtok("|");
 	$idPush = strtok("|");
 	
 	foreach(file($promotionfile) as $promo) {
 		$userdb_promo = strtok($promo,"|");
+		$promo_code = strtok("|");
+		$promo_detail = strtok("|");
+		
 		if ($userdb == $userdb_promo) {
 			$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 			$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
-			$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder(strtok("|"));
+			$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($promo_detail);
 			$response = $bot->pushMessage($idPush, $textMessageBuilder);
 		}
 	}
