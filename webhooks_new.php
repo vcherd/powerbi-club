@@ -48,7 +48,7 @@ if (!is_null($events['events'])) {
 					foreach(file($user_file) as $userrec) {
 						$userdb = strtok($userrec,"|");
 						$idPush = strtok("|");
-						if ($userdb == $secondstr) then $found = true;
+						if ($userdb == $secondstr) $found = true;
 					}
 					
 					if ($found = false) {
