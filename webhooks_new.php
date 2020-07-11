@@ -46,7 +46,7 @@ if (!is_null($events['events'])) {
 					$text = "registered";
 				}
 				else {
-					$text = "Information is missing.\nPlease use \'register <your initial>\'";
+					$text = "Information is missing.\nPlease use 'register <your initial>'";
 				}
 			}	
 			elseif (strpos($event['message']['text'], 'query') !== false) { // query
