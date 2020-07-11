@@ -10,11 +10,12 @@ $channelSecret = '55ccde8729536a6df0e0dfca954ef261';
 //$content = file_get_contents('php://input');
 //echo "<HTML><BODY>" . $_GET['ec'] . "</BODY></HTML>";
 $eCoupon = $_GET['ec'];
+echo "<HTML><BODY>" . $eCoupon . "</BODY></HTML>";
 
 $userfile = "vendor/userlist.txt";
 $promotionfile = "vendor/promotion.txt";
 
-
+/*
 foreach(file($promotionfile) as $promo) {
 	$userdb_promo = strtok($promo,"|");
 	$promo_code = strtok("|");
@@ -37,3 +38,4 @@ foreach(file($promotionfile) as $promo) {
 }
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
+*/
