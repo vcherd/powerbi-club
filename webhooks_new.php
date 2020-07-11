@@ -51,7 +51,7 @@ if (!is_null($events['events'])) {
 						if (($userdb == $secondstr) || ($idPush == $event['source']['userId'])) $found = true;
 					}
 					
-					if ($found = false) {
+					if ($found == false) {
 						file_put_contents($user_file, $secondstr . "|" . $event['source']['userId'] . "\n", FILE_APPEND);
 						$text = "Registered, thank you.";
 					}
