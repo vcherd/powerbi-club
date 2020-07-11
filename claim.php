@@ -16,7 +16,7 @@ $userfile = "vendor/userlist.txt";
 $promotionfile = "vendor/promotion.txt";
 
 
-echo "<HTML><BODY>"; //
+echo "<HTML><BODY>" . $eCoupon; //
 
 foreach(file($promotionfile) as $promo) {
 	$userdb_promo = strtok($promo,"|");
