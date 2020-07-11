@@ -7,8 +7,8 @@ $channelSecret = '55ccde8729536a6df0e0dfca954ef261';
 //$idPush = 'U508e825223e51da193359f03da202555';
 
 // Get POST body content
-$content = file_get_contents('php://input');
-echo $content;
+//$content = file_get_contents('php://input');
+echo $_GET['ec'];
 
 $userfile = "vendor/userlist.txt";
 $promotionfile = "vendor/promotion.txt";
