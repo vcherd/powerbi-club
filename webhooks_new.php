@@ -9,13 +9,13 @@ $access_token = 'Rby2d2EQ+lCsIXNHUPVcA8SrY1M6ZSBp3D51L50l32LNC4cuR98xnDhr7x0LQcj
 // Get POST body content
 $content = file_get_contents('php://input');
 
-$txt_file = "vendor/userlist.txt";
-if (!file_exists($txt_file)) {
+$user_file = "vendor/userlist.txt";
+if (!file_exists($user_file)) {
 	$text = "not found";
 }
 else {
 	$text = "found";
-	//$array = file($txt_file);
+	//$array = file($user_file);
 	//$text = $text . $array[0];
 }
 
@@ -30,7 +30,7 @@ if (!is_null($events['events'])) {
 			/*if (str_contains($event['message']['text'], 'register')) {
 				//$text = $event['source']['userId'];
 				//$text = 'Hello Pimchanok';
-				file_put_contents($txt_file, $event['source']['userId'] . "\n", FILE_APPEND);
+				file_put_contents($user_file, $event['source']['userId'] . "\n", FILE_APPEND);
 				
 					
 			}
@@ -42,15 +42,20 @@ if (!is_null($events['events'])) {
 				$firststr = strtok($event['message']['text'], ' ');
 				$secondstr = strtok(' ');
 				if ($secondstr != "") {
-					file_put_contents($txt_file, $secondstr . "|" . $event['source']['userId'] . "\n", FILE_APPEND);
-					$text = "registered";
+					//check if user exists
+					
+					file_put_contents($user_file, $secondstr . "|" . $event['source']['userId'] . "\n", FILE_APPEND);
+					$text = "Registered, thank you.";
 				}
 				else {
 					$text = "Information is missing.\nPlease use 'register <your initial>'";
 				}
 			}	
 			elseif (strpos($event['message']['text'], 'query') !== false) { // query
-				$array = file($txt_file);
+				$text = "Here's the user list:\n\n";
+				
+				
+				$array = file($user_file);
 				$text = join("",$array);
 			}
 			else {
