@@ -23,8 +23,6 @@ foreach(file($promotionfile) as $promo) {
 	$promo_code = strtok("|");
 	$promo_detail = strtok("|");
 	
-	echo $userdb_promo . "<br>"; //
-	
 	if ($eCoupon == $promo_code) {
 		echo "Found"; //
 		
@@ -33,16 +31,14 @@ foreach(file($promotionfile) as $promo) {
 			$userdb = strtok($userrec,"|");
 			if ($userdb == $userdb_promo) $idPush = strtok("|");
 		}
-		echo $idPush;
-		/*
-		//reply to user
 		
+		//reply to user
 		
 		$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 		$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 		$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("Claimed successfully");
 		$response = $bot->pushMessage($idPush, $textMessageBuilder);
-*/
+
 	}
 }
 echo "</BODY></HTML>";
