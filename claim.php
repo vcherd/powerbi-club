@@ -16,13 +16,17 @@ $userfile = "vendor/userlist.txt";
 $promotionfile = "vendor/promotion.txt";
 
 
+echo "<HTML><BODY>"; //
+
 foreach(file($promotionfile) as $promo) {
 	$userdb_promo = strtok($promo,"|");
 	$promo_code = strtok("|");
 	$promo_detail = strtok("|");
-
+	
+	echo $userdb_promo . "<br>";
+	
 	if ($eCoupon == $promo_code) {
-		echo "<HTML><BODY>" . "Found" . "</BODY></HTML>";
+		echo "Found";;
 		/*
 		// get user id
 		foreach(file($userfile) as $userrec) {
@@ -39,5 +43,5 @@ foreach(file($promotionfile) as $promo) {
 */
 	}
 }
-
+echo "</BODY></HTML>";
 //echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
