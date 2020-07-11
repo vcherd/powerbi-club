@@ -38,7 +38,7 @@ if (!is_null($events['events'])) {
 				$text = "hi there"
 			}
 			*/
-			if (strpos($event['message']['text'], 'register') !== false) {  //register
+			if (strpos(strtolower($event['message']['text']), 'register') !== false) {  //register
 				$firststr = strtok($event['message']['text'], ' ');
 				$secondstr = strtok(' ');
 				if ($secondstr != "") {
