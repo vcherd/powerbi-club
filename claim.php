@@ -38,4 +38,5 @@ foreach(file($promotionfile) as $promo) {
 	}
 }
 
-echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
+//echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
+echo "<HTML><script type="text/javascript">setTimeout("window.close();", 2000);</script><BODY>Claim Successfully</BODY><HTML>";
