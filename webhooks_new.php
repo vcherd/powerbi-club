@@ -40,7 +40,7 @@ if (!is_null($events['events'])) {
 			*/
 			if (strpos(strtolower($event['message']['text']), 'register') !== false) {  //register
 				$firststr = strtok($event['message']['text'], ' ');
-				$secondstr = strtok(' ');
+				$secondstr = strtolower(strtok(' '));
 				if ($secondstr != "") {
 					//check if user exists
 					$found = false;
@@ -63,7 +63,7 @@ if (!is_null($events['events'])) {
 					$text = "Information is missing.\nPlease use 'register <your initial>'";
 				}
 			}	
-			elseif (strpos($event['message']['text'], 'query') !== false) { // query
+			elseif (strpos(strtolower($event['message']['text']), 'query') !== false) { // query
 				$text = "Here's the user list:\n\n";
 				
 				
