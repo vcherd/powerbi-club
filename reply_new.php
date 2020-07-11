@@ -9,6 +9,7 @@ $promotionfile = "vendor/promotion.txt";
 
 foreach(file($userfile) as $userrec) {
 	$userdb = strtok($userrec,"|");
+	$promocode = strtok("|");
 	$idPush = strtok("|");
 	
 	foreach(file($promotionfile) as $promo) {
