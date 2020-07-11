@@ -23,16 +23,18 @@ foreach(file($promotionfile) as $promo) {
 	$promo_code = strtok("|");
 	$promo_detail = strtok("|");
 	
-	echo $userdb_promo . "<br>";
+	echo $userdb_promo . "<br>"; //
 	
 	if ($eCoupon == $promo_code) {
-		echo "Found";;
-		/*
+		echo "Found"; //
+		
 		// get user id
 		foreach(file($userfile) as $userrec) {
 			$userdb = strtok($userrec,"|");
 			if ($userdb == $userdb_promo) $idPush = strtok("|");
 		}
+		echo $idPush;
+		/*
 		//reply to user
 		
 		
