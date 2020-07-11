@@ -8,7 +8,7 @@ $channelSecret = '55ccde8729536a6df0e0dfca954ef261';
 
 // Get POST body content
 //$content = file_get_contents('php://input');
-echo $_GET['ec'];
+echo "<HTML><BODY>" . $_GET['ec'] . "</BODY></HTML>";
 
 $userfile = "vendor/userlist.txt";
 $promotionfile = "vendor/promotion.txt";
