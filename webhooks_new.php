@@ -56,7 +56,7 @@ if (!is_null($events['events'])) {
 				
 				
 				$array = file($user_file);
-				$text = join("",$array);
+				$text = $text . join("",$array);
 			}
 			else {
 				$text = $event['message']['text'];
