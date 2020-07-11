@@ -15,12 +15,12 @@ echo "<HTML><BODY>" . $eCoupon . "</BODY></HTML>";
 $userfile = "vendor/userlist.txt";
 $promotionfile = "vendor/promotion.txt";
 
-/*
+
 foreach(file($promotionfile) as $promo) {
 	$userdb_promo = strtok($promo,"|");
 	$promo_code = strtok("|");
 	$promo_detail = strtok("|");
-	
+/*	
 	if ($eCoupon == $promo_code) {
 		// get user id
 		foreach(file($userfile) as $userrec) {
@@ -35,7 +35,7 @@ foreach(file($promotionfile) as $promo) {
 		$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("Claimed successfully");
 		$response = $bot->pushMessage($idPush, $textMessageBuilder);
 	}
+*/
 }
 
-echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
-*/
+//echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
