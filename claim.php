@@ -11,12 +11,8 @@ $channelSecret = '55ccde8729536a6df0e0dfca954ef261';
 //echo "<HTML><BODY>" . $_GET['ec'] . "</BODY></HTML>";
 $eCoupon = $_GET['ec'];
 
-
 $userfile = "vendor/userlist.txt";
 $promotionfile = "vendor/promotion.txt";
-
-
-echo "<HTML><BODY>" . $eCoupon; //
 
 foreach(file($promotionfile) as $promo) {
 	$userdb_promo = strtok($promo,"|");
@@ -24,7 +20,6 @@ foreach(file($promotionfile) as $promo) {
 	$promo_detail = strtok("|");
 	
 	if ($eCoupon == $promo_code) {
-		echo "Found"; //
 		
 		// get user id
 		foreach(file($userfile) as $userrec) {
@@ -38,8 +33,7 @@ foreach(file($promotionfile) as $promo) {
 		$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 		$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("Claimed successfully");
 		$response = $bot->pushMessage($idPush, $textMessageBuilder);
-
 	}
 }
-echo "</BODY></HTML>";
-//echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
+
+echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
