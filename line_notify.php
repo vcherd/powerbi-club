@@ -1,13 +1,13 @@
 <?php
 
-//echo "<HTML><BODY>555</BODY></HTML";
+echo "<HTML><BODY>555";
 echo phpinfo();
 
 
 $cv = curl_init();
-/*
-curl_setopt($cv, CURLOPT_URL, “https://covid19.th-stat.com/api/open/today");
- 
+
+curl_setopt($cv, CURLOPT_URL, "https://covid19.th-stat.com/api/open/today");
+/* 
 header (‘Content-type: text/html; charset=utf-8’);
  
 curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
