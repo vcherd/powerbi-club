@@ -3,8 +3,9 @@
 //echo "<HTML><BODY>555</BODY></HTML";
 echo phpinfo();
 
-/*
+
 $cv = curl_init();
+/*
 curl_setopt($cv, CURLOPT_URL, “https://covid19.th-stat.com/api/open/today");
  
 header (‘Content-type: text/html; charset=utf-8’);
