@@ -10,15 +10,15 @@ curl_setopt($cv, CURLOPT_URL, "https://covid19.th-stat.com/api/open/today");
  
 //header (‘Content-type: text/html; charset=utf-8’);
 
-echo "<HTML><BODY>555</Body></html>";
-echo phpinfo();
-/*
 curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
 
  $output = curl_exec($cv);
  
  $js_array=json_decode($output, true);
- 
+
+echo "<HTML><BODY>666</Body></html>";
+echo phpinfo();
+/* 
  $notifyURL = “https://notify-api.line.me/api/notify";
 $accToken = “HHAwXfTK32lHD8V620krk2aFixxUksd0NPNCIFu2mn0”;
 $headers = array(
