@@ -10,7 +10,7 @@ curl_setopt($cv, CURLOPT_URL, "https://covid19.th-stat.com/api/open/today");
  
 header (‘Content-type: text/html; charset=utf-8’);
 
-
+/*
 curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
 
  $output = curl_exec($cv);
@@ -47,3 +47,4 @@ curl_close( $ch );
  
 var_dump($result);
 $result = json_decode($result,TRUE);
+*/
