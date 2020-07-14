@@ -1,17 +1,17 @@
 <?php
 
-echo "<HTML><BODY>555</Body></html>";
+//echo "<HTML><BODY>555</Body></html>";
 //echo phpinfo();
 
 
 $cv = curl_init();
 
 curl_setopt($cv, CURLOPT_URL, "https://covid19.th-stat.com/api/open/today");
-/* 
+ 
 header (‘Content-type: text/html; charset=utf-8’);
  
 curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
-// ตัวแปร $output เก็บข้อมูลทั้งหมดที่ดึงมา 
+
  $output = curl_exec($cv);
  
  $js_array=json_decode($output, true);
