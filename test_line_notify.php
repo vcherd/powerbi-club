@@ -1,10 +1,11 @@
 <?php
-define(‘LINE_API’,”https://notify-api.line.me/api/notify");
+define('LINE_API',”https://notify-api.line.me/api/notify");
  
-$token = “XZ8kt6CYmksPO5VFJHcHlrcEBCLEfhviwPpvrGLceYU”; //ใส่Token ที่copy เอาไว้
-$str = “ทดสอบ line notify”; //ข้อความที่ต้องการส่ง สูงสุด 1000 ตัวอักษร
+$token = “XZ8kt6CYmksPO5VFJHcHlrcEBCLEfhviwPpvrGLceYU”; 
+$str = “ทดสอบ line notify”;
  
 $res = notify_message($str,$token);
+
 print_r($res);
 function notify_message($message,$token){
  $queryData = array(‘message’ => $message);
@@ -23,4 +24,3 @@ function notify_message($message,$token){
  $res = json_decode($result);
  return $res;
 }
-?>
