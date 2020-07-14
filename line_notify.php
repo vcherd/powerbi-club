@@ -1,4 +1,7 @@
 <?php
+
+echo "<HTML><BODY>hhh</BODY></HTML";
+/*
 $cv = curl_init();
 // ตั้ง Url สำหรับดึงข้อมูล 
  curl_setopt($cv, CURLOPT_URL, “https://covid19.th-stat.com/api/open/today");
@@ -41,3 +44,4 @@ curl_close( $ch );
  
 var_dump($result);
 $result = json_decode($result,TRUE);
+*/
