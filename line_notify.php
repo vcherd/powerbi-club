@@ -50,7 +50,3 @@ curl_close( $ch );
  
 var_dump($result);
 $result = json_decode($result,TRUE);
-
-
-echo "<HTML><BODY>111</Body></html>";
-echo phpinfo();
