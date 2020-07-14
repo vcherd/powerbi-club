@@ -45,12 +45,12 @@ curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, 1);
 curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
 
+$result = curl_exec( $ch );
+curl_close( $ch );
+
 echo "<HTML><BODY>000</Body></html>";
 echo phpinfo();
 /* 
-$result = curl_exec( $ch );
-curl_close( $ch );
- 
 var_dump($result);
 $result = json_decode($result,TRUE);
 */
