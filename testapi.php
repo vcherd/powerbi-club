@@ -8,4 +8,3 @@ echo phpinfo();
 
 
 //echo json_encode(array("message" => "Hello world"));
-}
