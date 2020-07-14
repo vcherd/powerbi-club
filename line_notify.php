@@ -1,7 +1,7 @@
 <?php
 
-echo "<HTML><BODY>555";
-echo phpinfo();
+echo "<HTML><BODY>555</Body></html>";
+//echo phpinfo();
 
 
 $cv = curl_init();
