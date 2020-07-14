@@ -10,7 +10,9 @@ curl_setopt($cv, CURLOPT_URL, "https://covid19.th-stat.com/api/open/today");
  
 //header (‘Content-type: text/html; charset=utf-8’);
 
-
+echo "<HTML><BODY>555</Body></html>";
+echo phpinfo();
+/*
 curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
 
  $output = curl_exec($cv);
@@ -23,8 +25,8 @@ $headers = array(
  ‘Content-Type: application/x-www-form-urlencoded’,
  ‘Authorization: Bearer ‘.$accToken
 );
-echo "<HTML><BODY>555</Body></html>";
-/*
+
+
 $data = array(
  ‘message’ => ‘
 รายงานสถานการณ์โควิท
