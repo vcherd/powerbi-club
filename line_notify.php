@@ -47,10 +47,10 @@ curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
 
 $result = curl_exec( $ch );
 curl_close( $ch );
-
-echo "<HTML><BODY>000</Body></html>";
-echo phpinfo();
-/* 
+ 
 var_dump($result);
 $result = json_decode($result,TRUE);
-*/
+
+
+echo "<HTML><BODY>111</Body></html>";
+echo phpinfo();
