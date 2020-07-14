@@ -1,12 +1,13 @@
 <?php
 define('LINE_API',”https://notify-api.line.me/api/notify");
- 
+/* 
 $token = “XZ8kt6CYmksPO5VFJHcHlrcEBCLEfhviwPpvrGLceYU”; 
 $str = “ทดสอบ line notify”;
  
 $res = notify_message($str,$token);
 
 print_r($res);
+*/
 function notify_message($message,$token){
  $queryData = array(‘message’ => $message);
  $queryData = http_build_query($queryData,’’,’&’);
