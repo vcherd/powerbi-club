@@ -23,19 +23,20 @@ $headers = array(
  'Authorization: Bearer '.$accToken
 );
 
-echo "<HTML><BODY>888</Body></html>";
-echo phpinfo();
-/* 
+
 
 $data = array(
- ‘message’ => ‘
+ 'message' => '
 รายงานสถานการณ์โควิท
-ผู้ติดเชื้อ : ‘.$js_array[‘Confirmed’].’ คน
-เสียชีวิต : ‘.$js_array[‘Deaths’].’ คน
-หายแล้ว : ‘.$js_array[‘Recovered’].’ คน
-รักษาตัว : ‘.$js_array[‘Hospitalized’].’ คน
-เวลาล่าสุด : ‘.$js_array[‘UpdateDate’].’’ );
+ผู้ติดเชื้อ : '.$js_array['Confirmed'].' คน
+เสียชีวิต : '.$js_array['Deaths'].' คน
+หายแล้ว : '.$js_array['Recovered'].' คน
+รักษาตัว : '.$js_array['Hospitalized'].' คน
+เวลาล่าสุด : '.$js_array['UpdateDate'].'' );
 
+echo "<HTML><BODY>999</Body></html>";
+echo phpinfo();
+/* 
 $ch = curl_init();
 curl_setopt( $ch, CURLOPT_URL, $notifyURL);
 curl_setopt( $ch, CURLOPT_POST, 1);
