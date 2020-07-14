@@ -19,11 +19,11 @@ curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
  $notifyURL = “https://notify-api.line.me/api/notify";
 $accToken = “HHAwXfTK32lHD8V620krk2aFixxUksd0NPNCIFu2mn0”;
 $headers = array(
- ‘Content-Type: application/x-www-form-urlencoded’,
- ‘Authorization: Bearer ‘.$accToken
+ 'Content-Type: application/x-www-form-urlencoded',
+ 'Authorization: Bearer '.$accToken
 );
 
-echo "<HTML><BODY>777</Body></html>";
+echo "<HTML><BODY>888</Body></html>";
 echo phpinfo();
 /* 
 
