@@ -1,14 +1,13 @@
 <?php
 
-echo "<HTML><BODY>hhh</BODY></HTML";
-/*
+echo "<HTML><BODY>555</BODY></HTML";
+
 $cv = curl_init();
-// ตั้ง Url สำหรับดึงข้อมูล 
- curl_setopt($cv, CURLOPT_URL, “https://covid19.th-stat.com/api/open/today");
+curl_setopt($cv, CURLOPT_URL, “https://covid19.th-stat.com/api/open/today");
+/* 
+header (‘Content-type: text/html; charset=utf-8’);
  
- header (‘Content-type: text/html; charset=utf-8’);
- 
- curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
 // ตัวแปร $output เก็บข้อมูลทั้งหมดที่ดึงมา 
  $output = curl_exec($cv);
  
