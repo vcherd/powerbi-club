@@ -16,9 +16,6 @@ curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
  
  $js_array=json_decode($output, true);
 
-echo "<HTML><BODY>666</Body></html>";
-echo phpinfo();
-/* 
  $notifyURL = “https://notify-api.line.me/api/notify";
 $accToken = “HHAwXfTK32lHD8V620krk2aFixxUksd0NPNCIFu2mn0”;
 $headers = array(
@@ -26,6 +23,9 @@ $headers = array(
  ‘Authorization: Bearer ‘.$accToken
 );
 
+echo "<HTML><BODY>777</Body></html>";
+echo phpinfo();
+/* 
 
 $data = array(
  ‘message’ => ‘
