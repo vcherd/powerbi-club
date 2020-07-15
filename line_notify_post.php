@@ -1,7 +1,8 @@
 <?php
 // Get POST body content
-$content = file_get_contents('php://input');
-$data = array('message' => $content); 
+//$content = file_get_contents('php://input');
+//$data = array('message' => $content); 
+$data = array('message' => $_GET["name"]);
 
 // Prepare Token
 $notifyURL = "https://notify-api.line.me/api/notify";
