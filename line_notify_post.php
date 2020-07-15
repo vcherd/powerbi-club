@@ -11,8 +11,6 @@ $headers = array(
  'Authorization: Bearer '.$accToken
 );
 
-$data = array('message' => 'test krub pom'); // enter message here
-
 $ch = curl_init();
 curl_setopt( $ch, CURLOPT_URL, $notifyURL);
 curl_setopt( $ch, CURLOPT_POST, 1);
