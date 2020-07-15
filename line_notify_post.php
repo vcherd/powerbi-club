@@ -1,6 +1,6 @@
 <?php
 // Get POST body content
-$content = htmlspecialchars($_POST["Text1"]);
+$content = file_get_contents('php://input');
 $data = array('message' => $content); 
 
 // Prepare Token
