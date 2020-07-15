@@ -27,3 +27,8 @@ curl_close( $ch );
  
 var_dump($result);
 $result = json_decode($result,TRUE);
+?>
+<script>
+  setTimeout(window.close(), 5000);
+</script>
+
