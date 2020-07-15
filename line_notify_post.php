@@ -9,7 +9,7 @@ $headers = array(
  'Authorization: Bearer '.$accToken
 );
 
-$data = array('message' => $_POST["name"]); // enter message here
+$data = array('message' => $_POST["message"]); // enter message here
 
 $ch = curl_init();
 curl_setopt( $ch, CURLOPT_URL, $notifyURL);
