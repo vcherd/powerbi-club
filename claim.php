@@ -12,9 +12,9 @@ $channelSecret = '55ccde8729536a6df0e0dfca954ef261';
 //echo "<HTML><BODY>" . $_GET['ec'] . "</BODY></HTML>";
 $eCoupon = $_GET['ec'];
 
-$userfile = "vendor/userlist.txt";
-$promotionfile = "vendor/promotion.txt";
-$claimfile = "vendor/claimed.txt";
+$userfile = "db/userlist.txt";
+$promotionfile = "db/promotion.txt";
+$claimfile = "db/claimed.txt";
 
 foreach(file($promotionfile) as $promo) {
 	$userdb_promo = strtok($promo,"|");
