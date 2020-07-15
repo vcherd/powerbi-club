@@ -5,7 +5,7 @@ $data = array('message' => $content);
 
 // Prepare Token
 $notifyURL = "https://notify-api.line.me/api/notify";
-$accToken = "WWgojH0PlQInXPJaj53WspD8PuuguBtIsAV7bpB2hzs";
+$accToken = "SQcXQnD7tXAxd5fLzhB2PcqqMsFwu4nSipJamj4MxE4";
 $headers = array(
  'Content-Type: application/x-www-form-urlencoded',
  'Authorization: Bearer '.$accToken
