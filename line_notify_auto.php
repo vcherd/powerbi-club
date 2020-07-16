@@ -3,7 +3,8 @@
 //echo $_POST["name"];
 
 //$data = array('message' => "ตั้งใจทำงานนะ"); // enter message here
-$data = array('message' => join("",file("db/message.txt"))); // enter message here
+//$data = array('message' => join("",file("db/message.txt"))); // enter message here
+$data = array('message' => get_covid()); 
 
 $notifyURL = "https://notify-api.line.me/api/notify";
 $accToken = "99UtKRjmbuxfVSh6bbiUQLtIoonngNvI2ipXhml2rPC";
@@ -27,6 +28,32 @@ curl_close( $ch );
  
 var_dump($result);
 $result = json_decode($result,TRUE);
+
+function get_covid() {
+	$cv = curl_init();
+
+	curl_setopt($cv, CURLOPT_URL, "https://covid19.th-stat.com/api/open/today");
+	 
+	//header (‘Content-type: text/html; charset=utf-8’);
+
+	curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
+
+	 $output = curl_exec($cv);
+	 
+	 $js_array=json_decode($output, true);	
+	 
+	 $data = array(
+	 'message' => '
+	รายงานสถานการณ์โควิท
+	ผู้ติดเชื้อ : '.$js_array['Confirmed'].' คน
+	เสียชีวิต : '.$js_array['Deaths'].' คน
+	หายแล้ว : '.$js_array['Recovered'].' คน
+	รักษาตัว : '.$js_array['Hospitalized'].' คน
+	เวลาล่าสุด : '.$js_array['UpdateDate'].'' );
+	
+	return ($data);
+}
+
 ?>
 <a href="#" onclick="close_window();return false;">close</a>
 
