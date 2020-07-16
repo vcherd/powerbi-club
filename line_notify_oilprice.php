@@ -37,7 +37,7 @@ $data = array(
 '
 );
 
-for i = 0 to 7 {
+for ($i=0; $i<7; $i++) {
 	$data = $data . $js_array['oilPrice'][0]['id'] . " | " . $js_array['oilPrice'][0]['updatedPrice'] . " | " . $js_array['oilPrice'][0]['variance'] . "\n";
 }
 
