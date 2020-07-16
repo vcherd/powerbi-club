@@ -34,7 +34,7 @@ $data = array(
 วันที่ประกาศ : '.$js_array['postDate'].'
 วันที่มีผล : '.$js_array['effectiveDate'].' 
 ชนิดน้ำมัน | '.$js_array['unit'].' | ส่วนต่าง
-'.$js_array['oilPrice'][0]['id']
+'.$js_array['oilPrice'][0]['id'] . " | " . $js_array['oilPrice'][0]['updatedPrice'] . " | " . $js_array['oilPrice'][0]['variance']
 );
 
 
