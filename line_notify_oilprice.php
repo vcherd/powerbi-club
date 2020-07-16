@@ -19,10 +19,6 @@ curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
  //echo $output . "<br>";
  //echo print_r($js_array);
  
- 
-
- 
-
  $notifyURL = "https://notify-api.line.me/api/notify";
 $accToken = "WWgojH0PlQInXPJaj53WspD8PuuguBtIsAV7bpB2hzs";
 $headers = array(
@@ -37,7 +33,8 @@ $data = array(
 แจ้งปรับราคาน้ำมัน
 วันที่ประกาศ : '.$js_array['postDate'].'
 วันที่มีผล : '.$js_array['effectiveDate'].' 
-ชนิดน้ำมัน | '.$js_array['unit'].' | ส่วนต่าง'
+ชนิดน้ำมัน | '.$js_array['unit'].' | ส่วนต่าง
+'.$js_array['oilPrice'][0]['id']
 );
 
 
