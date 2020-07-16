@@ -17,7 +17,7 @@ curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
  $js_array=json_decode($output, true);
  //echo $js_array['postDate'];
  echo $output . "<br>";
- echo sizeof(implode($js_array));
+ echo print_r($js_array);
  
 /* 
  
