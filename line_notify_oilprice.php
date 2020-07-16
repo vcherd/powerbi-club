@@ -33,7 +33,7 @@ $message = '
 ชนิดน้ำมัน | '.$js_array['unit'].' | ส่วนต่าง
 ';
 
-for ($i=0; $i<7; $i++) {
+for ($i=0; $i<sizeof($js_array['oilPrice']); $i++) {
 	$message = $message . $js_array['oilPrice'][$i]['id'] . " | " . $js_array['oilPrice'][$i]['updatedPrice'] . " | " . $js_array['oilPrice'][$i]['variance'] . "\n";
 }
 
