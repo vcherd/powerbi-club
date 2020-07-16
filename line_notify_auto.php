@@ -28,5 +28,5 @@ curl_close( $ch );
 var_dump($result);
 $result = json_decode($result,TRUE);
 ?>
-<script type="text/javascript">setTimeout("window.close();", 3000);</script>
+<a href="#" onclick="close_window();return false;">close</a>
 
