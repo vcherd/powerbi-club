@@ -29,6 +29,8 @@ curl_close( $ch );
 var_dump($result);
 $result = json_decode($result,TRUE);
 
+echo '<script> window.setTimeout("window.close()", 1000); </script>';
+
 function get_covid() {
 	$cv = curl_init();
 
@@ -53,7 +55,3 @@ function get_covid() {
 	
 	return ($data);
 }
-
-?>
-<a href="#" onclick="close_window();return false;">close</a>
-
