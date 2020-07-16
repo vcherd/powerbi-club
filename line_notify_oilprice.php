@@ -25,21 +25,19 @@ $headers = array(
  'Content-Type: application/x-www-form-urlencoded',
  'Authorization: Bearer '.$accToken
 );
-
-
-
-$data = array(
- 'message' => '
+ 
+$message = '
 แจ้งปรับราคาน้ำมัน
 วันที่ประกาศ : '.$js_array['postDate'].'
 วันที่มีผล : '.$js_array['effectiveDate'].' 
 ชนิดน้ำมัน | '.$js_array['unit'].' | ส่วนต่าง
-'
-);
+';
 
 for ($i=0; $i<7; $i++) {
-	$data = $data . $js_array['oilPrice'][0]['id'] . " | " . $js_array['oilPrice'][0]['updatedPrice'] . " | " . $js_array['oilPrice'][0]['variance'] . "\n";
+	$message = $message . $js_array['oilPrice'][0]['id'] . " | " . $js_array['oilPrice'][0]['updatedPrice'] . " | " . $js_array['oilPrice'][0]['variance'] . "\n";
 }
+
+$data = array('message' => $message);
 
 
 $ch = curl_init();
