@@ -14,9 +14,10 @@ curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
 
  $output = curl_exec($cv);
  
- echo $output;
-/* 
  $js_array=json_decode($output, true);
+ echo $js_array;
+/* 
+ 
 
  $notifyURL = "https://notify-api.line.me/api/notify";
 $accToken = "WWgojH0PlQInXPJaj53WspD8PuuguBtIsAV7bpB2hzs";
