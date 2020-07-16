@@ -34,7 +34,7 @@ $message = '
 ';
 
 for ($i=0; $i<7; $i++) {
-	$message = $message . $js_array['oilPrice'][0]['id'] . " | " . $js_array['oilPrice'][0]['updatedPrice'] . " | " . $js_array['oilPrice'][0]['variance'] . "\n";
+	$message = $message . $js_array['oilPrice'][$i]['id'] . " | " . $js_array['oilPrice'][$i]['updatedPrice'] . " | " . $js_array['oilPrice'][$i]['variance'] . "\n";
 }
 
 $data = array('message' => $message);
