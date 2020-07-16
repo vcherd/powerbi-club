@@ -15,7 +15,7 @@ curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
  $output = curl_exec($cv);
  
  $js_array=json_decode($output, true);
- echo $js_array;
+ echo $js_array['postDate'];
 /* 
  
 
