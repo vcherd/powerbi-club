@@ -4,7 +4,7 @@
 
 //$data = array('message' => "ตั้งใจทำงานนะ"); // enter message here
 //$data = array('message' => join("",file("db/message.txt"))); // enter message here
-$data = array('message' => get_covid()); 
+$data = get_covid(); 
 
 $notifyURL = "https://notify-api.line.me/api/notify";
 $accToken = "99UtKRjmbuxfVSh6bbiUQLtIoonngNvI2ipXhml2rPC";
