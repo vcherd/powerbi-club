@@ -2,8 +2,8 @@
 
 //echo $_POST["name"];
 
-$data = array('message' => "Test"); // enter message here
-
+//$data = array('message' => "ตั้งใจทำงานนะ"); // enter message here
+$data = array('message' => file("db/message.txt")); // enter message here
 
 $notifyURL = "https://notify-api.line.me/api/notify";
 $accToken = "99UtKRjmbuxfVSh6bbiUQLtIoonngNvI2ipXhml2rPC";
