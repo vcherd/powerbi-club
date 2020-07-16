@@ -17,10 +17,10 @@ curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
  $js_array=json_decode($output, true);
  //echo $js_array['postDate'];
  //echo $output . "<br>";
- echo print_r($js_array);
+ //echo print_r($js_array);
  
  
-/* 
+
  
 
  $notifyURL = "https://notify-api.line.me/api/notify";
@@ -56,4 +56,3 @@ curl_close( $ch );
  
 var_dump($result);
 $result = json_decode($result,TRUE);
-*/
