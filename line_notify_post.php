@@ -1,7 +1,6 @@
 <?php 
 
 //echo $_POST["name"];
-
 if ($_POST["message"] == "covid") {
 	$cv = curl_init();
 
@@ -22,6 +21,9 @@ if ($_POST["message"] == "covid") {
 	หายแล้ว : '.$js_array['Recovered'].' คน
 	รักษาตัว : '.$js_array['Hospitalized'].' คน
 	เวลาล่าสุด : '.$js_array['UpdateDate'].'' );
+}
+elseif ($_POST["imageurl"] != "") {
+	$data = array('message' => $_POST["message"], 'imageThumbnail' => $_POST["imageurl"], 'imageFullsize' => $_POST["imageurl"]);
 }
 else $data = array('message' => $_POST["message"]); // enter message here
 
