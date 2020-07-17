@@ -1,7 +1,7 @@
 <?php
 
 $notifyURL = "https://notify-api.line.me/api/notify";
-$accToken = "WWgojH0PlQInXPJaj53WspD8PuuguBtIsAV7bpB2hzs";
+$accToken = "99UtKRjmbuxfVSh6bbiUQLtIoonngNvI2ipXhml2rPC";
 $headers = array(
  'Content-Type: application/x-www-form-urlencoded',
  'Authorization: Bearer '.$accToken
