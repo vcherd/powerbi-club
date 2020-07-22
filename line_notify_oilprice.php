@@ -41,7 +41,7 @@ $message = '
 for ($i=0; $i<sizeof($js_array[$idx]['oilprice']); $i++) {
 	$message = $message . $js_array[$idx]['oilprice'][$i]['id'] . " | " . $js_array[$idx]['oilprice'][$i]['updatedPrice'] . " | " . $js_array[$idx]['oilprice'][$i]['variance'] . "\n";
 }
-/*
+
 $data = array('message' => $message);
 
 
@@ -60,4 +60,3 @@ curl_close( $ch );
  
 var_dump($result);
 $result = json_decode($result,TRUE);
-*/
