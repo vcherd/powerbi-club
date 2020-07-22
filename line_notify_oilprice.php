@@ -35,7 +35,8 @@ $message = '
 ชนิดน้ำมัน | '.$js_array[$idx]['unit'].' | ส่วนต่าง
 ';
 
-echo print_r($js_array[$idx]);
+//echo print_r($js_array[$idx]);
+echo print_r($js_array[$idx]['oilproce'][0]['id']);
 
 /*
 for ($i=0; $i<sizeof($js_array[$idx]); $i++) {
