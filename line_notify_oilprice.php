@@ -35,8 +35,10 @@ $message = '
 ชนิดน้ำมัน | '.$js_array[$idx]['unit'].' | ส่วนต่าง
 ';
 
-for ($i=0; $i<sizeof($js_array[$idx]['oilPrice']); $i++) {
-	$message = $message . $js_array[$idx]['oilPrice'][$i]['id'] . " | " . $js_array[$idx]['oilPrice'][$i]['updatedPrice'] . " | " . $js_array[$idx]['oilPrice'][$i]['variance'] . "\n";
+$tmp = $js_array[$idx];
+
+for ($i=0; $i<sizeof($$tmp['oilPrice']); $i++) {
+	$message = $message . $tmp['oilPrice'][$i]['id'] . " | " . $tmp['oilPrice'][$i]['updatedPrice'] . " | " . $tmp['oilPrice'][$i]['variance'] . "\n";
 }
 
 $data = array('message' => $message);
