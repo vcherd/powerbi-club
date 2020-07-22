@@ -36,7 +36,7 @@ $message = '
 ';
 
 $tmp = $js_array[$idx]['oilPrice'];
-echo print_r($tmp);
+echo print_r($js_array[$idx]['oilPrice']);
 
 
 for ($i=0; $i<sizeof($tmp); $i++) {
