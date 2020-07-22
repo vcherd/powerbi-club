@@ -28,13 +28,13 @@ $headers = array(
  
 $message = '
 แจ้งปรับราคาน้ำมัน
-วันที่ประกาศ : '.$js_array['postDate'].'
-วันที่มีผล : '.$js_array['effectiveDate'].' 
-ชนิดน้ำมัน | '.$js_array['unit'].' | ส่วนต่าง
+วันที่ประกาศ : '.$js_array[0]['postDate'].'
+วันที่มีผล : '.$js_array[0]['effectiveDate'].' 
+ชนิดน้ำมัน | '.$js_array[0]['unit'].' | ส่วนต่าง
 ';
 
-for ($i=0; $i<sizeof($js_array['oilPrice']); $i++) {
-	$message = $message . $js_array['oilPrice'][$i]['id'] . " | " . $js_array['oilPrice'][$i]['updatedPrice'] . " | " . $js_array['oilPrice'][$i]['variance'] . "\n";
+for ($i=0; $i<sizeof($js_array[0]['oilPrice']); $i++) {
+	$message = $message . $js_array[0]['oilPrice'][$i]['id'] . " | " . $js_array[0]['oilPrice'][$i]['updatedPrice'] . " | " . $js_array[0]['oilPrice'][$i]['variance'] . "\n";
 }
 
 $data = array('message' => $message);
