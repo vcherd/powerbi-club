@@ -30,13 +30,13 @@ $idx = 0;
  
 $message = '
 แจ้งปรับราคาน้ำมัน
-วันที่ประกาศ : '.$js_array[idx]['postDate'].'
-วันที่มีผล : '.$js_array[idx]['effectiveDate'].' 
-ชนิดน้ำมัน | '.$js_array[idx]['unit'].' | ส่วนต่าง
+วันที่ประกาศ : '.$js_array[$idx]['postDate'].'
+วันที่มีผล : '.$js_array[$idx]['effectiveDate'].' 
+ชนิดน้ำมัน | '.$js_array[$idx]['unit'].' | ส่วนต่าง
 ';
 
-for ($i=0; $i<sizeof($js_array[idx]['oilPrice']); $i++) {
-	$message = $message . $js_array[idx]['oilPrice'][$i]['id'] . " | " . $js_array[idx]['oilPrice'][$i]['updatedPrice'] . " | " . $js_array[idx]['oilPrice'][$i]['variance'] . "\n";
+for ($i=0; $i<sizeof($js_array[$idx]['oilPrice']); $i++) {
+	$message = $message . $js_array[$idx]['oilPrice'][$i]['id'] . " | " . $js_array[$idx]['oilPrice'][$i]['updatedPrice'] . " | " . $js_array[$idx]['oilPrice'][$i]['variance'] . "\n";
 }
 
 $data = array('message' => $message);
