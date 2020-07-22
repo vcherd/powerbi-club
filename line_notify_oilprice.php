@@ -17,7 +17,7 @@ curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
  $js_array=json_decode($output, true);
  //echo $js_array['postDate'];
  //echo $output . "<br>";
- echo print_r($js_array);
+ //echo print_r($js_array);
 
  $notifyURL = "https://notify-api.line.me/api/notify";
 $accToken = "99UtKRjmbuxfVSh6bbiUQLtIoonngNvI2ipXhml2rPC";
@@ -36,6 +36,7 @@ $message = '
 ';
 
 $tmp = $js_array[$idx];
+echo print_r($tmp);
 
 for ($i=0; $i<sizeof($$tmp['oilPrice']); $i++) {
 	$message = $message . $tmp['oilPrice'][$i]['id'] . " | " . $tmp['oilPrice'][$i]['updatedPrice'] . " | " . $tmp['oilPrice'][$i]['variance'] . "\n";
