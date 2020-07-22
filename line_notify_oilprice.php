@@ -28,7 +28,7 @@ $headers = array(
  
 $message = '
 แจ้งปรับราคาน้ำมัน
-วันที่ประกาศ : '.$js_array['postDate'].'
+วันที่ประกาศ : '.$js_array[0]['postDate'].'
 วันที่มีผล : '.$js_array[0]['effectiveDate'].' 
 ชนิดน้ำมัน | '.$js_array[0]['unit'].' | ส่วนต่าง
 ';
