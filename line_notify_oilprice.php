@@ -39,7 +39,7 @@ $tmp = $js_array[$idx]['oilPrice'];
 echo print_r($tmp);
 
 
-for ($i=0; $i<sizeof($$tmp['oilPrice']); $i++) {
+for ($i=0; $i<sizeof($tmp['oilPrice']); $i++) {
 	$message = $message . $tmp['oilPrice'][$i]['id'] . " | " . $tmp['oilPrice'][$i]['updatedPrice'] . " | " . $tmp['oilPrice'][$i]['variance'] . "\n";
 }
 
