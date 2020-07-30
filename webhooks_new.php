@@ -5,6 +5,8 @@ require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 $user_file = "db/userlist.txt";
 $claim_file = "db/claimed.txt";
+
+$num_users_same_id = 3;
 //$access_token = '3ALKAbKFoGuJyJnoDdn0HeyfbxLFtEXBKiC0lFeoNl/XbL4WhoCZzefp2n7UDuXaCWfErIDro07BnZNggJmXJChXTIlMPo8LRJ+n1LEgbRUaKehDkiCr5p5CakHrPX+gauOGX/R5bB2e5yi7xjnHDAdB04t89/1O/w1cDnyilFU=';
 $access_token = 'Rby2d2EQ+lCsIXNHUPVcA8SrY1M6ZSBp3D51L50l32LNC4cuR98xnDhr7x0LQcjiALq2X4CsHufXuE+jvHiVb+s+DPZaSR/HlkUnW+sJrrUAvLIjTzpfS7u1i8wa6T0QKsSMF2yKXBPlKPJIOHaacQdB04t89/1O/w1cDnyilFU=';
 
@@ -40,15 +42,15 @@ if (!is_null($events['events'])) {
 			}
 			*/
 			if (strpos(strtolower($event['message']['text']), 'register') !== false) {  //register
-				$firststr = strtok($event['message']['text'], ' ');
-				$secondstr = strtolower(strtok(' '));
+				$firststr = strtok($event['message']['text'], ' '); // register
+				$secondstr = strtolower(strtok(' ')); //userid from webhook
 				if ($secondstr != "") {
 					//check if user exists
 					$found = false;
 					
 					foreach(file($user_file) as $userrec) {
-						$userdb = strtok($userrec,"|");
-						$idPush = strtok("|");
+						$userdb = strtok($userrec,"|"); // userId from file
+						$idPush = strtok("|"); //lineid from file
 						if (($userdb == $secondstr) || ($idPush == $event['source']['userId'])) $found = true;
 					}
 					
