@@ -408,8 +408,8 @@ if(!is_null($events)){
                             $textReplyMessage = "Bot ตอบกลับคุณเป็นข้อความ";
                             $textMessage = new TextMessageBuilder($textReplyMessage);
                                              
-                            $picFullSize = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower';
-                            $picThumbnail = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower/240';
+                            $picFullSize = 'https://sdr-lineoa-php.herokuapp.com/img/fuji.jpg';
+                            $picThumbnail = 'https://sdr-lineoa-php.herokuapp.com/img/fuji.jpg';
                             $imageMessage = new ImageMessageBuilder($picFullSize,$picThumbnail);
                                              
                             $placeName = "ที่ตั้งร้าน";
