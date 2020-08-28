@@ -34,7 +34,7 @@ if(isset($_GET['file']) && $_GET['file']!=""){
         exit;
     }
     // สร้างตัวแปรอ้างอิง object ตัวจัดการรูปภาพ
-    $manager = new ImageManager();    
+    $manager = new ImageServiceProvider();    
     $img = $manager->make($fullFile);     
     if(isset($_GET['mode']) && $_GET['mode']=='f'){
         if(isset($_GET['width']) && $_GET['width']!="" && isset($_GET['height']) && $_GET['height']!=""){       
