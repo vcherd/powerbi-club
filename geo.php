@@ -22,7 +22,7 @@
                 for( i = 0;i<arr_Destination.length;i++){ 
                     
 
-                    positionInfo = positionInfo + " " + arr_Destination[i].title + " = " + distance(position.coords.latitude,position.coords.longitude,arr_Destination[i].lat,arr_Destination[i].lng,"K");
+                    positionInfo = positionInfo + "<BR>" + arr_Destination[i].title + " = " + distance(position.coords.latitude,position.coords.longitude,arr_Destination[i].lat,arr_Destination[i].lng,"K");
                 }
                 
                 document.getElementById("result").innerHTML = positionInfo;
