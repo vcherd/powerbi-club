@@ -20,17 +20,6 @@
                 var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
                 document.getElementById("result").innerHTML = positionInfo;
 
-                // คำนวนระยะห่าง
-                    for( i = 0;i<arr_Destination.length;i++){    
-                        var htmlTr = '<tr><td>'+arr_Destination[i].title+'</td><td></td></tr>';
-                        //$("#placeData").append(htmlTr);
-    
-                        //posPlace = new GGM.LatLng(arr_Destination[i].lat,arr_Destination[i].lng);     
-                        //destinations.push(posPlace);
-    
-                        
-                    });         
-                }  
             });
 
         } else {
