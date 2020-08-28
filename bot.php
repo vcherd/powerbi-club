@@ -296,8 +296,8 @@ if(!is_null($events)){
                                     new ImageCarouselColumnTemplateBuilder(
                                         'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
                                         new UriTemplateActionBuilder(
-                                            'Uri Template', // ข้อความแสดงในปุ่ม
-                                            'https://www.ninenik.com'
+                                            'Check-in', // ข้อความแสดงในปุ่ม
+                                            'https://sdr-lineoa-php.herokuapp.com/geo.php'
                                         )
                                     ),
                                     new ImageCarouselColumnTemplateBuilder(
