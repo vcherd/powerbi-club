@@ -15,20 +15,12 @@
         }
     }
 
-    function showPositioninmap(position) {
-  var latlon = position.coords.latitude + "," + position.coords.longitude;
-
-  var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=
-  "+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
-
-  document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
-}
 </script>
 </head>
 <body>
     <div id="result">
         <!--Position information will be inserted here-->
     </div>
-    <button type="button" onclick="showPositioninmap();">Show Position</button>
+    <button type="button" onclick="showPosition();">Show Position</button>
 </body>
 </html>
