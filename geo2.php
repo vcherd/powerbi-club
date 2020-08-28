@@ -19,6 +19,7 @@
 </style>  
   
 <br>
+<br>
 <div class="container" style="width:800px;">
  
 <div id="map_canvas"></div>  
@@ -43,15 +44,14 @@
 <script src="//unpkg.com/jquery@3.2.1"></script>
 <script type="text/javascript">
 var arr_Destination = [
-    {id:1,title:'Place A',lat:13.78040,lng:100.58738},
-    {id:2,title:'Place B',lat:13.79157,lng:100.63922},
-    {id:3,title:'Place C',lat:13.81907,lng:100.57674},
-    {id:4,title:'Place D',lat:13.77139,lng:100.66669},
-/*  {title:'Place E',lat:ddddd,lng:ddddd},
+    {title:'Place A',lat:13.78040,lng:100.58738},
+    {title:'Place B',lat:13.79157,lng:100.63922},
+/*  {title:'Place C',lat:ddddd,lng:ddddd},
+    {title:'Place D',lat:ddddd,lng:ddddd},
+    {title:'Place E',lat:ddddd,lng:ddddd},
     {title:'Place F',lat:ddddd,lng:ddddd},*/
 ];
-var sort_arr_Destination = [];
-var iconLetter = ['a','b','c','d'];
+var iconLetter = ['a','b'];
 var place_Marker = [];
 var pos;
 var posPlace;
@@ -83,7 +83,7 @@ function initialize() { // ฟังก์ชันแสดงแผนที�
                   
                 // กำหนด Option ของแผนที่  
                 var myOptions = {  
-                    zoom: 12, // กำหนดขนาดการ zoom  
+                    zoom: 13, // กำหนดขนาดการ zoom  
                     center: pos , // กำหนดจุดกึ่งกลาง  เป็นจุดที่เราอยู่ปัจจุบัน
                     mapTypeId:GGM.MapTypeId.ROADMAP, // กำหนดรูปแบบแผนที่  
                     mapTypeControlOptions:{ // การจัดรูปแบบส่วนควบคุมประเภทแผนที่  
@@ -103,6 +103,9 @@ function initialize() { // ฟังก์ชันแสดงแผนที�
                 });                  
                   
                 for( i = 0;i<arr_Destination.length;i++){    
+                    var htmlTr = '<tr><td>'+arr_Destination[i].title+'</td><td class="place_distance"></td></tr>';
+                    $("#placeData").append(htmlTr);
+ 
                     posPlace = new GGM.LatLng(arr_Destination[i].lat,arr_Destination[i].lng);     
                     destinations.push(posPlace);
  
@@ -161,6 +164,16 @@ function initialize() { // ฟังก์ชันแสดงแผนที�
                 pos = new GGM.LatLng(myPosition_lat,myPosition_lon);     
                  orgins = [];
                  origins.push(pos);    
+                         
+                service.getDistanceMatrix(
+                  {
+                    origins: origins,
+                    destinations: destinations,
+                    travelMode: 'DRIVING',
+                    avoidHighways: true,
+                    avoidTolls: true,
+                  }, callback);                          
+                 
                 // ให้ marker เลื่อนไปอยู่ตำแหน่งปัจจุบัน ตามการอัพเดทของตำแหน่งจาก watchPosition
                 my_Marker.setPosition(pos);
  
@@ -179,26 +192,14 @@ function initialize() { // ฟังก์ชันแสดงแผนที�
   
    
 }  
- 
-function callback(response, status,_) {
+function callback(response, status) {
     if(status=='OK'){       
-//      console.log(arr_Destination);
+        console.log(response.rows);
         $.each(response.rows[0].elements,function(i,elm){
-            arr_Destination[i].distanceText = elm.distance.text;
-            arr_Destination[i].distanceValue = elm.distance.value;
+            console.log(i);
+            console.log(elm);
+            $(".place_distance:eq("+i+")").text(elm.distance.text);
         });
-        sort_arr_Destination = [];
-        sort_arr_Destination = $.extend(true,[], arr_Destination);
-        sort_arr_Destination.sort(function(a, b) {
-            return parseFloat(a.distanceValue) - parseFloat(b.distanceValue);
-        });
-//      console.log(sort_arr_Destination);
-        $("#placeData").html('');
-        $.each(sort_arr_Destination,function(i,dest){
-            var htmlTr = '<tr><td>'+dest.title+'</td><td>'+dest.distanceText+'</td></tr>';
-            $("#placeData").append(htmlTr);         
-    //      console.log(dest);
-        });     
     }
 }
 $(function(){  
