@@ -387,6 +387,26 @@ if(!is_null($events)){
                                 $bot->leaveRoom($sourceId);  
                             }                                                                                         
                         break;
+                    case "m":
+                            $textReplyMessage = "Bot ตอบกลับคุณเป็นข้อความ";
+                            $textMessage = new TextMessageBuilder($textReplyMessage);
+                                             
+                            $picFullSize = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower';
+                            $picThumbnail = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower/240';
+                            $imageMessage = new ImageMessageBuilder($picFullSize,$picThumbnail);
+                                             
+                            $placeName = "ที่ตั้งร้าน";
+                            $placeAddress = "แขวง พลับพลา เขต วังทองหลาง กรุงเทพมหานคร ประเทศไทย";
+                            $latitude = 13.780401863217657;
+                            $longitude = 100.61141967773438;
+                            $locationMessage = new LocationMessageBuilder($placeName, $placeAddress, $latitude ,$longitude);        
+                         
+                            $multiMessage =     new MultiMessageBuilder;
+                            $multiMessage->add($textMessage);
+                            $multiMessage->add($imageMessage);
+                            $multiMessage->add($locationMessage);
+                            $replyData = $multiMessage;                                     
+                        break; 
                     case "a":  // เงื่อนไขกรณีต้องการ เชื่อม Line  account กับ ระบบสมาชิกของเว็บไซต์เรา
                         $response = $httpClient->post("https://api.line.me/v2/bot/user/".urlencode($userId)."/linkToken",array());
                         $result = json_decode($response->getRawBody(),TRUE);
