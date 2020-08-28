@@ -10,7 +10,7 @@ require_once '../../vendor/autoload.php';
 //require_once("dbconnect.php");
  
 // import the Intervention Image Manager Class
-use Intervention\Image\ImageManager;  
+use InterventionImageImageManager;  
  
 if(isset($_GET['file']) && $_GET['file']!=""){
     $picFile = trim($_GET['file']);
@@ -35,72 +35,62 @@ if(isset($_GET['file']) && $_GET['file']!=""){
     // สร้างตัวแปรอ้างอิง object ตัวจัดการรูปภาพ
     $manager = new ImageManager();    
     $img = $manager->make($fullFile);     
-    if(isset($_GET['mode']) && $_GET['mode']=='f'){
-        if(isset($_GET['width']) && $_GET['width']!="" && isset($_GET['height']) && $_GET['height']!=""){       
-            $img->fit($_GET['width'], $_GET['height'], function ($constraint) {
-                $constraint->upsize(); // ถ้าค่าที่กำหนดมากกว่าค่าเดิม ไม่ต้องปรับขนาด
-            });
-        }else{
-            // only width
-            if(isset($_GET['width']) && $_GET['width']!=""){
-                $img->fit($_GET['width']);               
-            }else{ // no width parameter
-                 
-            }
-        }       
-    }
-    if(isset($_GET['mode']) && $_GET['mode']=='c'){
-        if(isset($_GET['width']) && $_GET['width']!="" && isset($_GET['height']) && $_GET['height']!=""){   
-            $img->crop($_GET['width'], $_GET['height']);         
-        }else{
-            // only width
-            if(isset($_GET['width']) && $_GET['width']!=""){
-                $img->crop($_GET['width'], $_GET['width']);              
-            }else{ // no width parameter
-                 
-            }
-        }       
-    }   
-    if(isset($_GET['mode']) && $_GET['mode']=='r'){
-        if(isset($_GET['width']) && $_GET['width']!="" && isset($_GET['height']) && $_GET['height']!=""){   
-            $img->resize($_GET['width'], $_GET['height']);           
-        }else{
-            // only width
-            if(isset($_GET['width']) && $_GET['width']!=""){
-                $img->resize($_GET['width'], null, function ($constraint) {
-                    $constraint->aspectRatio();// ให้คงสัดส่วนของรูปภาพ
+     
+    $width = (isset($_GET['width']) && $_GET['width']!="")?$_GET['width']:NULL;
+    $height = (isset($_GET['height']) && $_GET['height']!="")?$_GET['height']:NULL;
+    $mode = (isset($_GET['mode']) && $_GET['mode']!="")?$_GET['mode']:NULL;
+     
+    if(!is_null($width) && !is_null($height)){
+        switch ($mode) {
+            case 'f':
+                $img->fit($width, $height, function ($constraint) {
+                    $constraint->upsize(); // ถ้าค่าที่กำหนดมากกว่าค่าเดิม ไม่ต้องปรับขนาด
                 }); 
-            }else{ // no width parameter
-                 
-            }
-        }       
-    }       
-    if(isset($_GET['mode']) && $_GET['mode']=='w'){
-        // only width
-        if(isset($_GET['width']) && $_GET['width']!=""){
-            $img->widen($_GET['width'], function ($constraint) {
-                $constraint->upsize(); // ถ้าค่าความกว้างที่กำหนดมากกว่าค่าเดิม ไม่ต้องปรับขนาด
-            });
-        }else{ // no width parameter
-             
+                break;  
+            case 'c':
+                $img->crop($width, $height); 
+                break;  
+            case 'r':
+                $img->resize($width, $height);   
+                break;  
+            case 'w':
+                $img->widen($width, function ($constraint) {
+                    $constraint->upsize(); // ถ้าค่าที่กำหนดมากกว่าค่าเดิม ไม่ต้องปรับขนาด
+                }); 
+                break;          
+            case 'h':
+                $img->heighten($height, function ($constraint) {
+                    $constraint->upsize(); // ถ้าค่าที่กำหนดมากกว่าค่าเดิม ไม่ต้องปรับขนาด
+                }); 
+                break;                                                                  
         }
-    }           
-    if(isset($_GET['mode']) && $_GET['mode']=='h'){
-        if(isset($_GET['width']) && $_GET['width']!="" && isset($_GET['height']) && $_GET['height']!=""){       
-            $img->heighten($_GET['height'], function ($constraint) {
-                $constraint->upsize(); // ถ้าค่าความสูงที่กำหนดมากกว่าค่าเดิม ไม่ต้องปรับขนาด
-            });
-        }else{
-            // only width
-            if(isset($_GET['width']) && $_GET['width']!=""){
-                $img->heighten($_GET['width'], function ($constraint) {
-                    $constraint->upsize(); // ถ้าค่าความสูงที่กำหนดมากกว่าค่าเดิม ไม่ต้องปรับขนาด
-                });             
-            }else{ // no width parameter
-                 
+    }else{
+        if(!is_null($width)){
+            switch ($mode) {
+                case 'f':
+                    $img->fit($width);   
+                    break;  
+                case 'c':
+                    $img->crop($width, $width);  
+                    break;  
+                case 'r':
+                    $img->resize($width, null, function ($constraint) {
+                        $constraint->aspectRatio();// ให้คงสัดส่วนของรูปภาพ
+                    }); 
+                    break;  
+                case 'w':
+                    $img->widen($width, function ($constraint) {
+                        $constraint->upsize(); // ถ้าค่าที่กำหนดมากกว่าค่าเดิม ไม่ต้องปรับขนาด
+                    }); 
+                    break;          
+                case 'h':
+                    $img->heighten($width, function ($constraint) {
+                        $constraint->upsize(); // ถ้าค่าที่กำหนดมากกว่าค่าเดิม ไม่ต้องปรับขนาด
+                    }); 
+                    break;      
             }
         }
-    }   
+    }
      
     // ส่ง HTTP header และข้อมูลของรูปเพื่อนำไปแสดง
     echo $img->response();           
