@@ -11,7 +11,7 @@ require_once '../../vendor/autoload.php';
  
 // import the Intervention Image Manager Class
 //use Intervention\Image\ImageManager;  
-use Intervention\Image\Facades\Image as Image;
+use Intervention\Image\Facades\Image as ImageManager;
  
 if(isset($_GET['file']) && $_GET['file']!=""){
     $picFile = trim($_GET['file']);
