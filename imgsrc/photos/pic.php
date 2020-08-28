@@ -10,7 +10,8 @@ require_once '../../vendor/autoload.php';
 //require_once("dbconnect.php");
  
 // import the Intervention Image Manager Class
-use Intervention\Image\ImageManager;  
+//use Intervention\Image\ImageManager;  
+use Intervention\Image\ImageServiceProvider;  
  
 if(isset($_GET['file']) && $_GET['file']!=""){
     $picFile = trim($_GET['file']);
