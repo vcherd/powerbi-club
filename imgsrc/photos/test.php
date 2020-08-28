@@ -10,7 +10,7 @@ require_once '../../vendor/autoload.php';
 //require_once("dbconnect.php");
  
 // import the Intervention Image Manager Class
-use Intervention\Image\ImageManager; 
+use InterventionImageImageManager; 
 // สร้างตัวแปรอ้างอิง object ตัวจัดการรูปภาพ
 $manager = new ImageManager(); 
 ?> 
