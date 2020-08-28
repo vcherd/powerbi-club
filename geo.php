@@ -18,8 +18,12 @@
         if(navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
                 var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+                
+                for( i = 0;i<arr_Destination.length;i++){ 
+                    positionInfo = positionInfo + " " + arr_Destination[i].title;
+                }
+                
                 document.getElementById("result").innerHTML = positionInfo;
-
             });
 
         } else {
