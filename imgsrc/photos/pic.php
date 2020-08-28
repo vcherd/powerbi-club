@@ -10,8 +10,7 @@ require_once '../../vendor/autoload.php';
 //require_once("dbconnect.php");
  
 // import the Intervention Image Manager Class
-//use Intervention\Image\ImageManager;  
-use Intervention\Image\ImageServiceProvider;  
+use Intervention\Image\ImageManager;  
  
 if(isset($_GET['file']) && $_GET['file']!=""){
     $picFile = trim($_GET['file']);
@@ -34,7 +33,7 @@ if(isset($_GET['file']) && $_GET['file']!=""){
         exit;
     }
     // สร้างตัวแปรอ้างอิง object ตัวจัดการรูปภาพ
-    $manager = new ImageServiceProvider();    
+    $manager = new ImageManager();    
     $img = $manager->make($fullFile);     
     if(isset($_GET['mode']) && $_GET['mode']=='f'){
         if(isset($_GET['width']) && $_GET['width']!="" && isset($_GET['height']) && $_GET['height']!=""){       
