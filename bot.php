@@ -387,6 +387,23 @@ if(!is_null($events)){
                                 $bot->leaveRoom($sourceId);  
                             }                                                                                         
                         break;
+                    case "t_f2":
+                            $replyData = new TemplateMessageBuilder('Confirm Template',
+                                new ConfirmTemplateBuilder(
+                                        'Confirm template builder', // ข้อความแนะนำหรือบอกวิธีการ หรือคำอธิบาย
+                                        array(
+                                            new MessageTemplateActionBuilder(
+                                                'Yes', // ข้อความสำหรับปุ่มแรก
+                                                'YES'  // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                                            ),
+                                            new MessageTemplateActionBuilder(
+                                                'No', // ข้อความสำหรับปุ่มแรก
+                                                'NO' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                                            )
+                                        )
+                                )
+                            );
+                        break;  
                     case "m":
                             $textReplyMessage = "Bot ตอบกลับคุณเป็นข้อความ";
                             $textMessage = new TextMessageBuilder($textReplyMessage);
