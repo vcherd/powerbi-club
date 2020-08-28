@@ -387,7 +387,7 @@ if(!is_null($events)){
                                 $bot->leaveRoom($sourceId);  
                             }                                                                                         
                         break;
-                    case "t_f2":
+                    case "confirm":
                             $replyData = new TemplateMessageBuilder('Confirm Template',
                                 new ConfirmTemplateBuilder(
                                         'Confirm template builder', // ข้อความแนะนำหรือบอกวิธีการ หรือคำอธิบาย
