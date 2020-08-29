@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Get Visitor's Location Using HTML5 Geolocation</title>
+<title>Check-in</title>
 <script>
     function showPosition() {
         
@@ -23,7 +23,9 @@
                     positionInfo = positionInfo + "<BR>" + arr_Destination[i].title + " = " + userdistance;
 
                     if (userdistance <= 0.4) {
-                        positionInfo = positionInfo + " => Check-in";
+                        //positionInfo = positionInfo + " => Check-in";
+                        document.getElementById('userLoc').value = arr_Destination[i].title;
+                        document.getElementById('checkInFM').Submit();
                     }
                 }
                 
@@ -62,5 +64,8 @@ window.onload = function(){
         <!--Position information will be inserted here-->
     </div>
     <!--<button id="autoClickBtn" onclick="showPosition();">Show Position</button>-->
+    <form id="checkInFm" method="POST" action="poi-checkin.php">
+    <input id="userLoc" name="userLoc" type="hidden">
+    </form>
 </body>
 </html>
