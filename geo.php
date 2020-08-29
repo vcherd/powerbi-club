@@ -25,7 +25,7 @@
                     if (userdistance <= 0.4) {
                         //positionInfo = positionInfo + " => Check-in";
                         document.getElementById('userLoc').value = arr_Destination[i].title;
-                        document.getElementById('checkInFM').Submit();
+                        //document.getElementById('checkInFM').Submit();
                     }
                 }
                 
@@ -65,7 +65,7 @@ window.onload = function(){
     </div>
     <!--<button id="autoClickBtn" onclick="showPosition();">Show Position</button>-->
     <form id="checkInFm" method="POST" action="poi-checkin.php">
-    <input id="userLoc" name="userLoc" type="hidden">
+    <input id="userLoc" name="userLoc" type="text">
     </form>
 </body>
 </html>
