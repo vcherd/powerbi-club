@@ -9,6 +9,7 @@
         var arr_Destination = [
             {title:'MTower',lat:13.694827,lng:100.606188},
             {title:'Paragon',lat:13.7477777029,lng:100.534815},
+            {title:'BCP Refinery',lat:13.685400,lng:100.599556},
         /*  {title:'Place C',lat:ddddd,lng:ddddd},
             {title:'Place D',lat:ddddd,lng:ddddd},
             {title:'Place E',lat:ddddd,lng:ddddd},
