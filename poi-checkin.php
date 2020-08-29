@@ -1,3 +1,3 @@
-<?
-echo $userLoc;
+<?php
+echo $_POST["userLoc"];
 ?>
