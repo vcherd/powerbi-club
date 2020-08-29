@@ -52,7 +52,8 @@
 }
 
 window.onload = function(){
-    document.getElementById('autoClickBtn').click();
+    //document.getElementById('autoClickBtn').click();
+    showPosition();
 }
 </script>
 </head>
@@ -60,6 +61,6 @@ window.onload = function(){
     <div id="result">
         <!--Position information will be inserted here-->
     </div>
-    <button id="autoClickBtn" onclick="showPosition();">Show Position</button>
+    <!--<button id="autoClickBtn" onclick="showPosition();">Show Position</button>-->
 </body>
 </html>
