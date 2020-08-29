@@ -7,14 +7,11 @@
     function showPosition() {
         
         var arr_Destination = [
-            {title:'MTower',lat:13.694827,lng:100.606188},
+            {title:'M-Tower',lat:13.694827,lng:100.606188},
             {title:'Paragon',lat:13.7477777029,lng:100.534815},
             {title:'BCP Refinery',lat:13.685400,lng:100.599556},
             {title:'BTS Punnawithi',lat:13.689278,lng:100.608922},
-        /*  {title:'Place C',lat:ddddd,lng:ddddd},
-            {title:'Place D',lat:ddddd,lng:ddddd},
-            {title:'Place E',lat:ddddd,lng:ddddd},
-            {title:'Place F',lat:ddddd,lng:ddddd},*/
+        
         ];
 
         if(navigator.geolocation) {
@@ -54,12 +51,15 @@
     return dist
 }
 
+window.onload = function(){
+    document.getElementById('autoClickBtn').click();
+}
 </script>
 </head>
 <body>
     <div id="result">
         <!--Position information will be inserted here-->
     </div>
-    <button type="button" onclick="showPosition();">Show Position</button>
+    <button id="autoClickBtn" onclick="showPosition();">Show Position</button>
 </body>
 </html>
