@@ -10,6 +10,7 @@
             {title:'MTower',lat:13.694827,lng:100.606188},
             {title:'Paragon',lat:13.7477777029,lng:100.534815},
             {title:'BCP Refinery',lat:13.685400,lng:100.599556},
+            {title:'BTS Punnawithi',lat:13.689278,lng:100.608922},
         /*  {title:'Place C',lat:ddddd,lng:ddddd},
             {title:'Place D',lat:ddddd,lng:ddddd},
             {title:'Place E',lat:ddddd,lng:ddddd},
