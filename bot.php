@@ -252,11 +252,11 @@ if(!is_null($events)){
                                 'This is Text' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                             ),
                             new UriTemplateActionBuilder(
-                                'Uri Template', // ข้อความแสดงในปุ่ม
-                                'https://www.ninenik.com'
+                                'Check-in', // ข้อความแสดงในปุ่ม
+                                'https://sdr-lineoa-php.herokuapp.com/geo.php'
                             ),
                             new PostbackTemplateActionBuilder(
-                                'Postback', // ข้อความแสดงในปุ่ม
+                                'สถิติ Check-in ของคุณ', // ข้อความแสดงในปุ่ม
                                 http_build_query(array(
                                     'action'=>'buy',
                                     'item'=>100
