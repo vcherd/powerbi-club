@@ -31,7 +31,7 @@ $userID = $content['userID'];
                     if (userdistance <= 0.4) {
                         //positionInfo = positionInfo + " => Check-in";
                         document.getElementById('userLoc').value = arr_Destination[i].title;
-                        document.getElementById('SubmitBtn').click();
+                        //document.getElementById('SubmitBtn').click();
                     }
                 }
                 
