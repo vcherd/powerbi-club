@@ -25,7 +25,7 @@
                     if (userdistance <= 0.4) {
                         //positionInfo = positionInfo + " => Check-in";
                         document.getElementById('userLoc').value = arr_Destination[i].title;
-                        document.getElementById('checkInFM').Submit;
+                        document.getElementById('checkInFM').Submit();
                     }
                 }
                 
