@@ -118,7 +118,7 @@ if(!is_null($events)){
                         break;
                     case "v":
                         $picThumbnail = 'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/240';
-                        $videoUrl = "https://www.ninenik.com/line/simplevideo.mp4";             
+                        $videoUrl = "https://youtu.be/4oP_Cybp_gU";             
                         $replyData = new VideoMessageBuilder($videoUrl,$picThumbnail);
                         break;
                     case "a":
