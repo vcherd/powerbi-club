@@ -294,7 +294,7 @@ if(!is_null($events)){
                             new ImageCarouselTemplateBuilder(
                                 array(
                                     new ImageCarouselColumnTemplateBuilder(
-                                        'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/fuji.jpg',
                                         new UriTemplateActionBuilder(
                                             'Check-in', // ข้อความแสดงในปุ่ม
                                             'https://sdr-lineoa-php.herokuapp.com/geo.php'
