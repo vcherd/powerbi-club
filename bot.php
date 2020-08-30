@@ -301,12 +301,19 @@ if(!is_null($events)){
                                         )
                                     ),
                                     new ImageCarouselColumnTemplateBuilder(
-                                        'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c2.png',
                                         new UriTemplateActionBuilder(
-                                            'Uri Template', // ข้อความแสดงในปุ่ม
-                                            'https://www.ninenik.com'
+                                            'Bangchak Website', // ข้อความแสดงในปุ่ม
+                                            'https://www.bangchak.co.th'
                                         )
-                                    )                                       
+                                    ),
+                                    new ImageCarouselColumnTemplateBuilder(
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c3.png',
+                                        new UriTemplateActionBuilder(
+                                            'Check-in', // ข้อความแสดงในปุ่ม
+                                            'https://sdr-lineoa-php.herokuapp.com/geo.php'
+                                        )
+                                    )                                    
                                 )
                             )
                         );
