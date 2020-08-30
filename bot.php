@@ -261,7 +261,7 @@ if(!is_null($events)){
                             ),
                             new UriTemplateActionBuilder(
                                 'Check-in', // ข้อความแสดงในปุ่ม
-                                'https://sdr-lineoa-php.herokuapp.com/geo.php'
+                                'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID
                             ),
                             new MessageTemplateActionBuilder(
                                 'สถิติ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
