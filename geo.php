@@ -66,7 +66,7 @@ window.onload = function(){
     <!--<button id="autoClickBtn" onclick="showPosition();">Show Position</button>-->
     <form id="checkInFm" method="POST" action="poi-checkin.php">
     <input id="userLoc" name="userLoc" type="text">
-    <button id="SubmitBtn" type="submit">
+    <button id="SubmitBtn" type="submit">Submit</button>
     </form>
 </body>
 </html>
