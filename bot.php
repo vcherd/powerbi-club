@@ -108,7 +108,10 @@ if(!is_null($events)){
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
                         */
-                        $textReplyMessage = "สวัสดีครับ คุณ ".$userData['displayName']; // $userID;
+                        $userProfile = $bot->getProfile($userID);
+                        $userData = $userProfile->getJSONDecodedBody(); // return array 
+
+                        $textReplyMessage = "สวัสดีครับ คุณ " . $userData['displayName']; // $userID;
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
                     case "i":
