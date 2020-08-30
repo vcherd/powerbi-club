@@ -108,7 +108,7 @@ if(!is_null($events)){
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
                         */
-                        $textReplyMessage = "สวัสดีครับ คุณ ";
+                        $textReplyMessage = "สวัสดีครับ คุณ ". $userID;
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
                     case "i":
