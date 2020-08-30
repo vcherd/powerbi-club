@@ -268,21 +268,21 @@ if(!is_null($events)){
                             new CarouselTemplateBuilder(
                                 array(
                                     new CarouselColumnTemplateBuilder(
-                                        'Title Carousel',
-                                        'Description Carousel',
-                                        'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                        'Check-in',
+                                        'มาเช็คอินกับปั๊มรอบตัวคุณกันเถอะ',
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.png',
                                         $actionBuilder
                                     ),
                                     new CarouselColumnTemplateBuilder(
                                         'Title Carousel',
                                         'Description Carousel',
-                                        'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c2.png',
                                         $actionBuilder
                                     ),
                                     new CarouselColumnTemplateBuilder(
                                         'Title Carousel',
                                         'Description Carousel',
-                                        'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c3.png',
                                         $actionBuilder
                                     ),                                          
                                 )
