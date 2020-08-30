@@ -255,6 +255,10 @@ if(!is_null($events)){
                                 'Check-in', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/geo.php'
                             ),
+                            new MessageTemplateActionBuilder(
+                                'สถิติ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
+                                'ShowMyStat' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                            ),/*
                             new PostbackTemplateActionBuilder(
                                 'สถิติ Check-in ของคุณ', // ข้อความแสดงในปุ่ม
                                 http_build_query(array(
@@ -263,6 +267,7 @@ if(!is_null($events)){
                                 )), // ข้อมูลที่จะส่งไปใน webhook ผ่าน postback event
                                 'Postback Text'  // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                             ),      
+                            */
                         );
                         $replyData = new TemplateMessageBuilder('Carousel',
                             new CarouselTemplateBuilder(
