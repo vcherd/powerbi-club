@@ -103,12 +103,14 @@ if(!is_null($events)){
                 $userMessage = strtolower($userMessage); // แปลงเป็นตัวเล็ก สำหรับทดสอบ
                 switch ($userMessage) {
                     case "t":
-                        
+                        /*
                         $textReplyMessage = "Bot ตอบกลับคุณเป็นข้อความ";
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
-                        
-                        
+                        */
+                        $textReplyMessage = "สวัสดีครับ คุณ ";
+                        $replyData = new TextMessageBuilder($textReplyMessage);
+                        break;
                     case "i":
                         $picFullSize = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower';
                         $picThumbnail = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower/240';
