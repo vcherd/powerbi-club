@@ -303,8 +303,15 @@ if(!is_null($events)){
                                     new ImageCarouselColumnTemplateBuilder(
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c2.png',
                                         new UriTemplateActionBuilder(
+                                            'Check-in Again', // ข้อความแสดงในปุ่ม
+                                            'https://sdr-lineoa-php.herokuapp.com/geo.php'
+                                        )
+                                    ),
+                                    new ImageCarouselColumnTemplateBuilder(
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c3.png',
+                                        new UriTemplateActionBuilder(
                                             'Uri Template', // ข้อความแสดงในปุ่ม
-                                            'https://www.ninenik.com'
+                                            'https://www.bangchak.co.th'
                                         )
                                     )                                       
                                 )
