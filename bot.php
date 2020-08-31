@@ -266,7 +266,7 @@ if(!is_null($events)){
                             ),
                             new MessageTemplateActionBuilder(
                                 'สถิติ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
-                                'ShowMyStat' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                                'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID
                             ),/*
                             new PostbackTemplateActionBuilder(
                                 'สถิติ Check-in ของคุณ', // ข้อความแสดงในปุ่ม
