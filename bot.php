@@ -282,8 +282,8 @@ if(!is_null($events)){
                             new CarouselTemplateBuilder(
                                 array(
                                     new CarouselColumnTemplateBuilder(
-                                        'Check-in',
-                                        'มาเช็คอินกับปั๊มรอบตัวคุณกันเถอะ',
+                                        'Check-in ฟินรับทอง',
+                                        'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.png',
                                         $actionBuilder
                                     ),
