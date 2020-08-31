@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +26,7 @@
                     var userdistance = distance(position.coords.latitude,position.coords.longitude,arr_Destination[i].lat,arr_Destination[i].lng,"K");
                     positionInfo = positionInfo + "<BR>" + arr_Destination[i].title + " = " + userdistance;
 
-                    if (userdistance <= 0.4) {
+                    if (userdistance <= <?php echo POI_CHECK_IN_DISTANCE; ?>) {
                         //positionInfo = positionInfo + " => Check-in";
                         document.getElementById('userLoc').value = arr_Destination[i].title;
                         document.getElementById('SubmitBtn').click();
