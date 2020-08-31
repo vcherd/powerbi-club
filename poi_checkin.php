@@ -8,6 +8,6 @@ fclose($checkinfile);
 
 //echo $_POST["userLoc"] . "<BR>" . $_POST["userID"];
 $myfile = fopen(FILE_CHECK_IN_FULLPATH, "r") or die("Unable to open file!");
-echo fread($myfile,filesize(FILE_CHECK_IN_FULLPATH));
+echo str_replace("\n","<BR>",fread($myfile,filesize(FILE_CHECK_IN_FULLPATH)));
 fclose($myfile);
 ?>
