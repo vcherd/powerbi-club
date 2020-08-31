@@ -310,7 +310,7 @@ if(!is_null($events)){
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.png',
                                         new UriTemplateActionBuilder(
                                             'Check-in', // ข้อความแสดงในปุ่ม
-                                            'https://sdr-lineoa-php.herokuapp.com/geo.php'
+                                            'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID
                                         )
                                     ),
                                     new ImageCarouselColumnTemplateBuilder(
