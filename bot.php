@@ -265,7 +265,7 @@ if(!is_null($events)){
                                 'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID
                             ),new MessageTemplateActionBuilder(
                                 'Upload รูป',// ข้อความแสดงในปุ่ม
-                                'Upload รูป' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                                'กรุณาเลือกรูปที่ต้องการและกดส่ง' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                             ),/*
                             new MessageTemplateActionBuilder(
                                 'Message Template',// ข้อความแสดงในปุ่ม
