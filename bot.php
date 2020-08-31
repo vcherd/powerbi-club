@@ -9,6 +9,7 @@ require_once 'vendor/autoload.php';
  
 // การตั้งเกี่ยวกับ bot
 require_once 'config/bot_settings.php';
+require_once 'config/config.php';
  
 // กรณีมีการเชื่อมต่อกับฐานข้อมูล
 //require_once("dbconnect.php");
