@@ -256,10 +256,6 @@ if(!is_null($events)){
                     case "t_c":
                         // กำหนด action 4 ปุ่ม 4 ประเภท
                         $actionBuilder = array(
-                            new MessageTemplateActionBuilder(
-                                'Message Template',// ข้อความแสดงในปุ่ม
-                                'This is Text' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
-                            ),
                             new UriTemplateActionBuilder(
                                 'Check-in', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID
@@ -267,7 +263,14 @@ if(!is_null($events)){
                             new UriTemplateActionBuilder(
                                 'สถิติ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID
+                            ),new MessageTemplateActionBuilder(
+                                'Upload รูป',// ข้อความแสดงในปุ่ม
+                                'Upload รูป' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                             ),/*
+                            new MessageTemplateActionBuilder(
+                                'Message Template',// ข้อความแสดงในปุ่ม
+                                'This is Text' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                            ),
                             new PostbackTemplateActionBuilder(
                                 'สถิติ Check-in ของคุณ', // ข้อความแสดงในปุ่ม
                                 http_build_query(array(
