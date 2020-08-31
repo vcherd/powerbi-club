@@ -6,5 +6,8 @@ $txt = $_POST["userID"] . "\t" . $_POST["userLoc"];
 fwrite($checkinfile, $txt);
 fclose($checkinfile);
 
-echo $_POST["userLoc"] . "<BR>" . $_POST["userID"];
+//echo $_POST["userLoc"] . "<BR>" . $_POST["userID"];
+$myfile = fopen(FILE_CHECK_IN_FULLPATH, "r") or die("Unable to open file!");
+echo fread($myfile,filesize(FILE_CHECK_IN_FULLPATH));
+fclose($myfile);
 ?>
