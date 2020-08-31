@@ -11,6 +11,7 @@
             {title:'Paragon',lat:13.7477777029,lng:100.534815},
             {title:'BCP Refinery',lat:13.685400,lng:100.599556},
             {title:'BTS Punnawithi',lat:13.689278,lng:100.608922},
+            {title:'101 The 3rd Place',lat:13.686075,lng:100.611486},
         
         ];
 
