@@ -64,7 +64,7 @@ window.onload = function(){
         <!--Position information will be inserted here-->
     </div>
     <!--<button id="autoClickBtn" onclick="showPosition();">Show Position</button>-->
-    <form id="checkInFm" method="POST" action="poi-checkin.php">
+    <form id="checkInFm" method="POST" action="poi_checkin.php">
     <input id="userLoc" name="userLoc" type="hidden">
     <input id="userID" name="userID" type="hidden" value="<?php echo $_GET["userID"];?>">
     <button id="SubmitBtn" type="submit">Submit</button>
