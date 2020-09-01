@@ -334,7 +334,8 @@ if(!is_null($events)){
                         break;                                      
                 }
                 break;
-            case (preg_match('/image|audio|video/',$typeMessage) ? true : false) :
+            /*
+                case (preg_match('/image|audio|video/',$typeMessage) ? true : false) :
                     $response = $bot->getMessageContent($idMessage);
                     if ($response->isSucceeded()) {
                         // คำสั่ง getRawBody() ในกรณีนี้ จะได้ข้อมูลส่งกลับมาเป็น binary 
@@ -372,6 +373,7 @@ if(!is_null($events)){
                     $failMessage = json_encode($idMessage.' '.$response->getHTTPStatus() . ' ' . $response->getRawBody());
                     $replyData = new TextMessageBuilder($failMessage);  
                     break;  
+                */
             default:
                 $textReplyMessage = json_encode($events);
                 $replyData = new TextMessageBuilder($textReplyMessage);         
