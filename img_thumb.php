@@ -1,6 +1,11 @@
 <?php
 require_once 'config/config.php';
 
+$imgfolder = USER_IMAGE_FOLDER . '/' . $_GET["userID"] . '/';
+$thumbfolder = $imgfolder . USER_IMAGE_THUMBNAIL_SUBFOLDER . '/';
+
+echo $imgfolder; 
+/*
 
 function createThumbs( $pathToImages, $pathToThumbs, $thumbWidth ) 
 {
@@ -43,11 +48,8 @@ function createThumbs( $pathToImages, $pathToThumbs, $thumbWidth )
 // in which thumbnails will be placed and the thumbnail's width. 
 // We are assuming that the path will be a relative path working 
 // both in the filesystem, and through the web for links
-$imgfolder = USER_IMAGE_FOLDER . '/' . $_GET["userID"] . '/';
-$thumbfolder = $imgfolder . USER_IMAGE_THUMBNAIL_SUBFOLDER . '/'
 
-echo $imgfolder; 
-/*
+
 
 if(!file_exists($imgfolder)) { // ตรวจสอบถ้ายังไม่มีให้สร้างโฟลเดอร์ userId
     mkdir($imgfolder, 0777, true);
