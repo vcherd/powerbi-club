@@ -292,7 +292,8 @@ if(!is_null($events)){
                             new UriTemplateActionBuilder(
                                 'สถิติ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID
-                            ),new MessageTemplateActionBuilder(
+                            ),
+                            new MessageTemplateActionBuilder(
                                 'Upload รูป',// ข้อความแสดงในปุ่ม
                                 'UploadImage' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                             ),
