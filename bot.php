@@ -115,6 +115,10 @@ if(!is_null($events)){
                         $textReplyMessage = "สวัสดีครับ คุณ " . $userData['displayName']; // $userID;
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
+                    case "UploadImage":
+                            $textReplyMessage = "กรุณาเลือกรูปที่ต้องการ\n\nเงื่อนไข: ผู้ร่วมกิจกรรมต้องถ่ายรูปตัวเองกับปั๊มที่เช็กอิน และอัพโหลดรูปเข้าระบบ การเช็กอินจึงจะสมบูรณ์";
+                            $replyData = new TextMessageBuilder($textReplyMessage);
+                            break;
                     case "i":
                         $picFullSize = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower';
                         $picThumbnail = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower/240';
@@ -265,7 +269,7 @@ if(!is_null($events)){
                                 'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID
                             ),new MessageTemplateActionBuilder(
                                 'Upload รูป',// ข้อความแสดงในปุ่ม
-                                'กรุณาเลือกรูปที่ต้องการและกดส่ง' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                                'UploadImage' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                             ),/*
                             new MessageTemplateActionBuilder(
                                 'Message Template',// ข้อความแสดงในปุ่ม
