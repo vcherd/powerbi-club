@@ -3,7 +3,7 @@ require_once 'config/config.php';
 
 //$myfile = fopen(FILE_CHECK_IN_FULLPATH, "r") or die("Unable to open file!");
 //echo str_replace("\n","<BR>",fread($myfile,filesize(FILE_CHECK_IN_FULLPATH)));
-echo "userid = " . $_GET["userID"];
+//echo "userid = " . $_GET["userID"];
 if ($file = fopen(FILE_CHECK_IN_FULLPATH, "r")) {
     while(!feof($file)) {
         $line = fgets($file);
