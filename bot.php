@@ -49,43 +49,6 @@ use LINE\LINEBot\MessageBuilder\TemplateBuilder\ConfirmTemplateBuilder;
 use LINE\LINEBot\MessageBuilder\TemplateBuilder\ImageCarouselTemplateBuilder;
 use LINE\LINEBot\MessageBuilder\TemplateBuilder\ImageCarouselColumnTemplateBuilder;
 
-use LINE\LINEBot\QuickReplyBuilder;
-use LINE\LINEBot\QuickReplyBuilder\QuickReplyMessageBuilder;
-use LINE\LINEBot\QuickReplyBuilder\ButtonBuilder\QuickReplyButtonBuilder;
-use LINE\LINEBot\TemplateActionBuilder\CameraRollTemplateActionBuilder;
-use LINE\LINEBot\TemplateActionBuilder\CameraTemplateActionBuilder;
-use LINE\LINEBot\TemplateActionBuilder\LocationTemplateActionBuilder;
-use LINE\LINEBot\RichMenuBuilder;
-use LINE\LINEBot\RichMenuBuilder\RichMenuSizeBuilder;
-use LINE\LINEBot\RichMenuBuilder\RichMenuAreaBuilder;
-use LINE\LINEBot\RichMenuBuilder\RichMenuAreaBoundsBuilder;
-
-use LINE\LINEBot\Constant\Flex\ComponentIconSize;
-use LINE\LINEBot\Constant\Flex\ComponentImageSize;
-use LINE\LINEBot\Constant\Flex\ComponentImageAspectRatio;
-use LINE\LINEBot\Constant\Flex\ComponentImageAspectMode;
-use LINE\LINEBot\Constant\Flex\ComponentFontSize;
-use LINE\LINEBot\Constant\Flex\ComponentFontWeight;
-use LINE\LINEBot\Constant\Flex\ComponentMargin;
-use LINE\LINEBot\Constant\Flex\ComponentSpacing;
-use LINE\LINEBot\Constant\Flex\ComponentButtonStyle;
-use LINE\LINEBot\Constant\Flex\ComponentButtonHeight;
-use LINE\LINEBot\Constant\Flex\ComponentSpaceSize;
-use LINE\LINEBot\Constant\Flex\ComponentGravity;
-use LINE\LINEBot\MessageBuilder\FlexMessageBuilder;
-use LINE\LINEBot\MessageBuilder\Flex\BubbleStylesBuilder;
-use LINE\LINEBot\MessageBuilder\Flex\BlockStyleBuilder;
-use LINE\LINEBot\MessageBuilder\Flex\ContainerBuilder\BubbleContainerBuilder;
-use LINE\LINEBot\MessageBuilder\Flex\ContainerBuilder\CarouselContainerBuilder;
-use LINE\LINEBot\MessageBuilder\Flex\ComponentBuilder\BoxComponentBuilder;
-use LINE\LINEBot\MessageBuilder\Flex\ComponentBuilder\ButtonComponentBuilder;
-use LINE\LINEBot\MessageBuilder\Flex\ComponentBuilder\IconComponentBuilder;
-use LINE\LINEBot\MessageBuilder\Flex\ComponentBuilder\ImageComponentBuilder;
-use LINE\LINEBot\MessageBuilder\Flex\ComponentBuilder\SpacerComponentBuilder;
-use LINE\LINEBot\MessageBuilder\Flex\ComponentBuilder\FillerComponentBuilder;
-use LINE\LINEBot\MessageBuilder\Flex\ComponentBuilder\SeparatorComponentBuilder;
-use LINE\LINEBot\MessageBuilder\Flex\ComponentBuilder\TextComponentBuilder;
- 
 $httpClient = new CurlHTTPClient(LINE_MESSAGE_ACCESS_TOKEN);
 $bot = new LINEBot($httpClient, array('channelSecret' => LINE_MESSAGE_CHANNEL_SECRET));
  
@@ -367,49 +330,7 @@ if(!is_null($events)){
                                 )
                             )
                         );
-                        break;  
-                    case "qr":
-                            $postback = new PostbackTemplateActionBuilder(
-                                'Postback', // ข้อความแสดงในปุ่ม
-                                http_build_query(array(
-                                    'action'=>'buy',
-                                    'item'=>100
-                                )), // ข้อมูลที่จะส่งไปใน webhook ผ่าน postback event
-                                 'Buy'  // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
-                            );
-                            $txtMsg = new MessageTemplateActionBuilder(
- 
-                                'ข้อความภาษาไทย',// ข้อความแสดงในปุ่ม
-                                'thai' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
-                            );
-                            $datetimePicker = new DatetimePickerTemplateActionBuilder(
-                                'Datetime Picker', // ข้อความแสดงในปุ่ม
-                                http_build_query(array(
-                                    'action'=>'reservation',
-                                    'person'=>5
-                                )), // ข้อมูลที่จะส่งไปใน webhook ผ่าน postback event
-                                'datetime', // date | time | datetime รูปแบบข้อมูลที่จะส่ง ในที่นี้ใช้ datatime
-                                substr_replace(date("Y-m-d H:i"),'T',10,1), // วันที่ เวลา ค่าเริ่มต้นที่ถูกเลือก
-                                substr_replace(date("Y-m-d H:i",strtotime("+5 day")),'T',10,1), //วันที่ เวลา มากสุดที่เลือกได้
-                                substr_replace(date("Y-m-d H:i"),'T',10,1) //วันที่ เวลา น้อยสุดที่เลือกได้
-                            );
-                             
-                            $quickReply = new QuickReplyMessageBuilder(
-                                array(
-                                    new QuickReplyButtonBuilder(new LocationTemplateActionBuilder('เลือกตำแหน่ง')),
-                                    new QuickReplyButtonBuilder(new CameraTemplateActionBuilder('ถ่ายรูป')),
-                                    new QuickReplyButtonBuilder(new CameraRollTemplateActionBuilder('เลือกรูปภาพ')),
-                                    new QuickReplyButtonBuilder($postback),
-                                    new QuickReplyButtonBuilder($datetimePicker),
-                                    new QuickReplyButtonBuilder(
-                                        $txtMsg,
-                                        "https://www.ninenik.com/images/ninenik_page_logo.png"
-                                    ),
-                                )
-                            );
-                            $textReplyMessage = "ส่งพร้อม quick reply ";
-                            $replyData = new TextMessageBuilder($textReplyMessage,$quickReply);                             
-                            break;                                                                         
+                        break;                                                                      
                     default:
                         $textReplyMessage = " คุณไม่ได้พิมพ์ ค่า ตามที่กำหนด";
                         $replyData = new TextMessageBuilder($textReplyMessage);         
