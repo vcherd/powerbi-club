@@ -10,8 +10,8 @@ if ($file = fopen(FILE_CHECK_IN_FULLPATH, "r")) {
         $checkindatetime = strtok($line,"|");
         $uid_fromfile = strtok("|");
         $loc = strtok("|");
-
-        if ($uid_fromfile == $_GET["userID"]) echo $checkindatetime . " at " . $loc . "<BR>";
+        echo $line . "<BR>";
+        //if ($uid_fromfile == $_GET["userID"]) echo $checkindatetime . " at " . $loc . "<BR>";
     }
     fclose($file);
 }
