@@ -115,7 +115,7 @@ if(!is_null($events)){
                         $textReplyMessage = "สวัสดีครับ คุณ " . $userData['displayName']; // $userID;
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
-                    case "UploadImage":
+                    case "uploadimage":
                             $textReplyMessage = "กรุณาเลือกรูปที่ต้องการ\n\nเงื่อนไข: ผู้ร่วมกิจกรรมต้องถ่ายรูปตัวเองกับปั๊มที่เช็กอิน และอัพโหลดรูปเข้าระบบ การเช็กอินจึงจะสมบูรณ์";
                             $replyData = new TextMessageBuilder($textReplyMessage);
                             break;
