@@ -46,7 +46,8 @@ function createThumbs( $pathToImages, $pathToThumbs, $thumbWidth )
 $imgfolder = USER_IMAGE_FOLDER . '/' . $_GET["userID"] . '/';
 $thumbfolder = $imgfolder . USER_IMAGE_THUMBNAIL_SUBFOLDER . '/'
 
-echo $imgfolder;
+echo $imgfolder; 
+/*
 
 if(!file_exists($imgfolder)) { // ตรวจสอบถ้ายังไม่มีให้สร้างโฟลเดอร์ userId
     mkdir($imgfolder, 0777, true);
