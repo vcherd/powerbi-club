@@ -264,7 +264,7 @@ if(!is_null($events)){
                                 'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID
                             ),
                             new UriTemplateActionBuilder(
-                                'สถิติ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
+                                'ดูประวัติการ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID
                             ),new MessageTemplateActionBuilder(
                                 'Upload รูป',// ข้อความแสดงในปุ่ม
