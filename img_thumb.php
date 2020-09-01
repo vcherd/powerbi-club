@@ -4,9 +4,6 @@ require_once 'config/config.php';
 $imgfolder = USER_IMAGE_FOLDER . '/' . $_GET["userID"] . '/';
 $thumbfolder = $imgfolder . USER_IMAGE_THUMBNAIL_SUBFOLDER . '/';
 
-echo $thumbfolder; 
-/*
-
 function createThumbs( $pathToImages, $pathToThumbs, $thumbWidth ) 
 {
   // open the directory
@@ -58,6 +55,7 @@ if(!file_exists($thumbfolder)) { // ตรวจสอบถ้ายังไ�
     mkdir($thumbfolder, 0777, true);
 }
 
-//createThumbs($imgfolder, $thumbfolder . '/',100);
-*/
+createThumbs($imgfolder, $thumbfolder . '/',100);
+
+echo "success";
 ?>
