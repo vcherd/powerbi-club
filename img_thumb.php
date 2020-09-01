@@ -4,6 +4,9 @@ require_once 'config/config.php';
 $imgfolder = USER_IMAGE_FOLDER . '/' . $_GET["userID"] . '/';
 $thumbfolder = $imgfolder . USER_IMAGE_THUMBNAIL_SUBFOLDER . '/';
 
+echo "source: " . $imgfolder . "<BR>";
+echo "dest: " . &thumbfolder . "<BR>";
+
 function createThumbs( $pathToImages, $pathToThumbs, $thumbWidth ) 
 {
 // Turn off all error reporting
