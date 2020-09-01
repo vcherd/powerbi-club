@@ -350,15 +350,15 @@ if(!is_null($events)){
                             case (preg_match('/^image/',$fileType) ? true : false):
                                 list($typeFile,$ext) = explode("/",$fileType);
                                 $ext = ($ext=='jpeg' || $ext=='jpg')?"jpg":$ext;
-                                $fileNameSave = time().".".$ext;
+                                $fileNameSave = "img_" . date('Ymd_his').".".$ext;
                                 break;
                             case (preg_match('/^audio/',$fileType) ? true : false):
                                 list($typeFile,$ext) = explode("/",$fileType);
-                                $fileNameSave = time().".".$ext;                        
+                                $fileNameSave = "audio_" . date('Ymd_his').".".$ext;                        
                                 break;
                             case (preg_match('/^video/',$fileType) ? true : false):
                                 list($typeFile,$ext) = explode("/",$fileType);
-                                $fileNameSave = time().".".$ext;                                
+                                $fileNameSave = "vdo_" . date('Ymd_his').".".$ext;                             
                                 break;                                                      
                         }
                         $botDataFolder = USER_IMAGE_FOLDER . '/'; // โฟลเดอร์หลักที่จะบันทึกไฟล์
