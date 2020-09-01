@@ -19,6 +19,8 @@ require_once 'config/config.php';
         
         ];
 
+        found = false;
+
         if(navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
                 var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
@@ -29,11 +31,15 @@ require_once 'config/config.php';
 
                     if (userdistance <= <?php echo POI_CHECK_IN_DISTANCE; ?>) {
                         //positionInfo = positionInfo + " => Check-in";
+                        found = true;
                         document.getElementById('userLoc').value = arr_Destination[i].title;
                         document.checkInFm.submit();
                     }
                 }
                 
+                if (found == false) {
+                    positionInfo = positionInfo + "<BR>No nearby service station around you. Please get closer, thank you."
+                }
                 document.getElementById("result").innerHTML = positionInfo;
             });
 
