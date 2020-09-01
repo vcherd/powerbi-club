@@ -30,7 +30,7 @@ require_once 'config/config.php';
                     if (userdistance <= <?php echo POI_CHECK_IN_DISTANCE; ?>) {
                         //positionInfo = positionInfo + " => Check-in";
                         document.getElementById('userLoc').value = arr_Destination[i].title;
-                        document.getElementById('SubmitBtn').click();
+                        document.checkInFm.submit();
                     }
                 }
                 
@@ -69,7 +69,7 @@ window.onload = function(){
         <!--Position information will be inserted here-->
     </div>
     <!--<button id="autoClickBtn" onclick="showPosition();">Show Position</button>-->
-    <form id="checkInFm" method="POST" action="poi_checkin.php">
+    <form id="checkInFm" name="checkInFm" method="POST" action="poi_checkin.php">
     <input id="userLoc" name="userLoc" type="hidden">
     <input id="userID" name="userID" type="hidden" value="<?php echo $_GET["userID"];?>">
     <button id="SubmitBtn" type="submit">Submit</button>
