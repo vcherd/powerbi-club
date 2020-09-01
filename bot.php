@@ -368,22 +368,48 @@ if(!is_null($events)){
                             )
                         );
                         break;  
-                    case "fl":                                                                                                                                                                                                    
-                        $textReplyMessage = new BubbleContainerBuilder(
-                            "ltr",  // กำหนด NULL หรือ "ltr" หรือ "rtl"
-                            NULL,NULL,
-                            new BoxComponentBuilder(
-                                "horizontal",
+                    case "qr":
+                            $postback = new PostbackTemplateActionBuilder(
+                                'Postback', // ข้อความแสดงในปุ่ม
+                                http_build_query(array(
+                                    'action'=>'buy',
+                                    'item'=>100
+                                )), // ข้อมูลที่จะส่งไปใน webhook ผ่าน postback event
+                                 'Buy'  // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                            );
+                            $txtMsg = new MessageTemplateActionBuilder(
+ 
+                                'ข้อความภาษาไทย',// ข้อความแสดงในปุ่ม
+                                'thai' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                            );
+                            $datetimePicker = new DatetimePickerTemplateActionBuilder(
+                                'Datetime Picker', // ข้อความแสดงในปุ่ม
+                                http_build_query(array(
+                                    'action'=>'reservation',
+                                    'person'=>5
+                                )), // ข้อมูลที่จะส่งไปใน webhook ผ่าน postback event
+                                'datetime', // date | time | datetime รูปแบบข้อมูลที่จะส่ง ในที่นี้ใช้ datatime
+                                substr_replace(date("Y-m-d H:i"),'T',10,1), // วันที่ เวลา ค่าเริ่มต้นที่ถูกเลือก
+                                substr_replace(date("Y-m-d H:i",strtotime("+5 day")),'T',10,1), //วันที่ เวลา มากสุดที่เลือกได้
+                                substr_replace(date("Y-m-d H:i"),'T',10,1) //วันที่ เวลา น้อยสุดที่เลือกได้
+                            );
+                             
+                            $quickReply = new QuickReplyMessageBuilder(
                                 array(
-                                    new ImageComponentBuilder("https://www.ninenik.com/images/ninenik_page_logo.png"),
-                                    new FillerComponentBuilder(),
-                                    new ImageComponentBuilder("https://www.ninenik.com/images/ninenik_page_logo.png")                                                                                                           
+                                    new QuickReplyButtonBuilder(new LocationTemplateActionBuilder('เลือกตำแหน่ง')),
+                                    new QuickReplyButtonBuilder(new CameraTemplateActionBuilder('ถ่ายรูป')),
+                                    new QuickReplyButtonBuilder(new CameraRollTemplateActionBuilder('เลือกรูปภาพ')),
+                                    new QuickReplyButtonBuilder($postback),
+                                    new QuickReplyButtonBuilder($datetimePicker),
+                                    new QuickReplyButtonBuilder(
+                                        $txtMsg,
+                                        "https://www.ninenik.com/images/ninenik_page_logo.png"
+                                    ),
                                 )
-                            )
-                        );      
-                 
-                        $replyData = new FlexMessageBuilder("Flex",$textReplyMessage);     
-                        break;
+                            );
+                            $textReplyMessage = "ส่งพร้อม quick reply ";
+                            $replyData = new TextMessageBuilder($textReplyMessage,$quickReply);                             
+                            break;                                                                         
                     default:
                         $textReplyMessage = " คุณไม่ได้พิมพ์ ค่า ตามที่กำหนด";
                         $replyData = new TextMessageBuilder($textReplyMessage);         
