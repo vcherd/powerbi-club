@@ -365,7 +365,7 @@ if(!is_null($events)){
                         // กำหนด path ของไฟล์ที่จะบันทึก
                         $fileFullSavePath = $botDataUserFolder.'/'.$fileNameSave;
                         file_put_contents($fileFullSavePath,$dataBinary); // ทำการบันทึกไฟล์
-                        $textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว ". 'https://sdr-lineoa-php.herokuapp.com/' . $userID . "/". $fileNameSave;
+                        $textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว ". 'https://sdr-lineoa-php.herokuapp.com/' . $fileFullSavePath;
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
                     }
