@@ -1,6 +1,8 @@
 <?php
 require_once 'config/config.php';
 
+echo $_GET["userID"];
+/*
 function createThumbs( $pathToImages, $pathToThumbs, $thumbWidth ) 
 {
   // open the directory
@@ -52,6 +54,5 @@ if(!file_exists($thumbfolder)) { // ตรวจสอบถ้ายังไ�
     mkdir($thumbfolder, 0777, true);
 }
 createThumbs($imgfolder, $thumbfolder . '/',100);
-
-echo $thumbfolder;
+*/
 ?>
