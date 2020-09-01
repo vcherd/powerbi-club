@@ -284,7 +284,7 @@ if(!is_null($events)){
                         break;      
                     case "t_c":
                         // กำหนด action 4 ปุ่ม 4 ประเภท
-                        $actionBuilder = array(
+                        $actionBuilder1 = array(
                             new UriTemplateActionBuilder(
                                 'Check-in', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID
@@ -292,7 +292,9 @@ if(!is_null($events)){
                             new UriTemplateActionBuilder(
                                 'สถิติ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID
-                            ),
+                            ),                    
+                        );
+                        $actionBuilder2 = array(
                             new MessageTemplateActionBuilder(
                                 'Upload รูป',// ข้อความแสดงในปุ่ม
                                 'UploadImage' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
@@ -300,21 +302,17 @@ if(!is_null($events)){
                             new UriTemplateActionBuilder(
                                 'ดูรูปที่ Upload ไว้', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID
-                            ),
-                            /*
+                            ),                            
+                        );
+                        $actionBuilder3 = array(
                             new MessageTemplateActionBuilder(
-                                'Message Template',// ข้อความแสดงในปุ่ม
-                                'This is Text' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                                'Upload รูป',// ข้อความแสดงในปุ่ม
+                                'UploadImage' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                             ),
-                            new PostbackTemplateActionBuilder(
-                                'สถิติ Check-in ของคุณ', // ข้อความแสดงในปุ่ม
-                                http_build_query(array(
-                                    'action'=>'buy',
-                                    'item'=>100
-                                )), // ข้อมูลที่จะส่งไปใน webhook ผ่าน postback event
-                                'Postback Text'  // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
-                            ),      
-                            */
+                            new UriTemplateActionBuilder(
+                                'ดูรูปที่ Upload ไว้', // ข้อความแสดงในปุ่ม
+                                'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID
+                            ),                            
                         );
                         $replyData = new TemplateMessageBuilder('Carousel',
                             new CarouselTemplateBuilder(
@@ -323,19 +321,19 @@ if(!is_null($events)){
                                         'Check-in ฟินรับทอง',
                                         'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.png',
-                                        $actionBuilder
+                                        $actionBuilder1
                                     ),
                                     new CarouselColumnTemplateBuilder(
-                                        'Title Carousel',
-                                        'Description Carousel',
+                                        'Upload รูปคุณกับสถานีบริการ',
+                                        'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c2.png',
-                                        $actionBuilder
+                                        $actionBuilder2
                                     ),
                                     new CarouselColumnTemplateBuilder(
                                         'Title Carousel',
                                         'Description Carousel',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c3.png',
-                                        $actionBuilder
+                                        $actionBuilder3
                                     ),                                          
                                 )
                             )
