@@ -1,8 +1,6 @@
 <?php
 require_once 'config/config.php';
 
-use Gregwar\Image\Image;
-
 $imgfolder = USER_IMAGE_FOLDER . '/' . $_GET["userID"] . '/';
 $thumbfolder = $imgfolder . USER_IMAGE_THUMBNAIL_SUBFOLDER . '/';
 
@@ -21,12 +19,7 @@ function createThumbs( $pathToImages, $pathToThumbs, $thumbWidth )
       //echo "input: " . $pathToImages . $fname . "<br>";
       //echo "output: " . $pathToThumbs . "<br>";
       echo "Creating thumbnail for {$fname} <br />";
-
-      Image::open($pathToImages . $fname)
-        ->resize(100, 100)
-        ->negate()
-        ->save($pathToThumbs . $fname);
-      
+    
       echo "{$pathToThumbs}{$fname}";
     }
   }
