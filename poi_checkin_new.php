@@ -1215,7 +1215,7 @@ foreach ($ss_array as $ss) {
 
     $userdistance = distance($_POST["latitude"],$_POST["longitude"],$ss[1],$ss[2],"K");
 
-    echo $ss[0] . "=" . $userdistance . "<BR>";
+    if ($userdistance <= POI_CHECK_IN_DISTANCE) echo $ss[0] . "=" . $userdistance . "<BR>";
 }
 /*
 $checkinfile = fopen(FILE_CHECK_IN_FULLPATH, "a+") or die("Unable to open file!");
