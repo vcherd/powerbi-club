@@ -1,9 +1,5 @@
 <?php
-require_once './config/config_value.php';
-
-$verifydata = hash(HASH_ALGORITHM, $_POST["userID"] . SALT);
-
-if ($_POST["sID"] != $verifydata) die ("Error");
+require_once './config/config_post.php';
 
 $ss_poi = array (
     array('บางจาก - กระบี่',8.100842,98.885736),
