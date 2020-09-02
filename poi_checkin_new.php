@@ -1211,8 +1211,11 @@ echo "userID=".$_POST["userID"]."<BR>";
 echo "sID=".$_POST["sID"]."<BR>";
 
 foreach ($ss_array as $ss) {
-    echo $ss[0] . "<BR>";
+    
 
+    $userdistance = distance($_POST["latitude"],$_POST["longitude"],$ss[1],$ss[2],"K");
+
+    echo $ss[0] . "=" . $userdistance . "<BR>";
 }
 /*
 $checkinfile = fopen(FILE_CHECK_IN_FULLPATH, "a+") or die("Unable to open file!");
