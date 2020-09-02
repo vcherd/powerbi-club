@@ -13,24 +13,17 @@ require_once './config/config.php';
        
         if(navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
-                
-                
-                //for( i = 0;i<arr_Destination.length;i++){ 
-                //    var userdistance = distance(position.coords.latitude,position.coords.longitude,arr_Destination[i].lat,arr_Destination[i].lng,"K");
-                    
-                   
-                        //positionInfo = positionInfo + " => Check-in";
-                    if (position.coords.latitude > 0) && (position.coords.longitude > 0)    
+                              
+                    if ((position.coords.latitude > 0) && (position.coords.longitude > 0)) {   
                         document.getElementById('latitude').value = position.coords.latitude;
                         document.getElementById('longitude').value = position.coords.longitude;
                         document.checkInFm.submit();
                     }
-                }
+                else {
+                    positionInfo = "Error while retrieving your location.";
                 
-                if (found == false) {
-                    positionInfo = "No nearby service station around you. Please get closer, thank you."
+                    document.getElementById("result").innerHTML = positionInfo;
                 }
-                document.getElementById("result").innerHTML = positionInfo;
             });
 
         } else {
