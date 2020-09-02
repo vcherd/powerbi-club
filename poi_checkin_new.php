@@ -18,17 +18,6 @@ return $dist;
 }
 
 $ss_poi = array (
-    array('บางจาก - กระบี่',8.100842,98.885736)
-);
-
-echo "abclat=".$_POST["latitude"]."<BR>";
-echo "lon=".$_POST["longitude"]."<BR>";
-echo "userID=".$_POST["userID"]."<BR>";
-echo "sID=".$_POST["sID"]."<BR>";
-
-
-/*
-$ss_poi = array (
     array('บางจาก - กระบี่',8.100842,98.885736),
     array('บางจาก - คลองท่อม',7.870218,99.1633),
     array('บางจาก - อ่าวลึก',8.364195,98.750199),
@@ -1213,6 +1202,17 @@ $ss_poi = array (
     array('สกก. บุณฑริก จำกัด',14.697547,105.378868),
     array('สกก. เขื่องใน',15.408365,104.545993),
     array('สกก. บุณฑริก',14.758843,105.402623)
+);
+
+echo "abclat=".$_POST["latitude"]."<BR>";
+echo "lon=".$_POST["longitude"]."<BR>";
+echo "userID=".$_POST["userID"]."<BR>";
+echo "sID=".$_POST["sID"]."<BR>";
+
+
+/*
+$ss_poi = array (
+    
 );
 
 echo $_POST("latitude") . "<br>" . $_POST("longitude");
