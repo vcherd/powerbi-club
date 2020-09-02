@@ -1220,14 +1220,15 @@ foreach ($ss_array as $ss) {
     //if ($userdistance <= POI_CHECK_IN_DISTANCE) echo $ss[0] . "=" . $userdistance . "<BR>";
 }
 
-echo "Nearest SS is " . $nearest_ss . "(" . $nearest_distance . ")";
-/*
-$checkinfile = fopen(FILE_CHECK_IN_FULLPATH, "a+") or die("Unable to open file!");
-$txt = date('d-m-Y h:i:s A') . "|" . $_POST["userID"] . "|" . $_POST["userLoc"] . "\n";
-fwrite($checkinfile, $txt);
-fclose($checkinfile);
+//echo "Nearest SS is " . $nearest_ss . "(" . $nearest_distance . ")";
+if ($nearest_distance <= POI_CHECK_IN_DISTANCE) {
+    $checkinfile = fopen(FILE_CHECK_IN_FULLPATH, "a+") or die("Unable to open file!");
+    $txt = date('d-m-Y h:i:s A') . "|" . $_POST["userID"] . "|" . $nearest_ss . "\n";
+    fwrite($checkinfile, $txt);
+    fclose($checkinfile);    
+    echo "Check-in at " . $nearest_ss . " - Success.";
+}
+else echo "Couldn't find nearby service station around you. Please get closer, thank you.";
 
-echo "Check-in at " . $_POST["userLoc"] . " Success.";
-*/
 ?>
 
