@@ -24,7 +24,7 @@ foreach($files1 as $key=>$value){
 //echo "Total = " . $total . "<BR>";
 
 // จำนวนรายการที่ต้องการแสดง แต่ละหน้า
-$perPage = 10;
+$perPage = 2;
  
 // คำนวณจำนวนหน้าทั้งหมด
 $num_naviPage=ceil($total/$perPage);
