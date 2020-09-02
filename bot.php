@@ -306,7 +306,7 @@ if(!is_null($events)){
                         );
                         $actionBuilder3 = array(
                             new UriTemplateActionBuilder(
-                                'ลงทะเบียน', // ข้อความแสดงในปุ่ม
+                                'Register', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/register_form.php?userID=' . $userID
                             ),                            
                         );
