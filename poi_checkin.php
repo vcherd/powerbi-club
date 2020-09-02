@@ -1,6 +1,9 @@
 <?php
 require_once './config/config_post.php';
 
+//CheckRef($ref_site);
+echo $_SERVER['HTTP_REFERER'];
+
 function distance($lat1, $lon1, $lat2, $lon2, $unit) {
     $radlat1 = M_PI * $lat1/180;
     $radlat2 = M_PI * $lat2/180;
