@@ -2,7 +2,7 @@
 
 require_once './config/config.php';
 
-echo "ref=" . $_SERVER['HTTP_REFERER'];
+//echo "ref=" . $_SERVER['HTTP_REFERER'];
 $imgfolder = USER_IMAGE_FOLDER . '/' . $_GET["userID"] . '/';
 $thumbfolder = $imgfolder . USER_IMAGE_THUMBNAIL_SUBFOLDER . '/';
 
