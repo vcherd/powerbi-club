@@ -11,5 +11,5 @@ define('USER_IMAGE_THUMBNAIL_SUBFOLDER','thumbnails');
 
 //salt settings
 define('HASH_ALGORITHM','sha256');
-define('SALT','bangchak@corporation');
+define('SALT','bangchak@corporation' . date('Ymd'));
 ?>
