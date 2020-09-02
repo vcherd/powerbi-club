@@ -40,7 +40,7 @@ if(!isset($_GET['page'])){
     $e_key=($e_key>$total)?$total:$e_key;
 }
 for($i=1;$i<=$num_naviPage;$i++){
-    echo "  || <a href=\"?page=".$i .'&userID=' . $_GET["userID"] ."\">Page $i</a>";   
+    echo "  || <a href=\"?page=".$i."\">Page $i</a>";   
 }
 echo "<hr>";
  
