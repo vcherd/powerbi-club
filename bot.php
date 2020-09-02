@@ -286,6 +286,10 @@ if(!is_null($events)){
                         // กำหนด action 4 ปุ่ม 4 ประเภท
                         $actionBuilder1 = array(
                             new UriTemplateActionBuilder(
+                                'ลงทะเบียน', // ข้อความแสดงในปุ่ม
+                                'https://sdr-lineoa-php.herokuapp.com/register_form.php?userID=' . $userID
+                            ),
+                            new UriTemplateActionBuilder(
                                 'Check-in', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID
                             ),
