@@ -1,8 +1,10 @@
 <?php
 require_once './config/config_post.php';
 
-echo $_POST["latitude"];
-
+echo "lat=".$_POST["latitude"]."<BR>";
+echo "lon=".$_POST["longitude"]."<BR>";
+echo "userID=".$_POST["userID"]."<BR>";
+echo "sID=".$_POST["sID"]."<BR>";
 $ss_poi = array (
     array('บางจาก - กระบี่',8.100842,98.885736),
     array('บางจาก - คลองท่อม',7.870218,99.1633),
