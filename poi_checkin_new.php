@@ -17,7 +17,7 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 return $dist;
 }
 
-$ss_poi = array (
+$ss_array = array (
     array('บางจาก - กระบี่',8.100842,98.885736),
     array('บางจาก - คลองท่อม',7.870218,99.1633),
     array('บางจาก - อ่าวลึก',8.364195,98.750199),
@@ -1209,6 +1209,11 @@ echo "deflat=".$_POST["latitude"]."<BR>";
 echo "lon=".$_POST["longitude"]."<BR>";
 echo "userID=".$_POST["userID"]."<BR>";
 echo "sID=".$_POST["sID"]."<BR>";
+
+foreach ($ss_array as $ss) {
+    echo $ss[0] . "<BR>";
+
+}
 /*
 $checkinfile = fopen(FILE_CHECK_IN_FULLPATH, "a+") or die("Unable to open file!");
 $txt = date('d-m-Y h:i:s A') . "|" . $_POST["userID"] . "|" . $_POST["userLoc"] . "\n";
