@@ -17,10 +17,16 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 return $dist;
 }
 
-echo "lat=".$_POST["latitude"]."<BR>";
+$ss_poi = array (
+    array('บางจาก - กระบี่',8.100842,98.885736)
+);
+
+echo "abclat=".$_POST["latitude"]."<BR>";
 echo "lon=".$_POST["longitude"]."<BR>";
 echo "userID=".$_POST["userID"]."<BR>";
 echo "sID=".$_POST["sID"]."<BR>";
+
+
 /*
 $ss_poi = array (
     array('บางจาก - กระบี่',8.100842,98.885736),
