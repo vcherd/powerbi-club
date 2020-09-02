@@ -40,22 +40,22 @@
          
 		<tbody>  
 			<tr>  
-			   <td width="150 px" ><h6 id="text_new_system">Name</h6></td>
-			   <td width="150 px" colspan="3"><h6><textarea name="Name" id="Name" style="width:100%" placeholder="ชื่อผู้ลงทะเบียน"></textarea></h6></td>       
+			   <td width="150 px" ><h6 style='font-size:14px; text-align:left; color:#247209;' id="text_name">Name</h6></td>
+			   <td width="150 px" colspan="3"><h6><input type="text" name="Name" id="Name" style="width:90%" placeholder="ชื่อผู้ลงทะเบียน"></text></h6></td>       
 
 			</tr>  	
 			 <tr>  
-			   <td width="150 px" ><h6 id="text_new_system_en">Surname</h6></td>
-			   <td width="150 px" colspan="3"><h6><textarea name="Surname" id="Surname" style="width:100%" placeholder="นามสกุลผู้ลงทะเบียน"></textarea></h6></td>    
+			   <td width="150 px" ><h6 style='font-size:14px; text-align:left; color:#247209;' style='font-size:14px; text-align:left; color:#247209;'id="text_surname">Surname</h6></td>
+			   <td width="150 px" colspan="3"><h6><input type="text" name="Surname" id="Surname" style="width:90%" placeholder="นามสกุลผู้ลงทะเบียน"></textarea></h6></td>    
 			</tr> 
 			<tr>  
-			   <td width="150 px" ><h6 id="text_new_system">Tel</h6></td>
-			   <td width="150 px" colspan="3"><h6><textarea name="Tel" id="Tel" style="width:100%" placeholder="เบอร์โทรศัพท์"></textarea></h6></td>       
+			   <td width="150 px" ><h6 style='font-size:14px; text-align:left; color:#247209;' id="text_tel">Tel</h6></td>
+			   <td width="150 px" colspan="3"><h6><input type="text" name="Tel" id="Tel" style="width:90%" placeholder="เบอร์โทรศัพท์"></textarea></h6></td>       
 
 			</tr>  	
 			 <tr>  
-			   <td width="150 px" ><h6 id="text_new_system_en">E-Mail</h6></td>
-			   <td width="150 px" colspan="3"><h6><textarea name="mail" id="mail" style="width:100%" placeholder="E-Mail"></textarea></h6></td>    
+			   <td width="150 px" ><h6 style='font-size:14px; text-align:left; color:#247209;' id="text_mail">E-Mail</h6></td>
+			   <td width="150 px" colspan="3"><h6><input type="text" name="mail" id="mail" style="width:90%" placeholder="E-Mail"></textarea></h6></td>    
 			</tr> 
 
 			<tr style="text-align:center;">  
@@ -70,12 +70,11 @@
 			
 	<p></p>
   
-
-
-
-
-
-
+<div style="padding-top:10px;">
+<img src="pic/ilovebcp.png" width="150px"; style="text-align:middle" >
+ </div>
+ 
+ 
 </tbody>  
     <tfoot>  
      <!--   <tr>  
