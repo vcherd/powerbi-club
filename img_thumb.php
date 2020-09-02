@@ -21,7 +21,7 @@ foreach($files1 as $key=>$value){
     }
 }
 
-echo "Total = " . $total . "<BR>";
+//echo "Total = " . $total . "<BR>";
 
 // จำนวนรายการที่ต้องการแสดง แต่ละหน้า
 $perPage = 2;
