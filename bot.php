@@ -305,13 +305,9 @@ if(!is_null($events)){
                             ),                            
                         );
                         $actionBuilder3 = array(
-                            new MessageTemplateActionBuilder(
-                                'Upload รูป',// ข้อความแสดงในปุ่ม
-                                'UploadImage' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
-                            ),
                             new UriTemplateActionBuilder(
-                                'ดูรูปที่ Upload ไว้', // ข้อความแสดงในปุ่ม
-                                'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID
+                                'ลงทะเบียน', // ข้อความแสดงในปุ่ม
+                                'https://sdr-lineoa-php.herokuapp.com/register_form.php?userID=' . $userID
                             ),                            
                         );
                         $replyData = new TemplateMessageBuilder('Carousel',
