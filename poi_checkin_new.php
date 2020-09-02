@@ -1,7 +1,7 @@
 <?php
 require_once './config/config_post.php';
 
-echo "yeah";
+echo $_POST["latitude"];
 
 $ss_poi = array (
     array('บางจาก - กระบี่',8.100842,98.885736),
