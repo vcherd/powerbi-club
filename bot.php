@@ -149,7 +149,7 @@ if(!is_null($events)){
                             $userProfile = $bot->getProfile($userID);
                             $userData = $userProfile->getJSONDecodedBody(); // return array 
     
-                            $textReplyMessage = "สวัสดีครับ คุณ " . $userData['displayName'] . " กรุณากรอกชื่อ-สกุล และหมายเลขโทรศัพท์ของท่าน เพื่อยืนยันกรณีได้รับรางวัล"
+                            $textReplyMessage = "สวัสดีครับ คุณ " . $userData['displayName'] . " กรุณากรอกชื่อ-สกุล และหมายเลขโทรศัพท์ของท่าน เพื่อยืนยันกรณีได้รับรางวัล";
                             $replyData = new TextMessageBuilder($textReplyMessage);
                             break;
                     case "uploadimage":
