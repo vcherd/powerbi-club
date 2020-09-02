@@ -1204,13 +1204,11 @@ $ss_poi = array (
     array('สกก. บุณฑริก',14.758843,105.402623)
 );
 
-echo "xyzlat=".$_POST["latitude"]."<BR>";
+if (($_POST["userID"] == "") || ($_POST["sID"] == "") || ($_POST["latitude"] == "") || ($_POST["longitude"] == "")) die ("Internal error, missing value.");
+echo "deflat=".$_POST["latitude"]."<BR>";
 echo "lon=".$_POST["longitude"]."<BR>";
 echo "userID=".$_POST["userID"]."<BR>";
 echo "sID=".$_POST["sID"]."<BR>";
-
-
-if (($_POST["userID"] == "") || ($_POST["sID"] == "") || ($_POST["latitude"] == "") || ($_POST["longitude"] == "")) die ("Internal error, missing value.");
 /*
 $checkinfile = fopen(FILE_CHECK_IN_FULLPATH, "a+") or die("Unable to open file!");
 $txt = date('d-m-Y h:i:s A') . "|" . $_POST["userID"] . "|" . $_POST["userLoc"] . "\n";
