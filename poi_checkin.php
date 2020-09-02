@@ -1,5 +1,5 @@
 <?php
-require_once 'config/config.php';
+require_once './config/config.php';
 
 if (($_POST["userID"] == "") || ($_POST["userLoc"] == "")) die ("Internal error, missing value.");
 
