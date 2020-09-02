@@ -160,23 +160,7 @@ if(!is_null($events)){
                         $picFullSize = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower';
                         $picThumbnail = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower/240';
                         $replyData = new ImageMessageBuilder($picFullSize,$picThumbnail);
-                        break;
-                    case "v":
-                        $picThumbnail = 'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/240';
-                        $videoUrl = "https://youtu.be/4oP_Cybp_gU";             
-                        $replyData = new VideoMessageBuilder($videoUrl,$picThumbnail);
-                        break;
-                    case "a":
-                        $audioUrl = "https://www.ninenik.com/line/S_6988827932080.wav";
-                        $replyData = new AudioMessageBuilder($audioUrl,20000);
-                        break;
-                    case "l":
-                        $placeName = "ที่ตั้งร้าน";
-                        $placeAddress = "แขวง พลับพลา เขต วังทองหลาง กรุงเทพมหานคร ประเทศไทย";
-                        $latitude = 13.780401863217657;
-                        $longitude = 100.61141967773438;
-                        $replyData = new LocationMessageBuilder($placeName, $placeAddress, $latitude ,$longitude);              
-                        break;
+                        break;                    
                     case "m":
                         $textReplyMessage = "Bot ตอบกลับคุณเป็นข้อความ";
                         $textMessage = new TextMessageBuilder($textReplyMessage);
@@ -196,46 +180,7 @@ if(!is_null($events)){
                         $multiMessage->add($imageMessage);
                         $multiMessage->add($locationMessage);
                         $replyData = $multiMessage;                                     
-                        break;                  
-                    case "s":
-                        $stickerID = 22;
-                        $packageID = 2;
-                        $replyData = new StickerMessageBuilder($packageID,$stickerID);
-                        break;      
-                    case "im":
-                        $imageMapUrl = 'https://www.mywebsite.com/imgsrc/photos/w/sampleimagemap';
-                        $replyData = new ImagemapMessageBuilder(
-                            $imageMapUrl,
-                            'This is Title',
-                            new BaseSizeBuilder(699,1040),
-                            array(
-                                new ImagemapMessageActionBuilder(
-                                    'test image map',
-                                    new AreaBuilder(0,0,520,699)
-                                    ),
-                                new ImagemapUriActionBuilder(
-                                    'http://www.ninenik.com',
-                                    new AreaBuilder(520,0,520,699)
-                                    )
-                            )); 
-                        break;          
-                    case "tm":
-                        $replyData = new TemplateMessageBuilder('Confirm Template',
-                            new ConfirmTemplateBuilder(
-                                    'Confirm template builder',
-                                    array(
-                                        new MessageTemplateActionBuilder(
-                                            'Yes',
-                                            'Text Yes'
-                                        ),
-                                        new MessageTemplateActionBuilder(
-                                            'No',
-                                            'Text NO'
-                                        )
-                                    )
-                            )
-                        );
-                        break;          
+                        break;
                     case "t_b":
                         // กำหนด action 4 ปุ่ม 4 ประเภท
                         $actionBuilder = array(
@@ -277,23 +222,7 @@ if(!is_null($events)){
                             )
                         );              
                         break;      
-                    case "t_f":
-                        $replyData = new TemplateMessageBuilder('Confirm Template',
-                            new ConfirmTemplateBuilder(
-                                    'Confirm template builder', // ข้อความแนะนหรือบอกวิธีการ หรือคำอธิบาย
-                                    array(
-                                        new MessageTemplateActionBuilder(
-                                            'Yes', // ข้อความสำหรับปุ่มแรก
-                                            'YES'  // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
-                                        ),
-                                        new MessageTemplateActionBuilder(
-                                            'No', // ข้อความสำหรับปุ่มแรก
-                                            'NO' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
-                                        )
-                                    )
-                            )
-                        );
-                        break;      
+                         
                     case "t_c":
                         // กำหนด action 4 ปุ่ม 4 ประเภท
                         $actionBuilder1 = array(
@@ -350,36 +279,14 @@ if(!is_null($events)){
                                 )
                             )
                         );
-                        break;      
-                    case "t_ic":
-                        $replyData = new TemplateMessageBuilder('Image Carousel',
-                            new ImageCarouselTemplateBuilder(
-                                array(
-                                    new ImageCarouselColumnTemplateBuilder(
-                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.png',
-                                        new UriTemplateActionBuilder(
-                                            'Check-in', // ข้อความแสดงในปุ่ม
-                                            'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID
-                                        )
-                                    ),
-                                    new ImageCarouselColumnTemplateBuilder(
-                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c3.png',
-                                        new UriTemplateActionBuilder(
-                                            'Uri Template', // ข้อความแสดงในปุ่ม
-                                            'https://www.bangchak.co.th'
-                                        )
-                                    )                                       
-                                )
-                            )
-                        );
-                        break;                                                                      
+                        break;                                                                                             
                     default:
-                        $textReplyMessage = " คุณไม่ได้พิมพ์ ค่า ตามที่กำหนด";
+                        $textReplyMessage = "ข้อมูลที่คุณกรอกไม่ถูกต้อง";
                         $replyData = new TextMessageBuilder($textReplyMessage);         
                         break;                                      
                 }
                 break;
-            case (preg_match('/image|audio|video/',$typeMessage) ? true : false) :
+            case (preg_match('/^image/',$typeMessage) ? true : false) :
                     $response = $bot->getMessageContent($idMessage);
                     if ($response->isSucceeded()) {
                         // คำสั่ง getRawBody() ในกรณีนี้ จะได้ข้อมูลส่งกลับมาเป็น binary 
@@ -392,15 +299,7 @@ if(!is_null($events)){
                                 list($typeFile,$ext) = explode("/",$fileType);
                                 $ext = ($ext=='jpeg' || $ext=='jpg')?"jpg":$ext;
                                 $fileNameSave = "img_" . date('Ymd_his_'). rand(10000,99999) .".".$ext;
-                                break;
-                            case (preg_match('/^audio/',$fileType) ? true : false):
-                                list($typeFile,$ext) = explode("/",$fileType);
-                                $fileNameSave = "audio_" . date('Ymd_his_'). rand(10000,99999) .".".$ext;                        
-                                break;
-                            case (preg_match('/^video/',$fileType) ? true : false):
-                                list($typeFile,$ext) = explode("/",$fileType);
-                                $fileNameSave = "vdo_" . date('Ymd_his_'). rand(10000,99999) .".".$ext;                             
-                                break;                                                      
+                                break;                                                                            
                         }
                         $botDataFolder = USER_IMAGE_FOLDER . '/'; // โฟลเดอร์หลักที่จะบันทึกไฟล์
                         $botDataUserFolder = $botDataFolder.$userID; // มีโฟลเดอร์ด้านในเป็น userId อีกขั้น
