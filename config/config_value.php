@@ -2,7 +2,7 @@
 date_default_timezone_set('Asia/Bangkok');
 
 //general settings
-define('POI_CHECK_IN_DISTANCE',2); //unit: km
+define('POI_CHECK_IN_DISTANCE',1.0); //unit: km
 
 //file settings
 define('FILE_CHECK_IN_FULLPATH','db/user_checkin.txt');
