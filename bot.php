@@ -312,7 +312,7 @@ if(!is_null($events)){
                                 'UploadImage' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                             ),
                             new UriTemplateActionBuilder(
-                                'ดูรูปที่ Upload ไว้', // ข้อความแสดงในปุ่ม
+                                'Check รูป', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID
                             ),                            
                         );
