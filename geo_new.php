@@ -46,6 +46,7 @@ window.onload = function(){
     <input id="latitude" name="latitude" type="hidden">
     <input id="longitude" name="longitude" type="hidden">
     <input id="userID" name="userID" type="hidden" value="<?php echo $_GET["userID"];?>">
+    <input id="userID" name="sID" type="hidden" value="<?php echo $_GET["sID"];?>">
     <!--<button id="SubmitBtn" type="submit">Submit</button> -->
     </form>
 </body>
