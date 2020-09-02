@@ -22,6 +22,7 @@ foreach($files1 as $key=>$value){
 }
 
 echo "Total = " . $total . "<BR>";
+/*
 // จำนวนรายการที่ต้องการแสดง แต่ละหน้า
 $perPage = 2;
  
@@ -48,6 +49,6 @@ for($indexPicture=$s_key;$indexPicture<$e_key;$indexPicture++){
  
         echo "<img style='width:100px;' src='".$pic_path[$indexPicture]."'/>&nbsp;";  
 }
- 
+*/
 
 ?>
