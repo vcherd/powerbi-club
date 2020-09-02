@@ -10,7 +10,7 @@ require_once './vendor/autoload.php';
 // การตั้งเกี่ยวกับ bot
 require_once './config/bot_settings.php';
 require_once './config/config_value.php';
- 
+
 // กรณีมีการเชื่อมต่อกับฐานข้อมูล
 //require_once("dbconnect.php");
  
@@ -87,6 +87,7 @@ if(!is_null($events)){
     // ถ้ามีค่า สร้างตัวแปรเก็บ replyToken ไว้ใช้งาน
     $replyToken = $events['events'][0]['replyToken'];
     $userID = $events['events'][0]['source']['userId'];
+    $sID = hash(HASH_ALGORITHM, $userID . SALT);
     $sourceType = $events['events'][0]['source']['type'];        
     $is_postback = NULL;
     $is_message = NULL;
@@ -232,11 +233,11 @@ if(!is_null($events)){
                         $actionBuilder1 = array(
                             new UriTemplateActionBuilder(
                                 'Check-in', // ข้อความแสดงในปุ่ม
-                                'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID
+                                'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID . '&sID=' . $sID
                             ),
                             new UriTemplateActionBuilder(
                                 'สถิติ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
-                                'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID
+                                'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID . '&sID=' . $sID
                             ), 
                         );
                         $actionBuilder2 = array(
@@ -246,7 +247,7 @@ if(!is_null($events)){
                             ),
                             new UriTemplateActionBuilder(
                                 'Check รูป', // ข้อความแสดงในปุ่ม
-                                'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID
+                                'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID . '&sID=' . $sID
                             ),                            
                         );
                         $actionBuilder3 = array(
@@ -256,7 +257,7 @@ if(!is_null($events)){
                             ),
                             new UriTemplateActionBuilder(
                                 'Check ใบเสร็จ', // ข้อความแสดงในปุ่ม
-                                'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID
+                                'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID . '&sID=' . $sID
                             ),                            
                         );
                         $replyData = new TemplateMessageBuilder('Carousel',
