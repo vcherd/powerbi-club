@@ -8,4 +8,8 @@ define('POI_CHECK_IN_DISTANCE',0.2); //unit: km
 define('FILE_CHECK_IN_FULLPATH','db/user_checkin.txt');
 define('USER_IMAGE_FOLDER','userimage');
 define('USER_IMAGE_THUMBNAIL_SUBFOLDER','thumbnails');
+
+//salt settings
+define('HASH_ALGORITHM','sha256');
+define('SALT','bangchak@corporation');
 ?>
