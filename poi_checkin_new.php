@@ -1,10 +1,11 @@
 <?php
 require_once './config/config_post.php';
-
+/*
 echo "lat=".$_POST["latitude"]."<BR>";
 echo "lon=".$_POST["longitude"]."<BR>";
 echo "userID=".$_POST["userID"]."<BR>";
 echo "sID=".$_POST["sID"]."<BR>";
+*/
 $ss_poi = array (
     array('บางจาก - กระบี่',8.100842,98.885736),
     array('บางจาก - คลองท่อม',7.870218,99.1633),
@@ -1189,7 +1190,7 @@ $ss_poi = array (
     array('หจก. ฉัตรชัย ออยล์ เจริญทรัพย์',15.275653,104.801851),
     array('สกก. บุณฑริก จำกัด',14.697547,105.378868),
     array('สกก. เขื่องใน',15.408365,104.545993),
-    array('สกก. บุณฑริก',14.758843,105.402623),
+    array('สกก. บุณฑริก',14.758843,105.402623)
 );
 
 echo $_POST("latitude") . "<br>" . $_POST("longitude");
