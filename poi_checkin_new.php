@@ -1210,15 +1210,8 @@ echo "userID=".$_POST["userID"]."<BR>";
 echo "sID=".$_POST["sID"]."<BR>";
 
 
+if (($_POST["userID"] == "") || ($_POST["sID"] == "") || ($_POST["latitude"] == "") || ($_POST["longitude"] == "")) die ("Internal error, missing value.");
 /*
-$ss_poi = array (
-    
-);
-
-echo $_POST("latitude") . "<br>" . $_POST("longitude");
-
-if (($_POST["userID"] == "") || ($_POST["userLoc"] == "")) die ("Internal error, missing value.");
-
 $checkinfile = fopen(FILE_CHECK_IN_FULLPATH, "a+") or die("Unable to open file!");
 $txt = date('d-m-Y h:i:s A') . "|" . $_POST["userID"] . "|" . $_POST["userLoc"] . "\n";
 fwrite($checkinfile, $txt);
