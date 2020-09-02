@@ -8,6 +8,6 @@ $txt = date('d-m-Y h:i:s A') . "|" . $_POST["userID"] . "|" . $_POST["userLoc"] 
 fwrite($checkinfile, $txt);
 fclose($checkinfile);
 
-echo "Check-in Success!!";
+echo "Check-in at " . $_POST["userLoc"] . " Success.";
 ?>
 <script> window.setTimeout("window.close()", 1000); </script>
