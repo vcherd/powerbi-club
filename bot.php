@@ -288,7 +288,9 @@ if(!is_null($events)){
                             new UriTemplateActionBuilder(
                                 'ลงทะเบียน', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/register_form.php?userID=' . $userID
-                            ),
+                            ),                                
+                        );
+                        $actionBuilder2 = array(
                             new UriTemplateActionBuilder(
                                 'Check-in', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID
@@ -296,17 +298,7 @@ if(!is_null($events)){
                             new UriTemplateActionBuilder(
                                 'สถิติ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID
-                            ),                    
-                        );
-                        $actionBuilder2 = array(
-                            new MessageTemplateActionBuilder(
-                                'Upload รูป',// ข้อความแสดงในปุ่ม
-                                'UploadImage' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
-                            ),
-                            new UriTemplateActionBuilder(
-                                'ดูรูปที่ Upload ไว้', // ข้อความแสดงในปุ่ม
-                                'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID
-                            ),                            
+                            ),                          
                         );
                         $actionBuilder3 = array(
                             new MessageTemplateActionBuilder(
@@ -316,7 +308,7 @@ if(!is_null($events)){
                             new UriTemplateActionBuilder(
                                 'ดูรูปที่ Upload ไว้', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID
-                            ),                            
+                            ),  
                         );
                         $replyData = new TemplateMessageBuilder('Carousel',
                             new CarouselTemplateBuilder(
