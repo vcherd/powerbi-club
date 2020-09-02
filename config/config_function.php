@@ -1,7 +1,9 @@
 <?php
 
 function CheckRef($ref_site) {
-    if($_SERVER['HTTP_REFERER'] != $ref_site) die("Error");
+    echo "ref = ".$_SERVER['HTTP_REFERER'] . "<BR>ref2=" . $ref_site;
+
+    if(strpos($_SERVER['HTTP_REFERER'],$ref_site) == FALSE )die("Error");
     //header('Location:page1.php')
 }
 ?>
