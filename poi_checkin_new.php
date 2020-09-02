@@ -1204,7 +1204,7 @@ $ss_poi = array (
     array('สกก. บุณฑริก',14.758843,105.402623)
 );
 
-echo "abclat=".$_POST["latitude"]."<BR>";
+echo "aaalat=".$_POST["latitude"]."<BR>";
 echo "lon=".$_POST["longitude"]."<BR>";
 echo "userID=".$_POST["userID"]."<BR>";
 echo "sID=".$_POST["sID"]."<BR>";
