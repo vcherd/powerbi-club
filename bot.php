@@ -391,15 +391,15 @@ if(!is_null($events)){
                             case (preg_match('/^image/',$fileType) ? true : false):
                                 list($typeFile,$ext) = explode("/",$fileType);
                                 $ext = ($ext=='jpeg' || $ext=='jpg')?"jpg":$ext;
-                                $fileNameSave = "img_" . date('Ymd_his').".".$ext;
+                                $fileNameSave = "img_" . date('Ymd_his_'). rand(10000,99999) .".".$ext;
                                 break;
                             case (preg_match('/^audio/',$fileType) ? true : false):
                                 list($typeFile,$ext) = explode("/",$fileType);
-                                $fileNameSave = "audio_" . date('Ymd_his').".".$ext;                        
+                                $fileNameSave = "audio_" . date('Ymd_his_'). rand(10000,99999) .".".$ext;                        
                                 break;
                             case (preg_match('/^video/',$fileType) ? true : false):
                                 list($typeFile,$ext) = explode("/",$fileType);
-                                $fileNameSave = "vdo_" . date('Ymd_his').".".$ext;                             
+                                $fileNameSave = "vdo_" . date('Ymd_his_'). rand(10000,99999) .".".$ext;                             
                                 break;                                                      
                         }
                         $botDataFolder = USER_IMAGE_FOLDER . '/'; // โฟลเดอร์หลักที่จะบันทึกไฟล์
@@ -410,7 +410,7 @@ if(!is_null($events)){
                         // กำหนด path ของไฟล์ที่จะบันทึก
                         $fileFullSavePath = $botDataUserFolder.'/'.$fileNameSave;
                         file_put_contents($fileFullSavePath,$dataBinary); // ทำการบันทึกไฟล์
-                        $textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว ". 'https://sdr-lineoa-php.herokuapp.com/' . $fileFullSavePath;
+                        $textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว";//. 'https://sdr-lineoa-php.herokuapp.com/' . $fileFullSavePath;
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
                     }
