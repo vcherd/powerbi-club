@@ -233,7 +233,7 @@ if(!is_null($events)){
                         $actionBuilder1 = array(
                             new UriTemplateActionBuilder(
                                 'Check-in', // ข้อความแสดงในปุ่ม
-                                'https://sdr-lineoa-php.herokuapp.com/geo_new.php?userID=' . $userID . '&sID=' . $sID
+                                'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID . '&sID=' . $sID
                             ),
                             new UriTemplateActionBuilder(
                                 'สถิติ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
