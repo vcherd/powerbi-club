@@ -306,8 +306,8 @@ if(!is_null($events)){
                         );
                         $actionBuilder3 = array(
                             new UriTemplateActionBuilder(
-                                'Register', // ข้อความแสดงในปุ่ม
-                                'https://sdr-lineoa-php.herokuapp.com/register_form.php?userID=' . $userID
+                                'ลงทะเบียน', // ข้อความแสดงในปุ่ม
+                                'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID
                             ),                            
                         );
                         $replyData = new TemplateMessageBuilder('Carousel',
