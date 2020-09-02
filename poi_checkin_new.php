@@ -1,6 +1,8 @@
 <?php
 require_once './config/config_post.php';
 
+echo "yeah";
+
 $ss_poi = array (
     array('บางจาก - กระบี่',8.100842,98.885736),
     array('บางจาก - คลองท่อม',7.870218,99.1633),
