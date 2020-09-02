@@ -1209,11 +1209,12 @@ require_once 'config/config.php';
 
         if(navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
-                var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+                var positionInfo;
+                //positiionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
                 
                 for( i = 0;i<arr_Destination.length;i++){ 
                     var userdistance = distance(position.coords.latitude,position.coords.longitude,arr_Destination[i].lat,arr_Destination[i].lng,"K");
-                    positionInfo = positionInfo + "<BR>" + arr_Destination[i].title + " = " + userdistance;
+                    //positionInfo = positionInfo + "<BR>" + arr_Destination[i].title + " = " + userdistance;
 
                     if (userdistance <= <?php echo POI_CHECK_IN_DISTANCE; ?>) {
                         //positionInfo = positionInfo + " => Check-in";
