@@ -1205,18 +1205,22 @@ $ss_array = array (
 );
 
 if (($_POST["userID"] == "") || ($_POST["sID"] == "") || ($_POST["latitude"] == "") || ($_POST["longitude"] == "")) die ("Internal error, missing value.");
-echo "deflat=".$_POST["latitude"]."<BR>";
-echo "lon=".$_POST["longitude"]."<BR>";
-echo "userID=".$_POST["userID"]."<BR>";
-echo "sID=".$_POST["sID"]."<BR>";
+
+$nearest_distance = 10000;
+$nearest_ss = '';
 
 foreach ($ss_array as $ss) {
-    
-
     $userdistance = distance($_POST["latitude"],$_POST["longitude"],$ss[1],$ss[2],"K");
 
-    if ($userdistance <= POI_CHECK_IN_DISTANCE) echo $ss[0] . "=" . $userdistance . "<BR>";
+    //find nearest distance
+    if ($userdistance <= $nearest_distance) {
+        $nearest_distance = $userdistance;
+        $nearest_ss = $ss[0];
+    }
+    //if ($userdistance <= POI_CHECK_IN_DISTANCE) echo $ss[0] . "=" . $userdistance . "<BR>";
 }
+
+echo "Nearest SS is " . $nearest_ss . "(" . $nearest_distance . ")";
 /*
 $checkinfile = fopen(FILE_CHECK_IN_FULLPATH, "a+") or die("Unable to open file!");
 $txt = date('d-m-Y h:i:s A') . "|" . $_POST["userID"] . "|" . $_POST["userLoc"] . "\n";
