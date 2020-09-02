@@ -1209,7 +1209,7 @@ require_once 'config/config.php';
 
         if(navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
-                var positionInfo;
+                //var positionInfo;
                 //positiionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
                 
                 for( i = 0;i<arr_Destination.length;i++){ 
@@ -1225,7 +1225,7 @@ require_once 'config/config.php';
                 }
                 
                 if (found == false) {
-                    positionInfo = positionInfo + "<BR>No nearby service station around you. Please get closer, thank you."
+                    positionInfo = "No nearby service station around you. Please get closer, thank you."
                 }
                 document.getElementById("result").innerHTML = positionInfo;
             });
