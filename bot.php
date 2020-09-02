@@ -140,6 +140,18 @@ if(!is_null($events)){
                         $textReplyMessage = "สวัสดีครับ คุณ " . $userData['displayName']; // $userID;
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
+                    case "register":
+                            /*
+                            $textReplyMessage = "Bot ตอบกลับคุณเป็นข้อความ";
+                            $replyData = new TextMessageBuilder($textReplyMessage);
+                            break;
+                            */
+                            $userProfile = $bot->getProfile($userID);
+                            $userData = $userProfile->getJSONDecodedBody(); // return array 
+    
+                            $textReplyMessage = "สวัสดีครับ คุณ " . $userData['displayName'] . " กรุณากรอกชื่อ-สกุล และหมายเลขโทรศัพท์ของท่าน เพื่อยืนยันกรณีได้รับรางวัล"
+                            $replyData = new TextMessageBuilder($textReplyMessage);
+                            break;
                     case "uploadimage":
                             $textReplyMessage = "กรุณาเลือกรูปที่ต้องการ\n\nเงื่อนไข: ผู้ร่วมกิจกรรมต้องถ่ายรูปตัวเองกับปั๊มที่เช็กอิน และอัพโหลดรูปเข้าระบบ การเช็กอินจึงจะสมบูรณ์";
                             $replyData = new TextMessageBuilder($textReplyMessage);
