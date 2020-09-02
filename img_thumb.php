@@ -24,7 +24,7 @@ foreach($files1 as $key=>$value){
 //echo "Total = " . $total . "<BR>";
 
 // จำนวนรายการที่ต้องการแสดง แต่ละหน้า
-$perPage = 2;
+$perPage = 10;
  
 // คำนวณจำนวนหน้าทั้งหมด
 $num_naviPage=ceil($total/$perPage);
@@ -40,9 +40,9 @@ if(!isset($_GET['page'])){
     $e_key=($e_key>$total)?$total:$e_key;
 }
 for($i=1;$i<=$num_naviPage;$i++){
-    //echo "  || <a href=\"?page=".$i."\">Page $i</a>";   
-    echo '<button id="SubmitBtn" type="submit">Page $i</button>';
-    
+    echo "  || <a href=\"?page=".$i."\">Page $i</a>";   
+    //echo '<button id="SubmitBtn" type="submit">Page $i</button>';
+
 }
 echo "<hr>";
  
