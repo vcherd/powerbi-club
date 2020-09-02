@@ -1,5 +1,5 @@
 <?php
-require_once './config/config.php';
+require_once './config/config_value.php';
 
 $ss_poi = array (
     array('บางจาก - กระบี่',8.100842,98.885736),
