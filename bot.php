@@ -257,7 +257,7 @@ if(!is_null($events)){
                             ),
                             new UriTemplateActionBuilder(
                                 'Check ใบเสร็จ', // ข้อความแสดงในปุ่ม
-                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/img_thumb.php?userID=' . $userID . '&sID=' . $sID
+                                'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID . '&sID=' . $sID
                             ),                            
                         );
                         $replyData = new TemplateMessageBuilder('Carousel',
