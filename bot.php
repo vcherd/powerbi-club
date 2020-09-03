@@ -158,7 +158,7 @@ if(!is_null($events)){
                             $replyData = new TextMessageBuilder($textReplyMessage);
                             break;
                     case "uploadreceipt":
-                                $textReplyMessage = "กรุณาเลือกรูปใบเสร็จที่ต้องการ\n\nเงื่อนไข: 5.	ผู้ร่วมกิจกรรมต้องสะสมใบเสร็จหรือสลิปบัตรสมาชิกบางจาก จากการเติมน้ำมันบางจากตั้งแต่ 2,000 บาทขึ้นไป และอัพโหลดเข้าระบบ";
+                                $textReplyMessage = "กรุณาเลือกรูปใบเสร็จที่ต้องการ\n\nเงื่อนไข: ผู้ร่วมกิจกรรมต้องสะสมใบเสร็จหรือสลิปบัตรสมาชิกบางจาก จากการเติมน้ำมันบางจากตั้งแต่ 2,000 บาทขึ้นไป และอัพโหลดเข้าระบบ";
                                 $replyData = new TextMessageBuilder($textReplyMessage);
                                 break;
                     case "i":
