@@ -233,11 +233,11 @@ if(!is_null($events)){
                         // กำหนด action 4 ปุ่ม 4 ประเภท
                         $actionBuilder1 = array(
                             new UriTemplateActionBuilder(
-                                'Check-in', // ข้อความแสดงในปุ่ม
+                                'ลงทะเบียน, // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID . '&sID=' . $sID
                             ),
                             new UriTemplateActionBuilder(
-                                'สถิติ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
+                                'Check-in',// ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID . '&sID=' . $sID
                             ),                             
                         );
