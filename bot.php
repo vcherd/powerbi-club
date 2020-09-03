@@ -250,7 +250,6 @@ if(!is_null($events)){
                                 'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID . '&sID=' . $sID
                             ),                            
                         );
-                        
                         $actionBuilder3 = array(
                             new MessageTemplateActionBuilder(
                                 'Upload ใบเสร็จ',// ข้อความแสดงในปุ่ม
@@ -261,21 +260,9 @@ if(!is_null($events)){
                                 'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID . '&sID=' . $sID
                             ),                            
                         );
-                        $actionBuilder4 = array(
-                            new UriTemplateActionBuilder(
-                                'ลงทะเบียน', // ข้อความแสดงในปุ่ม
-                                'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID . '&sID=' . $sID
-                            ),                            
-                        );
                         $replyData = new TemplateMessageBuilder('Carousel',
                             new CarouselTemplateBuilder(
                                 array(
-                                    new CarouselColumnTemplateBuilder(
-                                        'Check-in ฟินรับทอง',
-                                        'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
-                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.png',
-                                        $actionBuilder4
-                                    ),
                                     new CarouselColumnTemplateBuilder(
                                         'Check-in ฟินรับทอง',
                                         'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
