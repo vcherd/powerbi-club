@@ -230,6 +230,12 @@ if(!is_null($events)){
                          
                     case "checkin":
                         // กำหนด action 4 ปุ่ม 4 ประเภท
+                        $actionBuilder0 = array(
+                            new UriTemplateActionBuilder(
+                                'Register', // ข้อความแสดงในปุ่ม
+                                'https://sdr-lineoa-php.herokuapp.com/admin_reg_user_popup.php?userID=' . $userID . '&sID=' . $sID
+                            ),
+                        );
                         $actionBuilder1 = array(
                             new UriTemplateActionBuilder(
                                 'Check-in', // ข้อความแสดงในปุ่ม
@@ -263,6 +269,12 @@ if(!is_null($events)){
                         $replyData = new TemplateMessageBuilder('Carousel',
                             new CarouselTemplateBuilder(
                                 array(
+                                    new CarouselColumnTemplateBuilder(
+                                        'Check-in ฟินรับทอง',
+                                        'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.png',
+                                        $actionBuilder0
+                                    ),
                                     new CarouselColumnTemplateBuilder(
                                         'Check-in ฟินรับทอง',
                                         'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
