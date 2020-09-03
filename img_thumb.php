@@ -50,8 +50,7 @@ echo "<hr>";
  
 // แสดงรายการ
 for($indexPicture=$s_key;$indexPicture<$e_key;$indexPicture++){
- 
-        echo "<img style='width:300px;' src='".$pic_path[$indexPicture]."'/>&nbsp;";  
+        if ($pic_path[$indexPicture] != "") echo "<img style='width:300px;' src='".$pic_path[$indexPicture]."'/>&nbsp;";  
 }
 
 
