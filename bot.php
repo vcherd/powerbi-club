@@ -260,6 +260,13 @@ if(!is_null($events)){
                                 'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID . '&sID=' . $sID
                             ),                            
                         );
+                        $actionBuilder4 = array(
+                            new UriTemplateActionBuilder(
+                                'Reg', // ข้อความแสดงในปุ่ม
+                                'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID . '&sID=' . $sID
+                            ),
+                           
+                        );
                         $replyData = new TemplateMessageBuilder('Carousel',
                             new CarouselTemplateBuilder(
                                 array(
@@ -267,7 +274,7 @@ if(!is_null($events)){
                                         'Register',
                                         'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.png',
-                                        $actionBuilder1
+                                        $actionBuilder4
                                     ),
                                     new CarouselColumnTemplateBuilder(
                                         'Check-in ฟินรับทอง',
