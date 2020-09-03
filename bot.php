@@ -182,6 +182,7 @@ if(!is_null($events)){
                         $multiMessage->add($locationMessage);
                         $replyData = $multiMessage;                                     
                         break;
+                        /*
                         case "t_c":
                             // กำหนด action 4 ปุ่ม 4 ประเภท
                             $actionBuilder = array(
@@ -227,7 +228,7 @@ if(!is_null($events)){
                                 )
                             );
                             break;  
-                         
+                         */
                     case "checkin":
                         // กำหนด action 4 ปุ่ม 4 ประเภท
                         $actionBuilder1 = array(
@@ -262,7 +263,7 @@ if(!is_null($events)){
                         );
                         $actionBuilder4 = array(
                             new UriTemplateActionBuilder(
-                                'Reg', // ข้อความแสดงในปุ่ม
+                                'ลงทะเบียนผู้ใช้', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/geo.php?userID=' . $userID . '&sID=' . $sID
                             ),
                            
