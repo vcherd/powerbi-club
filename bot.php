@@ -238,7 +238,7 @@ if(!is_null($events)){
                         $actionBuilder1 = array(
                             new UriTemplateActionBuilder(
                                 'ลงทะเบียน', // ข้อความแสดงในปุ่ม
-                                'https://sdr-lineoa-php.herokuapp.com/register.php?userID=' . $userID . '&sID=' . $sID
+                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/register.php?userID=' . $userID . '&sID=' . $sID
                             ),
                             new UriTemplateActionBuilder(
                                 'Check-in',// ข้อความแสดงในปุ่ม
