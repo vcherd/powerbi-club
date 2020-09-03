@@ -253,7 +253,7 @@ if(!is_null($events)){
                         );
                         $actionBuilder3 = array(
                             new MessageTemplateActionBuilder(
-                                'Upload ใบเสร็จ',// ข้อความแสดงในปุ่ม
+                                'ตรวจสอบข้อมูล Check-in',// ข้อความแสดงในปุ่ม
                                 'UploadImage' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                             ),
                             new UriTemplateActionBuilder(
