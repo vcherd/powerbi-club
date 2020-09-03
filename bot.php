@@ -280,7 +280,7 @@ if(!is_null($events)){
                                         'Step 3',
                                         'ตรวจสอบข้อมูลของคุณ',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c2.png',
-                                        $actionBuilder2
+                                        $actionBuilder3
                                     ),                                         
                                 )
                             )
