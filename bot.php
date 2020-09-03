@@ -243,9 +243,13 @@ if(!is_null($events)){
                         );
                         $actionBuilder2 = array(
                             new MessageTemplateActionBuilder(
-                                'Upload รูปและใบเสร็จ',// ข้อความแสดงในปุ่ม
+                                'Upload รูป',// ข้อความแสดงในปุ่ม
                                 'UploadImage' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
-                            ),                                              
+                            ),
+                            new UriTemplateActionBuilder(
+                                'Check รูป', // ข้อความแสดงในปุ่ม
+                                'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID . '&sID=' . $sID
+                            ),                            
                         );
                         $actionBuilder3 = array(
                             new MessageTemplateActionBuilder(
