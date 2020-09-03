@@ -1234,10 +1234,10 @@ if ($nearest_distance <= POI_CHECK_IN_DISTANCE) {
             $checkindatetime = strtok($line,"|");
             $uid_fromfile = strtok("|");
             $loc = strtok("|");
-/*
+
             $today = (new DateTime())->format('Y-m-d'); //use format whatever you are using
             $expiry = (new DateTime($checkindatetime))->format('Y-m-d');
-
+/*
             //var_dump(strtotime($today)  strtotime($expiry)); //false or true   
             
             if ($uid_fromfile == $_GET["userID"]) && (var_dump(strtotime($today) == strtotime($expiry)) && ($loc == $nearest_ss) {
