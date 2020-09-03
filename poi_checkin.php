@@ -1239,12 +1239,12 @@ if ($nearest_distance <= POI_CHECK_IN_DISTANCE) {
             $expiry = (new DateTime($checkindatetime))->format('Y-m-d');
 
             //var_dump(strtotime($today)  strtotime($expiry)); //false or true   
-            /*
-            if ($uid_fromfile == $_GET["userID"]) && (var_dump(strtotime($today) == strtotime($expiry)) && ($loc == $nearest_ss) {
+            
+            if (($uid_fromfile == $_GET["userID"]) && (var_dump(strtotime($today) == strtotime($expiry))) && ($loc == $nearest_ss)) {
                 $found = true;
                 die("You already check-in to " . $nearest_ss ." today. Please come again tomorrow.");
             }
-            */
+            
         }
         
         fclose($file);
