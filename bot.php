@@ -274,7 +274,7 @@ if(!is_null($events)){
                                         'Step 2',
                                         'Upload รูปของคุณ',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.png',
-                                        $actionBuilder1
+                                        $actionBuilder2
                                     ),
                                     new CarouselColumnTemplateBuilder(
                                         'Step 3',
