@@ -1224,11 +1224,39 @@ foreach ($ss_array as $ss) {
 
 //echo "Nearest SS is " . $nearest_ss . "(" . $nearest_distance . ")";
 if ($nearest_distance <= POI_CHECK_IN_DISTANCE) {
-    $checkinfile = fopen(FILE_CHECK_IN_FULLPATH, "a+") or die("Unable to open file!");
-    $txt = date('d-m-Y h:i:s A') . "|" . $_POST["userID"] . "|" . $nearest_ss . "\n";
-    fwrite($checkinfile, $txt);
-    fclose($checkinfile);    
-    echo "Check-in at " . $nearest_ss . " - Success.";
+    // check if already checkin today
+    $found = false;
+
+    if ($file = fopen(FILE_CHECK_IN_FULLPATH, "r")) {
+        while(!feof($file) && ($found == false)) {
+            $line = fgets($file);
+            $checkindatetime = strtok($line,"|");
+            $uid_fromfile = strtok("|");
+            $loc = strtok("|");
+
+            $today = (new DateTime())->format('Y-m-d'); //use format whatever you are using
+            $expiry = (new DateTime($checkindatetime))->format('Y-m-d');
+
+            //var_dump(strtotime($today)  strtotime($expiry)); //false or true   
+            
+            if ($uid_fromfile == $_GET["userID"]) && (var_dump(strtotime($today) == strtotime($expiry))) && ($loc == $nearest_ss) {
+                die("You already check-in to " . $nearest_ss ." today. Please come again tomorrow.");
+            }
+        }
+        fclose($file);
+    }
+    else die("Unable to open file!");
+
+    fclose($myfile);
+
+    // save
+    if ($found == false) {
+        $checkinfile = fopen(FILE_CHECK_IN_FULLPATH, "a+") or die("Unable to open file!");
+        $txt = date('d-m-Y h:i:s A') . "|" . $_POST["userID"] . "|" . $nearest_ss . "\n";
+        fwrite($checkinfile, $txt);
+        fclose($checkinfile);    
+        echo "Check-in at " . $nearest_ss . " - Success.";
+    }
 }
 else echo "Couldn't find nearby service station around you. Please get closer, thank you.";
 
