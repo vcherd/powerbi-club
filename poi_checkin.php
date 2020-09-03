@@ -1228,13 +1228,13 @@ if ($nearest_distance <= POI_CHECK_IN_DISTANCE) {
     $found = false;
     
     if ($file = fopen(FILE_CHECK_IN_FULLPATH, "r")) {
-        /*
+        
         while(!feof($file) && ($found == false)) {
             $line = fgets($file);
             $checkindatetime = strtok($line,"|");
             $uid_fromfile = strtok("|");
             $loc = strtok("|");
-
+/*
             $today = (new DateTime())->format('Y-m-d'); //use format whatever you are using
             $expiry = (new DateTime($checkindatetime))->format('Y-m-d');
 
@@ -1243,8 +1243,9 @@ if ($nearest_distance <= POI_CHECK_IN_DISTANCE) {
             if ($uid_fromfile == $_GET["userID"]) && (var_dump(strtotime($today) == strtotime($expiry))) && ($loc == $nearest_ss) {
                 die("You already check-in to " . $nearest_ss ." today. Please come again tomorrow.");
             }
+*/
         }
-        */
+        
         fclose($file);
     }
     else die("Unable to open file!");
