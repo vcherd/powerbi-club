@@ -157,6 +157,10 @@ if(!is_null($events)){
                             $textReplyMessage = "กรุณาเลือกรูปที่ต้องการ\n\nเงื่อนไข: ผู้ร่วมกิจกรรมต้องถ่ายรูปตัวเองกับปั๊มที่เช็กอิน และอัพโหลดรูปเข้าระบบ การเช็กอินจึงจะสมบูรณ์";
                             $replyData = new TextMessageBuilder($textReplyMessage);
                             break;
+                    case "uploadreceipt":
+                                $textReplyMessage = "กรุณาเลือกรูปใบเสร็จที่ต้องการ\n\nเงื่อนไข: 5.	ผู้ร่วมกิจกรรมต้องสะสมใบเสร็จหรือสลิปบัตรสมาชิกบางจาก จากการเติมน้ำมันบางจากตั้งแต่ 2,000 บาทขึ้นไป และอัพโหลดเข้าระบบ";
+                                $replyData = new TextMessageBuilder($textReplyMessage);
+                                break;
                     case "i":
                         $picFullSize = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower';
                         $picThumbnail = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower/240';
@@ -248,7 +252,7 @@ if(!is_null($events)){
                             ),
                             new MessageTemplateActionBuilder(
                                 'Upload ใบเสร็จ', // ข้อความแสดงในปุ่ม
-                                'UploadImage' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                                'UploadReceipt' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                             ),                            
                         );
                         $actionBuilder3 = array(
