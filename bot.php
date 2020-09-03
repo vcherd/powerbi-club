@@ -272,13 +272,13 @@ if(!is_null($events)){
                                     ),
                                     new CarouselColumnTemplateBuilder(
                                         'Step 2',
-                                        'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
+                                        'Upload รูปของคุณ',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.png',
                                         $actionBuilder1
                                     ),
                                     new CarouselColumnTemplateBuilder(
                                         'Step 3',
-                                        'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
+                                        'ตรวจสอบข้อมูลของคุณ',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c2.png',
                                         $actionBuilder2
                                     ),                                         
