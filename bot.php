@@ -240,6 +240,10 @@ if(!is_null($events)){
                                 'สถิติ Check-in ของคุณ',// ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID . '&sID=' . $sID
                             ), 
+                            new UriTemplateActionBuilder(
+                                'Register',// ข้อความแสดงในปุ่ม
+                                'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID . '&sID=' . $sID
+                            ),                             
                         );
                         $actionBuilder2 = array(
                             new MessageTemplateActionBuilder(
