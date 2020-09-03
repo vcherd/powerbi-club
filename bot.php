@@ -261,6 +261,7 @@ if(!is_null($events)){
                                 'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID . '&sID=' . $sID
                             ),                            
                         );
+                        /*
                         $actionBuilder4 = array(
                             new UriTemplateActionBuilder(
                                 'ลงทะเบียนผู้ใช้', // ข้อความแสดงในปุ่ม
@@ -268,6 +269,7 @@ if(!is_null($events)){
                             ),
                            
                         );
+                        */
                         $replyData = new TemplateMessageBuilder('Carousel',
                             new CarouselTemplateBuilder(
                                 array(
