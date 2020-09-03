@@ -1226,7 +1226,7 @@ foreach ($ss_array as $ss) {
 if ($nearest_distance <= POI_CHECK_IN_DISTANCE) {
     // check if already checkin today
     $found = false;
-
+    /*
     if ($file = fopen(FILE_CHECK_IN_FULLPATH, "r")) {
         while(!feof($file) && ($found == false)) {
             $line = fgets($file);
@@ -1248,7 +1248,7 @@ if ($nearest_distance <= POI_CHECK_IN_DISTANCE) {
     else die("Unable to open file!");
 
     fclose($myfile);
-
+    */
     // save
     if ($found == false) {
         $checkinfile = fopen(FILE_CHECK_IN_FULLPATH, "a+") or die("Unable to open file!");
