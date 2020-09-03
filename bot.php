@@ -261,7 +261,7 @@ if(!is_null($events)){
                                 'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID . '&sID=' . $sID
                             ),
                             new UriTemplateActionBuilder(
-                                'Check ใบเสร็จ', // ข้อความแสดงในปุ่ม
+                                'Check รูปและใบเสร็จ', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID . '&sID=' . $sID
                             ),                            
                         );
