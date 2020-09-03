@@ -277,7 +277,7 @@ if(!is_null($events)){
                                         'Register',
                                         'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.png',
-                                        $actionBuilder4
+                                        $actionBuilder1
                                     ),
                                     new CarouselColumnTemplateBuilder(
                                         'Check-in ฟินรับทอง',
