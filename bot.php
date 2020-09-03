@@ -252,9 +252,9 @@ if(!is_null($events)){
                             ),                            
                         );
                         $actionBuilder3 = array(
-                            new MessageTemplateActionBuilder(
-                                'ตรวจสอบข้อมูล Check-in',// ข้อความแสดงในปุ่ม
-                                'UploadImage' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                            new UriTemplateActionBuilder(
+                                'ตรวจสอบข้อมูล Check-in',
+                                'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID . '&sID=' . $sID
                             ),
                             new UriTemplateActionBuilder(
                                 'Check ใบเสร็จ', // ข้อความแสดงในปุ่ม
