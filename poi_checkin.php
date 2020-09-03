@@ -1226,8 +1226,9 @@ foreach ($ss_array as $ss) {
 if ($nearest_distance <= POI_CHECK_IN_DISTANCE) {
     // check if already checkin today
     $found = false;
-    /*
+    
     if ($file = fopen(FILE_CHECK_IN_FULLPATH, "r")) {
+        /*
         while(!feof($file) && ($found == false)) {
             $line = fgets($file);
             $checkindatetime = strtok($line,"|");
@@ -1243,12 +1244,13 @@ if ($nearest_distance <= POI_CHECK_IN_DISTANCE) {
                 die("You already check-in to " . $nearest_ss ." today. Please come again tomorrow.");
             }
         }
+        */
         fclose($file);
     }
     else die("Unable to open file!");
 
     fclose($myfile);
-    */
+    
     // save
     if ($found == false) {
         $checkinfile = fopen(FILE_CHECK_IN_FULLPATH, "a+") or die("Unable to open file!");
