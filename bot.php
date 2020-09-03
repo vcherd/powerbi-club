@@ -262,7 +262,7 @@ if(!is_null($events)){
                         );
                         $actionBuilder4 = array(
                             new UriTemplateActionBuilder(
-                                'Check ใบเสร็จ', // ข้อความแสดงในปุ่ม
+                                'ลงทะเบียน', // ข้อความแสดงในปุ่ม
                                 'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID . '&sID=' . $sID
                             ),                            
                         );
