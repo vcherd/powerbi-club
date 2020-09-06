@@ -283,7 +283,7 @@ if(!is_null($events)){
                                     new CarouselColumnTemplateBuilder(
                                         'Step 3',
                                         'ตรวจสอบข้อมูลของคุณ',
-                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c3.jpg',
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c3.png',
                                         $actionBuilder3
                                     ),                                         
                                 )
