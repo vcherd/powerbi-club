@@ -1,7 +1,7 @@
 <?php
 require_once './config/config_post.php';
 
-CheckRef("geo.php");
+//CheckRef("geo.php");
 
 function distance($lat1, $lon1, $lat2, $lon2, $unit) {
     $radlat1 = M_PI * $lat1/180;
