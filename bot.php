@@ -258,7 +258,7 @@ if(!is_null($events)){
                         $actionBuilder3 = array(
                             new UriTemplateActionBuilder(
                                 'ตรวจสอบข้อมูล Check-in',
-                                'https://sdr-lineoa-php.herokuapp.com/poi_checkin_stat.php?userID=' . $userID . '&sID=' . $sID
+                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/poi_checkin_stat.php?userID=' . $userID . '&sID=' . $sID
                             ),
                             new UriTemplateActionBuilder(
                                 'Check รูปและใบเสร็จ', // ข้อความแสดงในปุ่ม
