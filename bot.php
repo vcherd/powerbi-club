@@ -324,10 +324,10 @@ if(!is_null($events)){
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
                         */
-                        /*
+                        
                         $url = 'https://bcpcheckin.bangchak.co.th/bcpcheckin/saveimage.php';
                         $data = array('key1' => 'value1', 'key2' => 'value2');
-
+                        /*
                         // use key 'http' even if you send the request to https://...
                         $options = array(
                             'http' => array(
