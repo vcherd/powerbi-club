@@ -324,7 +324,8 @@ if(!is_null($events)){
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
                         */
-                        $url = 'https://bcpcheckin.bangchak.co.th/bcpcheckin/img_save.php';
+                        /*
+                        $url = 'https://bcpcheckin.bangchak.co.th/bcpcheckin/saveimage.php';
                         $data = array('key1' => 'value1', 'key2' => 'value2');
 
                         // use key 'http' even if you send the request to https://...
@@ -337,10 +338,10 @@ if(!is_null($events)){
                         );
                         $context  = stream_context_create($options);
                         $result = file_get_contents($url, false, $context);
-                        /*if ($result === FALSE) { /* Handle error */ }
+                        //if ($result === FALSE) { // Handle error  }
 
                         //var_dump($result);
-                        
+                        */
 
                         break;
                     }
