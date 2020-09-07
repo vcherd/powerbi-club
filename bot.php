@@ -311,6 +311,7 @@ if(!is_null($events)){
                                 $fileNameSave = "img_" . date('Ymd_his_'). rand(10000,99999) .".".$ext;
                                 break;                                                                            
                         }
+                        /*
                         $botDataFolder = USER_IMAGE_FOLDER . '/'; // โฟลเดอร์หลักที่จะบันทึกไฟล์
                         $botDataUserFolder = $botDataFolder.$userID; // มีโฟลเดอร์ด้านในเป็น userId อีกขั้น
                         if(!file_exists($botDataUserFolder)) { // ตรวจสอบถ้ายังไม่มีให้สร้างโฟลเดอร์ userId
@@ -321,6 +322,26 @@ if(!is_null($events)){
                         file_put_contents($fileFullSavePath,$dataBinary); // ทำการบันทึกไฟล์
                         $textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว";//. 'https://sdr-lineoa-php.herokuapp.com/' . $fileFullSavePath;
                         $replyData = new TextMessageBuilder($textReplyMessage);
+                        break;
+                        */
+                        $url = 'https://bcpcheckin.bangchak.co.th/bcpcheckin/img_save.php';
+                        $data = array('key1' => 'value1', 'key2' => 'value2');
+
+                        // use key 'http' even if you send the request to https://...
+                        $options = array(
+                            'http' => array(
+                                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                                'method'  => 'POST',
+                                'content' => http_build_query($data)
+                            )
+                        );
+                        $context  = stream_context_create($options);
+                        $result = file_get_contents($url, false, $context);
+                        /*if ($result === FALSE) { /* Handle error */ }
+
+                        //var_dump($result);
+                        
+
                         break;
                     }
                     $failMessage = json_encode($idMessage.' '.$response->getHTTPStatus() . ' ' . $response->getRawBody());
