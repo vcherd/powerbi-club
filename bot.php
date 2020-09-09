@@ -338,7 +338,8 @@ if(!is_null($events)){
                         $context  = stream_context_create($options);
                         $result = file_get_contents($url, false, $context);
                         
-                        $textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว";//. 'https://sdr-lineoa-php.herokuapp.com/' . $fileFullSavePath;
+                        //$textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว";//. 'https://sdr-lineoa-php.herokuapp.com/' . $fileFullSavePath;
+                        $textReplyMessage = $result;//. 'https://sdr-lineoa-php.herokuapp.com/' . $fileFullSavePath;
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;                        
                     }
