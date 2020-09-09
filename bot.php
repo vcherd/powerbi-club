@@ -328,8 +328,7 @@ if(!is_null($events)){
                         $data = array(
                                 'userID' => $userID, 
                                 'sID' => $sID,
-                                'imagedata' => addslashes($dataBinary),
-                                'filename' => $fileNameSave
+                                'imagedata' => addslashes($dataBinary)
                             );
                         
                         // use key 'http' even if you send the request to https://...
