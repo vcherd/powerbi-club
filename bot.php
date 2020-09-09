@@ -327,7 +327,7 @@ if(!is_null($events)){
                         $url = 'https://bcpcheckin.bangchak.co.th/bcpcheckin/saveimage.php';
                         $data = array(
                                 'userID' => $userID, 
-                                'sID' => $sID,
+                                'sID' => $sID
                                 //'imagedata' => addslashes($dataBinary)
                             );
                         
