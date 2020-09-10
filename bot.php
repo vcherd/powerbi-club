@@ -328,7 +328,7 @@ if(!is_null($events)){
                         $data = array(
                                 'userID' => $userID, 
                                 'sID' => $sID,
-                                //'imagedata' => addslashes($dataBinary)
+                                'imagedata' => $dataBinary,
                                 'filename' => $fileNameSave
                             );
                         
