@@ -262,7 +262,7 @@ if(!is_null($events)){
                             ),
                             new UriTemplateActionBuilder(
                                 'Check รูปและใบเสร็จ', // ข้อความแสดงในปุ่ม
-                                'https://sdr-lineoa-php.herokuapp.com/img_thumb.php?userID=' . $userID . '&sID=' . $sID
+                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/img_thumb.php?userID=' . $userID . '&sID=' . $sID
                             ),                            
                         );
                         $replyData = new TemplateMessageBuilder('Carousel',
