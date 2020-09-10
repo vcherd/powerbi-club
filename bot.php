@@ -311,7 +311,7 @@ if(!is_null($events)){
                                 $fileNameSave = "img_" . date('Ymd_his_'). rand(10000,99999) .".".$ext;
                                 break;                                                                            
                         }
-                        
+                        /*
                         $botDataFolder = USER_IMAGE_FOLDER . '/'; // โฟลเดอร์หลักที่จะบันทึกไฟล์
                         $botDataUserFolder = $botDataFolder.$userID; // มีโฟลเดอร์ด้านในเป็น userId อีกขั้น
                         if(!file_exists($botDataUserFolder)) { // ตรวจสอบถ้ายังไม่มีให้สร้างโฟลเดอร์ userId
@@ -323,7 +323,7 @@ if(!is_null($events)){
                         $textReplyMessage = "บันทึกไฟล์เรียบร้อยแล้ว";//. 'https://sdr-lineoa-php.herokuapp.com/' . $fileFullSavePath;
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
-                        /*                     
+                        */                     
                         $url = 'https://bcpcheckin.bangchak.co.th/bcpcheckin/saveimage.php';
                         $data = array(
                                 'userID' => $userID, 
@@ -347,7 +347,7 @@ if(!is_null($events)){
                         $textReplyMessage = $result;//. 'https://sdr-lineoa-php.herokuapp.com/' . $fileFullSavePath;
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
-                        */                        
+                                               
                     }
                     $failMessage = json_encode($idMessage.' '.$response->getHTTPStatus() . ' ' . $response->getRawBody());
                     $replyData = new TextMessageBuilder($failMessage);  
