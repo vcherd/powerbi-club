@@ -92,36 +92,7 @@ $events = json_decode($content, true);
 
 // ส่วนของการทำงาน
 if(!is_null($events)){
-    // ถ้ามีค่า สร้างตัวแปรเก็บ replyToken ไว้ใช้งาน
-    $replyToken = $events['events'][0]['replyToken'];
-    $userID = $events['events'][0]['source']['userId'];
-    $sID = hash(HASH_ALGORITHM, $userID . SALT);
-    $sourceType = $events['events'][0]['source']['type'];        
-    $is_postback = NULL;
-    $is_message = NULL;
-    if(isset($events['events'][0]) && array_key_exists('message',$events['events'][0])){
-        $is_message = true;
-        $typeMessage = $events['events'][0]['message']['type'];
-        $userMessage = $events['events'][0]['message']['text'];     
-        $idMessage = $events['events'][0]['message']['id'];             
-    }
-    if(isset($events['events'][0]) && array_key_exists('postback',$events['events'][0])){
-        $is_postback = true;
-        $dataPostback = NULL;
-        parse_str($events['events'][0]['postback']['data'],$dataPostback);;
-        $paramPostback = NULL;
-        if(array_key_exists('params',$events['events'][0]['postback'])){
-            if(array_key_exists('date',$events['events'][0]['postback']['params'])){
-                $paramPostback = $events['events'][0]['postback']['params']['date'];
-            }
-            if(array_key_exists('time',$events['events'][0]['postback']['params'])){
-                $paramPostback = $events['events'][0]['postback']['params']['time'];
-            }
-            if(array_key_exists('datetime',$events['events'][0]['postback']['params'])){
-                $paramPostback = $events['events'][0]['postback']['params']['datetime'];
-            }                       
-        }
-    } 
+    
     // ถ้า bot ถูก invite เพื่อเข้า Join Event ให้ bot ส่งข้อความใน GROUP ว่าเข้าร่วม GROUP แล้ว
     if(!is_null($eventJoin)){
         $textReplyMessage = "ขอเข้าร่วมด้วยน่ะ $sourceType ID:: ".$sourceId;
