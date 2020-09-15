@@ -1,4 +1,13 @@
 <?php
+// include composer autoload
+require_once './vendor/autoload.php';
+ 
+// การตั้งเกี่ยวกับ bot
+require_once './config/bot_settings.php';
+require_once './config/config_value.php';
+
+// ไฟล์ฟังก์ชั่นสำหรับแปลง xml เป็น flex 
+require_once("flex_gen.php");
 ///////////// ส่วนของการเรียกใช้งาน class ผ่าน namespace
 use LINE\LINEBot;
 use LINE\LINEBot\HTTPClient;
@@ -70,16 +79,6 @@ use LINE\LINEBot\MessageBuilder\Flex\ComponentBuilder\SpacerComponentBuilder;
 use LINE\LINEBot\MessageBuilder\Flex\ComponentBuilder\FillerComponentBuilder;
 use LINE\LINEBot\MessageBuilder\Flex\ComponentBuilder\SeparatorComponentBuilder;
 use LINE\LINEBot\MessageBuilder\Flex\ComponentBuilder\TextComponentBuilder;
-
-// include composer autoload
-require_once './vendor/autoload.php';
- 
-// การตั้งเกี่ยวกับ bot
-require_once './config/bot_settings.php';
-require_once './config/config_value.php';
-
-// ไฟล์ฟังก์ชั่นสำหรับแปลง xml เป็น flex 
-require_once("flex_gen.php");
 
 $httpClient = new CurlHTTPClient(LINE_MESSAGE_ACCESS_TOKEN);
 $bot = new LINEBot($httpClient, array('channelSecret' => LINE_MESSAGE_CHANNEL_SECRET));
