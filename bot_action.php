@@ -305,7 +305,20 @@ if(!is_null($events)){
                             )
                         );
                         break;                                                                                             
-                    default:
+                        case "fl": // ส่วนทดสอบโต้ตอบข้อควมม flex
+                            $textReplyMessage = new BubbleContainerBuilder(
+                                "ltr",NULL,NULL,
+                                new BoxComponentBuilder(
+                                    "vertical",
+                                    array(
+                                        new TextComponentBuilder("hello"),
+                                        new TextComponentBuilder("world")
+                                    )
+                                )
+                            );
+                            $replyData = new FlexMessageBuilder("This is a Flex Message",$textReplyMessage);                                                                
+                            break;
+                        default:
                         $textReplyMessage = "ข้อมูลที่คุณกรอกไม่ถูกต้อง";
                         $replyData = new TextMessageBuilder($textReplyMessage);         
                         break;                                      
