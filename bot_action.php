@@ -11,6 +11,9 @@ require_once './vendor/autoload.php';
 require_once './config/bot_settings.php';
 require_once './config/config_value.php';
 
+// ไฟล์ฟังก์ชั่นสำหรับแปลง xml เป็น flex 
+require_once 'flex_gen.php';
+
 // กรณีมีการเชื่อมต่อกับฐานข้อมูล
 //require_once("dbconnect.php");
  
