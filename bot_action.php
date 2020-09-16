@@ -307,35 +307,16 @@ if(!is_null($events)){
                         break;                                                                                             
                         case "fl": // ส่วนทดสอบโต้ตอบข้อควมม flex
                             $textReplyMessage = new BubbleContainerBuilder(
-                                "ltr",  // กำหนด NULL หรือ "ltr" หรือ "rtl"
+                                "ltr",NULL,NULL,
                                 new BoxComponentBuilder(
                                     "vertical",
                                     array(
-                                        new TextComponentBuilder("This is Header")
+                                        new TextComponentBuilder("hello"),
+                                        new TextComponentBuilder("world")
                                     )
-                                ),
-                                new ImageComponentBuilder(
-                                    "https://www.ninenik.com/images/ninenik_page_logo.png",NULL,NULL,NULL,NULL,"full","20:13","cover"),
-                                new BoxComponentBuilder(
-                                    "vertical",
-                                    array(
-                                        new TextComponentBuilder("This is Body")
-                                    )
-                                ),
-                                new BoxComponentBuilder(
-                                    "vertical",
-                                    array(
-                                        new TextComponentBuilder("This is Footer")
-                                    )
-                                ),
-                                new BubbleStylesBuilder( // style ทั้งหมดของ bubble
-                                    new BlockStyleBuilder("#FFC90E"),  // style สำหรับ header block
-                                    new BlockStyleBuilder("#EFE4B0"), // style สำหรับ hero block
-                                    new BlockStyleBuilder("#B5E61D"), // style สำหรับ body block
-                                    new BlockStyleBuilder("#FFF200") // style สำหรับ footer block
                                 )
                             );
-                            $replyData = new FlexMessageBuilder("Flex",$textReplyMessage);
+                            $replyData = new FlexMessageBuilder("This is a Flex Message",$textReplyMessage);
                         break;
                         /*
                             $textReplyMessage = new BubbleContainerBuilder(
