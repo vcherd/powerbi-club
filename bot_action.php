@@ -306,6 +306,13 @@ if(!is_null($events)){
                         );
                         break;                                                                                             
                         case "fl": // ส่วนทดสอบโต้ตอบข้อควมม flex
+                            $userProfile = $bot->getProfile($userID);
+                            $userData = $userProfile->getJSONDecodedBody(); // return array 
+
+                            $textReplyMessage = "สวัสดีครับ คุณ " . $userData['displayName']; // $userID;
+                            $replyData = new TextMessageBuilder($textReplyMessage);
+                        break;
+                        /*
                             $textReplyMessage = new BubbleContainerBuilder(
                                 "ltr",NULL,NULL,
                                 new BoxComponentBuilder(
@@ -318,6 +325,7 @@ if(!is_null($events)){
                             );
                             $replyData = new FlexMessageBuilder("This is a Flex Message",$textReplyMessage);                                                                
                             break;
+                        */
                         default:
                         $textReplyMessage = "ข้อมูลที่คุณกรอกไม่ถูกต้อง";
                         $replyData = new TextMessageBuilder($textReplyMessage);         
