@@ -305,7 +305,7 @@ if(!is_null($events)){
                             )
                         );
                         break;                                                                                             
-                        case "fl": // ส่วนทดสอบโต้ตอบข้อควมม flex
+                        case "f": // ส่วนทดสอบโต้ตอบข้อควมม flex
                             $textReplyMessage = new BubbleContainerBuilder(
                                 "ltr",NULL,NULL,
                                 new BoxComponentBuilder(
