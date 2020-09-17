@@ -233,7 +233,7 @@ if(!is_null($events)){
                             );
                             break;  
                          */
-                    case "checkin":
+                    case "whatis":
                         // กำหนด action 4 ปุ่ม 4 ประเภท
                         $actionBuilder1 = array(
                             new UriTemplateActionBuilder(
