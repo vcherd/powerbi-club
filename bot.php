@@ -246,14 +246,14 @@ if(!is_null($events)){
                             ),                             
                         );
                         $actionBuilder2 = array(
-                            new MessageTemplateActionBuilder(
-                                'Upload รูป',// ข้อความแสดงในปุ่ม
-                                'UploadImage' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                            new UriTemplateActionBuilder(
+                                'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
+                                'https://www.thepexcel.com/what-is-power-bi/'
                             ),
-                            new MessageTemplateActionBuilder(
-                                'Upload ใบเสร็จ', // ข้อความแสดงในปุ่ม
-                                'UploadReceipt' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
-                            ),                            
+                            new UriTemplateActionBuilder(
+                                'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
+                                'https://www.thepexcel.com/what-is-power-bi/'
+                            ),                              
                         );
                         $actionBuilder3 = array(
                             new UriTemplateActionBuilder(
@@ -270,19 +270,19 @@ if(!is_null($events)){
                                 array(
                                     new CarouselColumnTemplateBuilder(
                                         'Step 1',
-                                        'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
+                                        'เริ่มต้นกับ Power BI',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/carosel.png',
                                         $actionBuilder1
                                     ),
                                     new CarouselColumnTemplateBuilder(
                                         'Step 2',
-                                        'Upload รูปของคุณ',
+                                        'Power BI ทำอะไรได้บ้าง',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/carosel.png',
                                         $actionBuilder2
                                     ),
                                     new CarouselColumnTemplateBuilder(
                                         'Step 3',
-                                        'ตรวจสอบข้อมูลของคุณ',
+                                        'มาดู Case Study กันดีกว่า',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/carosel.png',
                                         $actionBuilder3
                                     ),                                         
