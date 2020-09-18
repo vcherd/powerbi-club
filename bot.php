@@ -253,6 +253,13 @@ if(!is_null($events)){
                                     'Postback Text'  // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                                 ),      
                             );
+                            $actionBuilder1 = array(
+                                new UriTemplateActionBuilder(
+                                    'ทำความรู้จัก', // ข้อความแสดงในปุ่ม
+                                    'https://youtu.be/yKTSLffVGbk'
+                                ),
+                                    
+                            );
                             $replyData = new TemplateMessageBuilder('Carousel',
                                 new CarouselTemplateBuilder(
                                     array(
