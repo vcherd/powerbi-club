@@ -271,19 +271,19 @@ if(!is_null($events)){
                                     new CarouselColumnTemplateBuilder(
                                         'Step 1',
                                         'เข้าร่วมกิจกรรม เช็คอิน ฟินรับทอง',
-                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/carosel.png',
                                         $actionBuilder1
                                     ),
                                     new CarouselColumnTemplateBuilder(
                                         'Step 2',
                                         'Upload รูปของคุณ',
-                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c2.jpg',
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/carosel.png',
                                         $actionBuilder2
                                     ),
                                     new CarouselColumnTemplateBuilder(
                                         'Step 3',
                                         'ตรวจสอบข้อมูลของคุณ',
-                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c3.jpg',
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/carosel.png',
                                         $actionBuilder3
                                     ),                                         
                                 )
