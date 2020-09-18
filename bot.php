@@ -260,7 +260,7 @@ if(!is_null($events)){
                                 ),
                                 new UriTemplateActionBuilder(
                                     'ตัวอย่างการใช้งานเบื้องต้น',// ข้อความแสดงในปุ่ม
-                                    'แแแแ'
+                                    'https://www.youtube.com/watch?v=WSvkcRjTBMQ'
                                 ),
                                 new UriTemplateActionBuilder(
                                     'ดาวน์โหลดไปใช้งาน',// ข้อความแสดงในปุ่ม
