@@ -235,7 +235,7 @@ if(!is_null($events)){
                          */
                         case "whatis":
                             // กำหนด action 4 ปุ่ม 4 ประเภท
-                            $actionBuilder = array(
+                            $actionBuilder1 = array(
                                 new MessageTemplateActionBuilder(
                                     'Message Template',// ข้อความแสดงในปุ่ม
                                     'This is Text' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
@@ -253,7 +253,7 @@ if(!is_null($events)){
                                     'Postback Text'  // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                                 ),      
                             );
-                            $actionBuilder1 = array(
+                            $actionBuilder2 = array(
                                 new UriTemplateActionBuilder(
                                     'ทำความรู้จัก', // ข้อความแสดงในปุ่ม
                                     'https://youtu.be/yKTSLffVGbk'
@@ -266,25 +266,25 @@ if(!is_null($events)){
                                             'Step 1',
                                             'เริ่มต้นกับ Power BI',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder
+                                            $actionBuilder1
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'Step 2',
                                             'Power BI ทำอะไรได้บ้าง',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder
+                                            $actionBuilder1
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'Step 3',
                                             'มาดู Case Study กันดีกว่า',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder
+                                            $actionBuilder1
                                         ),   
                                         new CarouselColumnTemplateBuilder(
                                             'Step 4',
                                             'Power BI ขั้นสูง',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder
+                                            $actionBuilder1
                                         ),                                        
                                     )
                                 )
