@@ -265,6 +265,16 @@ if(!is_null($events)){
                                 'https://bcpcheckin.bangchak.co.th/bcpcheckin/img_thumb.php?userID=' . $userID . '&sID=' . $sID
                             ),                            
                         );
+                        $actionBuilder4 = array(
+                            new UriTemplateActionBuilder(
+                                'รู้จักกับ ETL',
+                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/poi_checkin_stat.php?userID=' . $userID . '&sID=' . $sID
+                            ),
+                            new UriTemplateActionBuilder(
+                                'Power BI Report Server', // ข้อความแสดงในปุ่ม
+                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/img_thumb.php?userID=' . $userID . '&sID=' . $sID
+                            ),                            
+                        );
                         $replyData = new TemplateMessageBuilder('Carousel',
                             new CarouselTemplateBuilder(
                                 array(
@@ -285,6 +295,12 @@ if(!is_null($events)){
                                         'มาดู Case Study กันดีกว่า',
                                         'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
                                         $actionBuilder3
+                                    ),
+                                    new CarouselColumnTemplateBuilder(
+                                        'Step 3,
+                                        'Power BI ขั้นสูง',
+                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
+                                        $actionBuilder4
                                     ),                                         
                                 )
                             )
