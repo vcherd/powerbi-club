@@ -233,83 +233,51 @@ if(!is_null($events)){
                             );
                             break;  
                          */
-                    case "whatis":
-                        // กำหนด action 4 ปุ่ม 4 ประเภท
-                        $actionBuilder1 = array(
-                            new UriTemplateActionBuilder(
-                                'ทำความรู้จัก', // ข้อความแสดงในปุ่ม
-                                'https://youtu.be/yKTSLffVGbk'
-                            ),
-                            new UriTemplateActionBuilder(
-                                'ตัวอย่างการใช้งานเบื้องต้น',// ข้อความแสดงในปุ่ม
-                                'https://www.youtube.com/watch?v=WSvkcRjTBMQ'
-                            ),
-                            new UriTemplateActionBuilder(
-                                'ดาวน์โหลดไปใช้งาน',// ข้อความแสดงในปุ่ม
-                                'https://powerbi.microsoft.com/en-us/downloads/'
-                            ),                           
-                        );
-                        $actionBuilder2 = array(
-                            new UriTemplateActionBuilder(
-                                'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
-                                'https://www.thepexcel.com/what-is-power-bi/'
-                            ),
-                            new UriTemplateActionBuilder(
-                                'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
-                                'https://www.thepexcel.com/what-is-power-bi/'
-                            ),                              
-                        );
-                        $actionBuilder3 = array(
-                            new UriTemplateActionBuilder(
-                                'ตรวจสอบข้อมูล Check-in',
-                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/poi_checkin_stat.php?userID=' . $userID . '&sID=' . $sID
-                            ),
-                            new UriTemplateActionBuilder(
-                                'Check รูปและใบเสร็จ', // ข้อความแสดงในปุ่ม
-                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/img_thumb.php?userID=' . $userID . '&sID=' . $sID
-                            ),                            
-                        );
-                        $actionBuilder4 = array(
-                            new UriTemplateActionBuilder(
-                                'รู้จักกับ ETL',
-                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/poi_checkin_stat.php?userID=' . $userID . '&sID=' . $sID
-                            ),
-                            new UriTemplateActionBuilder(
-                                'Power BI Report Server', // ข้อความแสดงในปุ่ม
-                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/img_thumb.php?userID=' . $userID . '&sID=' . $sID
-                            ),                            
-                        );
-                        $replyData = new TemplateMessageBuilder('Carousel',
-                            new CarouselTemplateBuilder(
-                                array(
-                                    new CarouselColumnTemplateBuilder(
-                                        'Step 1',
-                                        'เริ่มต้นกับ Power BI',
-                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                        $actionBuilder1
-                                    ),
-                                    new CarouselColumnTemplateBuilder(
-                                        'Step 2',
-                                        'Power BI ทำอะไรได้บ้าง',
-                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                        $actionBuilder2
-                                    ),
-                                    new CarouselColumnTemplateBuilder(
-                                        'Step 3',
-                                        'มาดู Case Study กันดีกว่า',
-                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                        $actionBuilder3
-                                    ),
-                                    new CarouselColumnTemplateBuilder(
-                                        'Step 3,
-                                        'Power BI ขั้นสูง',
-                                        'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                        $actionBuilder4
-                                    ),                                         
+                        case "whatis":
+                            // กำหนด action 4 ปุ่ม 4 ประเภท
+                            $actionBuilder = array(
+                                new MessageTemplateActionBuilder(
+                                    'Message Template',// ข้อความแสดงในปุ่ม
+                                    'This is Text' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                                ),
+                                new UriTemplateActionBuilder(
+                                    'Uri Template', // ข้อความแสดงในปุ่ม
+                                    'https://www.ninenik.com'
+                                ),
+                                new PostbackTemplateActionBuilder(
+                                    'Postback', // ข้อความแสดงในปุ่ม
+                                    http_build_query(array(
+                                        'action'=>'buy',
+                                        'item'=>100
+                                    )), // ข้อมูลที่จะส่งไปใน webhook ผ่าน postback event
+                                    'Postback Text'  // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                                ),      
+                            );
+                            $replyData = new TemplateMessageBuilder('Carousel',
+                                new CarouselTemplateBuilder(
+                                    array(
+                                        new CarouselColumnTemplateBuilder(
+                                            'Title Carousel',
+                                            'Description Carousel',
+                                            'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                            $actionBuilder
+                                        ),
+                                        new CarouselColumnTemplateBuilder(
+                                            'Title Carousel',
+                                            'Description Carousel',
+                                            'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                            $actionBuilder
+                                        ),
+                                        new CarouselColumnTemplateBuilder(
+                                            'Title Carousel',
+                                            'Description Carousel',
+                                            'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                            $actionBuilder
+                                        ),                                          
+                                    )
                                 )
-                            )
-                        );
-                        break;                                                                                             
+                            );
+                            break;      
                     default:
                         $textReplyMessage = "ข้อมูลที่คุณกรอกไม่ถูกต้อง";
                         $replyData = new TextMessageBuilder($textReplyMessage);         
