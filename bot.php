@@ -323,6 +323,16 @@ if(!is_null($events)){
                                         'https://liff.line.me/1654928111-2QB1R7BR'
                                     ),     
                                 );
+                                $actionBuilder6 = array(
+                                    new UriTemplateActionBuilder(
+                                        'ระบุวัน-เวลา',
+                                        'https://liff.line.me/1654928111-2QB1R7BR'
+                                    ),
+                                    new UriTemplateActionBuilder(
+                                        'ฝากข้อความ', // ข้อความแสดงในปุ่ม
+                                        'https://liff.line.me/1654928111-2QB1R7BR'
+                                    ),     
+                                );
                                 $replyData = new TemplateMessageBuilder('Carousel',
                                     new CarouselTemplateBuilder(
                                         array(
@@ -333,7 +343,17 @@ if(!is_null($events)){
                                                 $actionBuilder5
                                             ),                                                                                  
                                         )
-                                    )
+                                    ),
+                                    new CarouselTemplateBuilder(
+                                        array(
+                                            new CarouselColumnTemplateBuilder(
+                                                'นัดหมายทีมงาน',
+                                                'ระบุวัน-เวลาที่สะดวกเพื่อพูดคุยกับ Coach ของเรา',
+                                                'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
+                                                $actionBuilder6
+                                            ),                                                                                  
+                                        )
+                                    ),
                                 );
                             break;
                     default:
