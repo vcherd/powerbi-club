@@ -237,8 +237,8 @@ if(!is_null($events)){
                         // กำหนด action 4 ปุ่ม 4 ประเภท
                         $actionBuilder1 = array(
                             new UriTemplateActionBuilder(
-                                'ลงทะเบียน', // ข้อความแสดงในปุ่ม
-                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/register.php?userID=' . $userID . '&sID=' . $sID
+                                'ทำความรู้จัก', // ข้อความแสดงในปุ่ม
+                                'https://youtu.be/yKTSLffVGbk'
                             ),
                             new UriTemplateActionBuilder(
                                 'ตัวอย่างการใช้งานเบื้องต้น',// ข้อความแสดงในปุ่ม
