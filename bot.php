@@ -266,7 +266,7 @@ if(!is_null($events)){
                                             'Step 1',
                                             'เริ่มต้นกับ Power BI',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder1
+                                            $actionBuilder
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'Step 2',
