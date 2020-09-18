@@ -258,7 +258,10 @@ if(!is_null($events)){
                                     'ทำความรู้จัก', // ข้อความแสดงในปุ่ม
                                     'https://youtu.be/yKTSLffVGbk'
                                 ),
-                                    
+                                new UriTemplateActionBuilder(
+                                    'ตัวอย่างการใช้งานเบื้องต้น', // ข้อความแสดงในปุ่ม
+                                    'https://www.youtube.com/watch?v=WSvkcRjTBMQ'
+                                ),    
                             );
                             $replyData = new TemplateMessageBuilder('Carousel',
                                 new CarouselTemplateBuilder(
@@ -267,7 +270,7 @@ if(!is_null($events)){
                                             'Step 1',
                                             'เริ่มต้นกับ Power BI',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder
+                                            $actionBuilder1
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'Step 2',
