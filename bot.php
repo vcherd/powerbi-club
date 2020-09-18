@@ -255,7 +255,7 @@ if(!is_null($events)){
                             );
                             $actionBuilder1 = array(
                                 new UriTemplateActionBuilder(
-                                    'ทำความรู้จัก', // ข้อความแสดงในปุ่ม
+                                    'ทำความรู้จัก Power BI', // ข้อความแสดงในปุ่ม
                                     'https://youtu.be/yKTSLffVGbk'
                                 ),
                                 new UriTemplateActionBuilder(
