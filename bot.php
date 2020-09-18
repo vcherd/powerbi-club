@@ -272,7 +272,7 @@ if(!is_null($events)){
                                             'Step 2',
                                             'Power BI ทำอะไรได้บ้าง',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder1
+                                            $actionBuilder2
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'Step 3',
