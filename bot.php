@@ -342,17 +342,12 @@ if(!is_null($events)){
                                                 'https://sdr-lineoa-php.herokuapp.com/uploadimage/c2.jpg',
                                                 $actionBuilder5
                                             ),                                                                                  
-                                            new DatetimePickerTemplateActionBuilder(
-                                                'ระบุวัน-เวลานัดหมาย Coach (เฉพาะวันศุกร์บ่าย)', // ข้อความแสดงในปุ่ม
-                                                http_build_query(array(
-                                                    'action'=>'reservation',
-                                                    'person'=>5
-                                                )), // ข้อมูลที่จะส่งไปใน webhook ผ่าน postback event
-                                                'datetime', // date | time | datetime รูปแบบข้อมูลที่จะส่ง ในที่นี้ใช้ datatime
-                                                substr_replace(date("Y-m-d H:i"),'T',10,1), // วันที่ เวลา ค่าเริ่มต้นที่ถูกเลือก
-                                                substr_replace(date("Y-m-d H:i",strtotime("+5 day")),'T',10,1), //วันที่ เวลา มากสุดที่เลือกได้
-                                                substr_replace(date("Y-m-d H:i"),'T',10,1) //วันที่ เวลา น้อยสุดที่เลือกได้
-                                            ),                                                                                
+                                            new CarouselColumnTemplateBuilder(
+                                                'นัดหมายทีมงาน',
+                                                'ระบุวัน-เวลาที่สะดวกเพื่อพูดคุยกับ Coach ของเรา',
+                                                'https://sdr-lineoa-php.herokuapp.com/uploadimage/c2.jpg',
+                                                $actionBuilder6
+                                            ),                                                                                  
                                         )
                                     ),
                                 );
