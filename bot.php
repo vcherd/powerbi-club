@@ -241,8 +241,8 @@ if(!is_null($events)){
                                 'https://bcpcheckin.bangchak.co.th/bcpcheckin/register.php?userID=' . $userID . '&sID=' . $sID
                             ),
                             new UriTemplateActionBuilder(
-                                'Check-in',// ข้อความแสดงในปุ่ม
-                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/geo.php?userID=' . $userID . '&sID=' . $sID
+                                'ตัวอย่างการใช้งานเบื้องต้น',// ข้อความแสดงในปุ่ม
+                                'https://www.youtube.com/watch?v=WSvkcRjTBMQ'
                             ),                             
                         );
                         $actionBuilder2 = array(
