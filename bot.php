@@ -257,11 +257,7 @@ if(!is_null($events)){
                                 new UriTemplateActionBuilder(
                                     'ทำความรู้จัก', // ข้อความแสดงในปุ่ม
                                     'https://youtu.be/yKTSLffVGbk'
-                                ),
-                                new UriTemplateActionBuilder(
-                                    'ตัวอย่างการใช้งานเบื้องต้น', // ข้อความแสดงในปุ่ม
-                                    'https://www.youtube.com/watch?v=WSvkcRjTBMQ'
-                                ),    
+                                ),                                  
                             );
                             $replyData = new TemplateMessageBuilder('Carousel',
                                 new CarouselTemplateBuilder(
