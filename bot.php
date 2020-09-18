@@ -342,10 +342,6 @@ if(!is_null($events)){
                                                 'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
                                                 $actionBuilder5
                                             ),                                                                                  
-                                        )
-                                    ),
-                                    new CarouselTemplateBuilder(
-                                        array(
                                             new CarouselColumnTemplateBuilder(
                                                 'นัดหมายทีมงาน',
                                                 'ระบุวัน-เวลาที่สะดวกเพื่อพูดคุยกับ Coach ของเรา',
