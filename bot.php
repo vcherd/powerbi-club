@@ -258,26 +258,26 @@ if(!is_null($events)){
                                     array(
                                         new CarouselColumnTemplateBuilder(
                                             'Step 1',
-                                            'Description Carousel',
-                                            'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                            'เริ่มต้นกับ Power BI',
+                                            'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
                                             $actionBuilder
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'Step 2',
-                                            'Description Carousel',
-                                            'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                            'Power BI ทำอะไรได้บ้าง',
+                                            'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
                                             $actionBuilder
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'Step 3',
-                                            'Description Carousel',
-                                            'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                            'มาดู Case Study กันดีกว่า',
+                                            'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
                                             $actionBuilder
                                         ),   
                                         new CarouselColumnTemplateBuilder(
                                             'Step 4',
-                                            'Description Carousel',
-                                            'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                            'Power BI ขั้นสูง',
+                                            'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
                                             $actionBuilder
                                         ),                                        
                                     )
