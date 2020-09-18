@@ -312,8 +312,7 @@ if(!is_null($events)){
                                 )
                             );
                             break;
-                            case "whatis":
-                                // กำหนด action 4 ปุ่ม 4 ประเภท
+                            case "help":
                                 $actionBuilder5 = array(
                                     new UriTemplateActionBuilder(
                                         'คุยกับ Coach ของเรา', // ข้อความแสดงในปุ่ม
