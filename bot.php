@@ -300,13 +300,13 @@ if(!is_null($events)){
                                             'Step 3',
                                             'มาดู Case Study กันดีกว่า',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder0
+                                            $actionBuilder2
                                         ),   
                                         new CarouselColumnTemplateBuilder(
                                             'Step 4',
                                             'Power BI ขั้นสูง',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder0
+                                            $actionBuilder2
                                         ),                                        
                                     )
                                 )
