@@ -317,7 +317,7 @@ if(!is_null($events)){
                                     new ImageCarouselTemplateBuilder(
                                         array(
                                             new ImageCarouselColumnTemplateBuilder(
-                                                'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
+                                                'https://sdr-lineoa-php.herokuapp.com/uploadimage/contact.png',
                                                 new UriTemplateActionBuilder(
                                                     'ติดต่อ IT Team', // ข้อความแสดงในปุ่ม
                                                     'https://www.ninenik.com'
