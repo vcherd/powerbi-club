@@ -312,6 +312,28 @@ if(!is_null($events)){
                                 )
                             );
                             break;      
+                            case "help":
+                                $replyData = new TemplateMessageBuilder('Image Carousel',
+                                    new ImageCarouselTemplateBuilder(
+                                        array(
+                                            new ImageCarouselColumnTemplateBuilder(
+                                                'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
+                                                new UriTemplateActionBuilder(
+                                                    'ติดต่อ IT Team', // ข้อความแสดงในปุ่ม
+                                                    'https://www.ninenik.com'
+                                                )
+                                            ),
+                                            new ImageCarouselColumnTemplateBuilder(
+                                                'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
+                                                new UriTemplateActionBuilder(
+                                                    'ฝากคำถาม', // ข้อความแสดงในปุ่ม
+                                                    'https://www.ninenik.com'
+                                                )
+                                            )                                       
+                                        )
+                                    )
+                                );
+                            break;       
                     default:
                         $textReplyMessage = "ข้อมูลที่คุณกรอกไม่ถูกต้อง";
                         $replyData = new TextMessageBuilder($textReplyMessage);         
