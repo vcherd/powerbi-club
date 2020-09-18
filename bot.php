@@ -267,6 +267,20 @@ if(!is_null($events)){
                                     'https://powerbi.microsoft.com/en-us/downloads/'
                                 ),      
                             );
+                            $actionBuilder2 = array(
+                                new UriTemplateActionBuilder(
+                                    'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
+                                    'https://www.thepexcel.com/what-is-power-bi/'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
+                                    'https://www.thepexcel.com/what-is-power-bi/'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
+                                    'https://www.thepexcel.com/what-is-power-bi/'
+                                ),     
+                            );
                             $replyData = new TemplateMessageBuilder('Carousel',
                                 new CarouselTemplateBuilder(
                                     array(
