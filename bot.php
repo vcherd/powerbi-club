@@ -235,7 +235,7 @@ if(!is_null($events)){
                          */
                         case "whatis":
                             // กำหนด action 4 ปุ่ม 4 ประเภท
-                            $actionBuilder1 = array(
+                            $actionBuilder0 = array(
                                 new MessageTemplateActionBuilder(
                                     'Message Template',// ข้อความแสดงในปุ่ม
                                     'This is Text' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
@@ -253,19 +253,19 @@ if(!is_null($events)){
                                     'Postback Text'  // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
                                 ),      
                             );
-                            $actionBuilder2 = array(
+                            $actionBuilder1 = array(
                                 new UriTemplateActionBuilder(
-                                    'Uri Template', // ข้อความแสดงในปุ่ม
-                                    'https://www.ninenik.com'
+                                    'ทำความรู้จัก', // ข้อความแสดงในปุ่ม
+                                    'https://youtu.be/yKTSLffVGbk'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Uri Template', // ข้อความแสดงในปุ่ม
-                                    'https://www.ninenik.com'
+                                    'ตัวอย่างการใช้งานเบื้องต้น',// ข้อความแสดงในปุ่ม
+                                    'แแแแ'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Uri Template', // ข้อความแสดงในปุ่ม
-                                    'https://www.ninenik.com'
-                                ),     
+                                    'ดาวน์โหลดไปใช้งาน',// ข้อความแสดงในปุ่ม
+                                    'https://powerbi.microsoft.com/en-us/downloads/'
+                                ),      
                             );
                             $replyData = new TemplateMessageBuilder('Carousel',
                                 new CarouselTemplateBuilder(
@@ -280,19 +280,19 @@ if(!is_null($events)){
                                             'Step 2',
                                             'Power BI ทำอะไรได้บ้าง',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder2
+                                            $actionBuilder0
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'Step 3',
                                             'มาดู Case Study กันดีกว่า',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder1
+                                            $actionBuilder0
                                         ),   
                                         new CarouselColumnTemplateBuilder(
                                             'Step 4',
                                             'Power BI ขั้นสูง',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder1
+                                            $actionBuilder0
                                         ),                                        
                                     )
                                 )
