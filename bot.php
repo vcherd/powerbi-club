@@ -257,23 +257,29 @@ if(!is_null($events)){
                                 new CarouselTemplateBuilder(
                                     array(
                                         new CarouselColumnTemplateBuilder(
-                                            'Title Carousel',
+                                            'Step 1',
                                             'Description Carousel',
                                             'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
                                             $actionBuilder
                                         ),
                                         new CarouselColumnTemplateBuilder(
-                                            'Title Carousel',
+                                            'Step 2',
                                             'Description Carousel',
                                             'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
                                             $actionBuilder
                                         ),
                                         new CarouselColumnTemplateBuilder(
-                                            'Title Carousel',
+                                            'Step 3',
                                             'Description Carousel',
                                             'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
                                             $actionBuilder
-                                        ),                                          
+                                        ),   
+                                        new CarouselColumnTemplateBuilder(
+                                            'Step 4',
+                                            'Description Carousel',
+                                            'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                            $actionBuilder
+                                        ),                                        
                                     )
                                 )
                             );
