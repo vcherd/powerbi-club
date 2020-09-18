@@ -311,29 +311,32 @@ if(!is_null($events)){
                                     )
                                 )
                             );
-                            break;      
-                            case "help":
-                                $replyData = new TemplateMessageBuilder('Image Carousel',
-                                    new ImageCarouselTemplateBuilder(
+                            break;
+                            case "whatis":
+                                // กำหนด action 4 ปุ่ม 4 ประเภท
+                                $actionBuilder5 = array(
+                                    new UriTemplateActionBuilder(
+                                        'คุยกับ Coach ของเรา', // ข้อความแสดงในปุ่ม
+                                        'https://liff.line.me/1654928111-2QB1R7BR'
+                                    ),
+                                    new UriTemplateActionBuilder(
+                                        'ฝากข้อความ', // ข้อความแสดงในปุ่ม
+                                        'https://liff.line.me/1654928111-2QB1R7BR'
+                                    ),     
+                                );
+                                $replyData = new TemplateMessageBuilder('Carousel',
+                                    new CarouselTemplateBuilder(
                                         array(
-                                            new ImageCarouselColumnTemplateBuilder(
-                                                'https://sdr-lineoa-php.herokuapp.com/uploadimage/contact.jpg',
-                                                new UriTemplateActionBuilder(
-                                                    'ติดต่อ IT Team', // ข้อความแสดงในปุ่ม
-                                                    'https://www.ninenik.com'
-                                                )
-                                            ),
-                                            new ImageCarouselColumnTemplateBuilder(
+                                            new CarouselColumnTemplateBuilder(
+                                                'ติดต่อทีมงาน',
+                                                'ถาม-ตอบปัญหา Power BI และ ETL',
                                                 'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                                new UriTemplateActionBuilder(
-                                                    'ฝากคำถาม', // ข้อความแสดงในปุ่ม
-                                                    'https://www.ninenik.com'
-                                                )
-                                            )                                       
+                                                $actionBuilder5
+                                            ),                                                                                  
                                         )
                                     )
                                 );
-                            break;       
+                            break;
                     default:
                         $textReplyMessage = "ข้อมูลที่คุณกรอกไม่ถูกต้อง";
                         $replyData = new TextMessageBuilder($textReplyMessage);         
