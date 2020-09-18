@@ -332,7 +332,7 @@ if(!is_null($events)){
                                         )), // ข้อมูลที่จะส่งไปใน webhook ผ่าน postback event
                                         'datetime', // date | time | datetime รูปแบบข้อมูลที่จะส่ง ในที่นี้ใช้ datatime
                                         substr_replace(date("Y-m-d H:i"),'T',10,1), // วันที่ เวลา ค่าเริ่มต้นที่ถูกเลือก
-                                        substr_replace(date("Y-m-d H:i",strtotime("+5 day")),'T',10,1), //วันที่ เวลา มากสุดที่เลือกได้
+                                        substr_replace(date("Y-m-d H:i",strtotime("+30 day")),'T',10,1), //วันที่ เวลา มากสุดที่เลือกได้
                                         substr_replace(date("Y-m-d H:i"),'T',10,1) //วันที่ เวลา น้อยสุดที่เลือกได้
                                     ),
                                     new UriTemplateActionBuilder(
