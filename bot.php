@@ -374,13 +374,13 @@ if(!is_null($events)){
                                             new CarouselColumnTemplateBuilder(
                                                 'ติดต่อทีมงาน',
                                                 'ถาม-ตอบปัญหา Power BI และ ETL',
-                                                'https://sdr-lineoa-php.herokuapp.com/uploadimage/c2.jpg',
+                                                'https://powerbi-club.herokuapp.com/uploadimage/help1.jpg',
                                                 $actionBuilder5
                                             ),                                                                                  
                                             new CarouselColumnTemplateBuilder(
                                                 'นัดหมายทีมงาน',
                                                 'ระบุวัน-เวลาที่สะดวกเพื่อพูดคุยกับ Coach ของเรา',
-                                                'https://sdr-lineoa-php.herokuapp.com/uploadimage/c2.jpg',
+                                                'https://powerbi-club.herokuapp.com/uploadimage/help1.jpg',
                                                 $actionBuilder6
                                             ),                                                                                  
                                         )
