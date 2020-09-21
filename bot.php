@@ -315,25 +315,25 @@ if(!is_null($events)){
                                         new CarouselColumnTemplateBuilder(
                                             'Stage 1',
                                             'เริ่มต้นกับ Power BI',
-                                            'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
+                                            'https://powerbi-club.herokuapp.com/uploadimage/whatis.jpg',
                                             $actionBuilder1
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'Stage 2',
                                             'Power BI ทำอะไรได้บ้าง',
-                                            'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
+                                            'https://powerbi-club.herokuapp.com/uploadimage/whatis.jpg',
                                             $actionBuilder2
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'Stage 3',
                                             'มาดู Case Study กันดีกว่า',
-                                            'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
+                                            'https://powerbi-club.herokuapp.com/uploadimage/whatis.jpg',
                                             $actionBuilder3
                                         ),   
                                         new CarouselColumnTemplateBuilder(
                                             'Stage 4',
                                             'Power BI ขั้นสูง',
-                                            'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
+                                            'https://powerbi-club.herokuapp.com/uploadimage/whatis.jpg',
                                             $actionBuilder4
                                         ),                                        
                                     )
