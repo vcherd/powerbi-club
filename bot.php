@@ -277,7 +277,21 @@ if(!is_null($events)){
                                     'https://www.thepexcel.com/what-is-power-bi/'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Power BI Manual', // ข้อความแสดงในปุ่ม
+                                    'อ่านต่อที่ DataProteins', // ข้อความแสดงในปุ่ม
+                                    'https://www.facebook.com/DataProteins/'
+                                ),     
+                            );
+                            $actionBuilder4 = array(
+                                new UriTemplateActionBuilder(
+                                    'ตัวอย่างการใช้งานเบื้องต้น',// ข้อความแสดงในปุ่ม
+                                    'https://www.youtube.com/watch?v=WSvkcRjTBMQ'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
+                                    'https://www.thepexcel.com/what-is-power-bi/'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    'eBook (Microsoft Press)', // ข้อความแสดงในปุ่ม
                                     'https://www.thepexcel.com/what-is-power-bi/'
                                 ),     
                             );
@@ -306,7 +320,7 @@ if(!is_null($events)){
                                             'Step 4',
                                             'Power BI ขั้นสูง',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder2
+                                            $actionBuilder4
                                         ),                                        
                                     )
                                 )
