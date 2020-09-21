@@ -291,8 +291,8 @@ if(!is_null($events)){
                                     'https://www.thepexcel.com/what-is-power-bi/'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'eBook (Microsoft Press)', // ข้อความแสดงในปุ่ม
-                                    'https://www.thepexcel.com/what-is-power-bi/'
+                                    'อ่านต่อที่ DataProteins', // ข้อความแสดงในปุ่ม
+                                    'https://www.facebook.com/DataProteins/'
                                 ),     
                             );
                             $replyData = new TemplateMessageBuilder('Carousel',
@@ -320,7 +320,7 @@ if(!is_null($events)){
                                             'Step 4',
                                             'Power BI ขั้นสูง',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder2
+                                            $actionBuilder4
                                         ),                                        
                                     )
                                 )
