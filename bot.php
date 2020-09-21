@@ -333,7 +333,7 @@ if(!is_null($events)){
                                         new CarouselColumnTemplateBuilder(
                                             'Stage 4',
                                             'Power BI ขั้นสูง',
-                                            'https://powerbi-club.herokuapp.com/uploadimage/whatis2.jpg',
+                                            'https://powerbi-club.herokuapp.com/uploadimage/whatis4.jpg',
                                             $actionBuilder4
                                         ),                                        
                                     )
