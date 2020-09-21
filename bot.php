@@ -259,8 +259,8 @@ if(!is_null($events)){
                                     'https://youtu.be/yKTSLffVGbk'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'ตัวอย่างการใช้งานเบื้องต้น',// ข้อความแสดงในปุ่ม
-                                    'https://www.youtube.com/watch?v=WSvkcRjTBMQ'
+                                    'Cooking Steps',// ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-be2v6lWG'
                                 ),
                                 new UriTemplateActionBuilder(
                                     'ดาวน์โหลดไปใช้งาน',// ข้อความแสดงในปุ่ม
@@ -269,15 +269,15 @@ if(!is_null($events)){
                             );
                             $actionBuilder2 = array(
                                 new UriTemplateActionBuilder(
-                                    'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
-                                    'https://www.thepexcel.com/what-is-power-bi/'
+                                    'ตัวอย่างการใช้งานเบื้องต้น',// ข้อความแสดงในปุ่ม
+                                    'https://www.youtube.com/watch?v=WSvkcRjTBMQ'
                                 ),
                                 new UriTemplateActionBuilder(
                                     'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
                                     'https://www.thepexcel.com/what-is-power-bi/'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
+                                    'Power BI Manual', // ข้อความแสดงในปุ่ม
                                     'https://www.thepexcel.com/what-is-power-bi/'
                                 ),     
                             );
