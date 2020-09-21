@@ -281,6 +281,20 @@ if(!is_null($events)){
                                     'https://www.facebook.com/DataProteins/'
                                 ),     
                             );
+                            $actionBuilder3 = array(
+                                new UriTemplateActionBuilder(
+                                    'ตัวอย่างการใช้งานเบื้องต้น',// ข้อความแสดงในปุ่ม
+                                    'https://www.youtube.com/watch?v=WSvkcRjTBMQ'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
+                                    'https://www.thepexcel.com/what-is-power-bi/'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    'อ่านต่อที่ DataProteins', // ข้อความแสดงในปุ่ม
+                                    'https://www.facebook.com/DataProteins/'
+                                ),     
+                            );
                             $actionBuilder4 = array(
                                 new UriTemplateActionBuilder(
                                     'eBook',// ข้อความแสดงในปุ่ม
@@ -314,7 +328,7 @@ if(!is_null($events)){
                                             'Step 3',
                                             'มาดู Case Study กันดีกว่า',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder2
+                                            $actionBuilder3
                                         ),   
                                         new CarouselColumnTemplateBuilder(
                                             'Step 4',
