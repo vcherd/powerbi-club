@@ -284,7 +284,7 @@ if(!is_null($events)){
                             $actionBuilder3 = array(
                                 new UriTemplateActionBuilder(
                                     'EIS Smartport',// ข้อความแสดงในปุ่ม
-                                    'https://liff.line.me/1654945197-dV18AlkY?id=ABC'
+                                    'https://liff.line.me/1654945197-dV18AlkY'
                                 ),
                                 new UriTemplateActionBuilder(
                                     'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
