@@ -327,7 +327,7 @@ if(!is_null($events)){
                                         new CarouselColumnTemplateBuilder(
                                             'Stage 3',
                                             'มาดู Case Study กันดีกว่า',
-                                            'https://powerbi-club.herokuapp.com/uploadimage/whatis1.jpg',
+                                            'https://powerbi-club.herokuapp.com/uploadimage/whatis3.jpg',
                                             $actionBuilder3
                                         ),   
                                         new CarouselColumnTemplateBuilder(
