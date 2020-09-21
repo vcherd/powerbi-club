@@ -283,7 +283,7 @@ if(!is_null($events)){
                             );
                             $actionBuilder3 = array(
                                 new UriTemplateActionBuilder(
-                                    'ตัวอย่างการใช้งานเบื้องต้น',// ข้อความแสดงในปุ่ม
+                                    'EIS Smartport',// ข้อความแสดงในปุ่ม
                                     'https://www.youtube.com/watch?v=WSvkcRjTBMQ'
                                 ),
                                 new UriTemplateActionBuilder(
