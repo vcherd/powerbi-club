@@ -259,7 +259,7 @@ if(!is_null($events)){
                                     'https://youtu.be/yKTSLffVGbk'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Power BI Cooking Steps',// ข้อความแสดงในปุ่ม
+                                    'Cooking Steps',// ข้อความแสดงในปุ่ม
                                     'https://liff.line.me/1654945197-be2v6lWG'
                                 ),
                                 new UriTemplateActionBuilder(
