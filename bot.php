@@ -313,25 +313,25 @@ if(!is_null($events)){
                                 new CarouselTemplateBuilder(
                                     array(
                                         new CarouselColumnTemplateBuilder(
-                                            'Step 1',
+                                            'Stage 1',
                                             'เริ่มต้นกับ Power BI',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
                                             $actionBuilder1
                                         ),
                                         new CarouselColumnTemplateBuilder(
-                                            'Step 2',
+                                            'Stage 2',
                                             'Power BI ทำอะไรได้บ้าง',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
                                             $actionBuilder2
                                         ),
                                         new CarouselColumnTemplateBuilder(
-                                            'Step 3',
+                                            'Stage 3',
                                             'มาดู Case Study กันดีกว่า',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
                                             $actionBuilder3
                                         ),   
                                         new CarouselColumnTemplateBuilder(
-                                            'Step 4',
+                                            'Stage 4',
                                             'Power BI ขั้นสูง',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
                                             $actionBuilder4
