@@ -320,7 +320,7 @@ if(!is_null($events)){
                                             'Step 4',
                                             'Power BI ขั้นสูง',
                                             'https://sdr-lineoa-php.herokuapp.com/uploadimage/c1.jpg',
-                                            $actionBuilder4
+                                            $actionBuilder2
                                         ),                                        
                                     )
                                 )
