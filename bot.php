@@ -380,7 +380,7 @@ if(!is_null($events)){
                                             new CarouselColumnTemplateBuilder(
                                                 'นัดหมายทีมงาน',
                                                 'ระบุวัน-เวลาที่สะดวกเพื่อพูดคุยกับ Coach ของเรา',
-                                                'https://powerbi-club.herokuapp.com/uploadimage/help1.jpg',
+                                                'https://powerbi-club.herokuapp.com/uploadimage/help2.jpg',
                                                 $actionBuilder6
                                             ),                                                                                  
                                         )
