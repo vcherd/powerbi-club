@@ -284,7 +284,7 @@ if(!is_null($events)){
                             $actionBuilder4 = array(
                                 new UriTemplateActionBuilder(
                                     'eBook',// ข้อความแสดงในปุ่ม
-                                    'https://www.youtube.com/watch?v=WSvkcRjTBMQ'
+                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/eBook.pdf'
                                 ),
                                 new UriTemplateActionBuilder(
                                     'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
