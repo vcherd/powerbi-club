@@ -394,21 +394,21 @@ if(!is_null($events)){
                                     new ImageCarouselTemplateBuilder(
                                         array(
                                             new ImageCarouselColumnTemplateBuilder(
-                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help1.jpg',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help01.jpg',
                                                 new UriTemplateActionBuilder(
                                                     'คุยกับ Coach', // ข้อความแสดงในปุ่ม
                                                     'https://liff.line.me/1654945197-Ml7QkBvE'
                                                 )
                                             ),
                                             new ImageCarouselColumnTemplateBuilder(
-                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help2.jpg',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help02.jpg',
                                                 new UriTemplateActionBuilder(
                                                     'ฝากข้อความ', // ข้อความแสดงในปุ่ม
                                                     'https://liff.line.me/1654945197-JOLKnvX7'
                                                 )
                                             ),
                                             new ImageCarouselColumnTemplateBuilder(
-                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help1.jpg',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help01.jpg',
                                                 new UriTemplateActionBuilder(
                                                     'นัดหมายทีมงาน', // ข้อความแสดงในปุ่ม
                                                     'https://www.ninenik.com'
