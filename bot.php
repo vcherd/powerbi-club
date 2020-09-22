@@ -396,22 +396,22 @@ if(!is_null($events)){
                                             new ImageCarouselColumnTemplateBuilder(
                                                 'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help01.jpg',
                                                 new UriTemplateActionBuilder(
-                                                    'คุยกับ Coach', // ข้อความแสดงในปุ่ม
+                                                    'คลิก', // ข้อความแสดงในปุ่ม
                                                     'https://liff.line.me/1654945197-Ml7QkBvE'
                                                 )
                                             ),
                                             new ImageCarouselColumnTemplateBuilder(
                                                 'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help02.jpg',
                                                 new UriTemplateActionBuilder(
-                                                    'ฝากข้อความ', // ข้อความแสดงในปุ่ม
+                                                    'คลิก', // ข้อความแสดงในปุ่ม
                                                     'https://liff.line.me/1654945197-JOLKnvX7'
                                                 )
                                             ),
                                             new ImageCarouselColumnTemplateBuilder(
-                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help01.jpg',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help03.jpg',
                                                 new UriTemplateActionBuilder(
-                                                    'นัดหมายทีมงาน', // ข้อความแสดงในปุ่ม
-                                                    'https://www.ninenik.com'
+                                                    'คลิก', // ข้อความแสดงในปุ่ม
+                                                    'https://liff.line.me/1654945197-JOLKnvX7'
                                                 )
                                             )                                       
                                         )
