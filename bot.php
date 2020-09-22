@@ -404,7 +404,7 @@ if(!is_null($events)){
                                                 'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
                                                 new UriTemplateActionBuilder(
                                                     'ฝากข้อความ', // ข้อความแสดงในปุ่ม
-                                                    'https://www.ninenik.com'
+                                                    'https://liff.line.me/1654945197-JOLKnvX7'
                                                 )
                                             ),
                                             new ImageCarouselColumnTemplateBuilder(
