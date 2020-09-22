@@ -315,25 +315,25 @@ if(!is_null($events)){
                                         new CarouselColumnTemplateBuilder(
                                             'Stage 1',
                                             'เริ่มต้นกับ Power BI',
-                                            'https://powerbi-club.herokuapp.com/uploadimage/whatis1.jpg',
+                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis1.jpg',
                                             $actionBuilder1
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'Stage 2',
                                             'Power BI ทำอะไรได้บ้าง',
-                                            'https://powerbi-club.herokuapp.com/uploadimage/whatis2.jpg',
+                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis2.jpg',
                                             $actionBuilder2
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'Stage 3',
                                             'มาดู Case Study กันดีกว่า',
-                                            'https://powerbi-club.herokuapp.com/uploadimage/whatis3.jpg',
+                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis3.jpg',
                                             $actionBuilder3
                                         ),   
                                         new CarouselColumnTemplateBuilder(
                                             'Stage 4',
                                             'Power BI ขั้นสูง',
-                                            'https://powerbi-club.herokuapp.com/uploadimage/whatis4.jpg',
+                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis4.jpg',
                                             $actionBuilder4
                                         ),                                        
                                     )
@@ -374,13 +374,13 @@ if(!is_null($events)){
                                             new CarouselColumnTemplateBuilder(
                                                 'ติดต่อทีมงาน',
                                                 'ถาม-ตอบปัญหา Power BI และ ETL',
-                                                'https://powerbi-club.herokuapp.com/uploadimage/help1.jpg',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help1.jpg',
                                                 $actionBuilder5
                                             ),                                                                                  
                                             new CarouselColumnTemplateBuilder(
                                                 'นัดหมายทีมงาน',
                                                 'ระบุวัน-เวลาที่สะดวกเพื่อพูดคุยกับ Coach ของเรา',
-                                                'https://powerbi-club.herokuapp.com/uploadimage/help2.jpg',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help2.jpg',
                                                 $actionBuilder6
                                             ),                                                                                  
                                         )
