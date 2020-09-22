@@ -396,21 +396,21 @@ if(!is_null($events)){
                                             new ImageCarouselColumnTemplateBuilder(
                                                 'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
                                                 new UriTemplateActionBuilder(
-                                                    'Uri Template', // ข้อความแสดงในปุ่ม
+                                                    'คุยกับ Coach', // ข้อความแสดงในปุ่ม
+                                                    'https://liff.line.me/1654945197-Ml7QkBvE'
+                                                )
+                                            ),
+                                            new ImageCarouselColumnTemplateBuilder(
+                                                'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                                new UriTemplateActionBuilder(
+                                                    'ฝากข้อความ', // ข้อความแสดงในปุ่ม
                                                     'https://www.ninenik.com'
                                                 )
                                             ),
                                             new ImageCarouselColumnTemplateBuilder(
                                                 'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
                                                 new UriTemplateActionBuilder(
-                                                    'Uri Template', // ข้อความแสดงในปุ่ม
-                                                    'https://www.ninenik.com'
-                                                )
-                                            ),
-                                            new ImageCarouselColumnTemplateBuilder(
-                                                'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
-                                                new UriTemplateActionBuilder(
-                                                    'Uri Template', // ข้อความแสดงในปุ่ม
+                                                    'นัดหมายทีมงาน', // ข้อความแสดงในปุ่ม
                                                     'https://www.ninenik.com'
                                                 )
                                             )                                       
