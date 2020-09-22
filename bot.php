@@ -340,7 +340,7 @@ if(!is_null($events)){
                                 )
                             );
                             break;
-                            /*
+                            
                             case "help":
                                 $actionBuilder5 = array(
                                     new UriTemplateActionBuilder(
@@ -388,7 +388,7 @@ if(!is_null($events)){
                                     ),
                                 );
                             break;
-                            */
+                            /*
                             case "help":
                                 $replyData = new TemplateMessageBuilder('Image Carousel',
                                     new ImageCarouselTemplateBuilder(
@@ -418,6 +418,7 @@ if(!is_null($events)){
                                     )
                                 );
                             break;
+                            */
                     default:
                         $textReplyMessage = "ข้อมูลที่คุณกรอกไม่ถูกต้อง";
                         $replyData = new TextMessageBuilder($textReplyMessage);         
