@@ -313,29 +313,35 @@ if(!is_null($events)){
                                 new CarouselTemplateBuilder(
                                     array(
                                         new CarouselColumnTemplateBuilder(
-                                            'Stage 1',
+                                            'EP.01',
                                             'เริ่มต้นกับ Power BI',
                                             'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis1.jpg',
                                             $actionBuilder1
                                         ),
                                         new CarouselColumnTemplateBuilder(
-                                            'Stage 2',
+                                            'EP.02',
                                             'Power BI ทำอะไรได้บ้าง',
                                             'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis2.jpg',
                                             $actionBuilder2
                                         ),
                                         new CarouselColumnTemplateBuilder(
-                                            'Stage 3',
+                                            'EP.03',
                                             'มาดู Case Study กันดีกว่า',
                                             'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis3.jpg',
                                             $actionBuilder3
                                         ),   
                                         new CarouselColumnTemplateBuilder(
-                                            'Stage 4',
+                                            'EP.04',
                                             'Power BI eBooks',
                                             'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis4.jpg',
                                             $actionBuilder4
-                                        ),                                        
+                                        ),
+                                        new CarouselColumnTemplateBuilder(
+                                            'EP.05',
+                                            'ทำความรู้จัก ETL',
+                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis4.jpg',
+                                            $actionBuilder4
+                                        ),                                         
                                     )
                                 )
                             );
