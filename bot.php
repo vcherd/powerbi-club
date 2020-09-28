@@ -301,11 +301,11 @@ if(!is_null($events)){
                                     'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/eBook_MS.pdf'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'eBook: Power BI ง่ายนิดเดียว', // ข้อความแสดงในปุ่ม
+                                    'Power BI ง่ายนิดเดียว ', // ข้อความแสดงในปุ่ม
                                     'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/EBOOK2.pdf'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'eBook: Power 70 บทเรียน', // ข้อความแสดงในปุ่ม
+                                    'Power 70 บทเรียน', // ข้อความแสดงในปุ่ม
                                     'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/ebook70.pdf'
                                 ),     
                             );
