@@ -301,12 +301,12 @@ if(!is_null($events)){
                                     'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/eBook_MS.pdf'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Power BI ง่ายนิดเดียว ', // ข้อความแสดงในปุ่ม
-                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/EBOOK2.pdf'
+                                    'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
+                                    'https://www.thepexcel.com/what-is-power-bi/'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Power 70 บทเรียน', // ข้อความแสดงในปุ่ม
-                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/ebook70.pdf'
+                                    'อ่านต่อที่ DataProteins', // ข้อความแสดงในปุ่ม
+                                    'https://www.facebook.com/DataProteins/'
                                 ),     
                             );
                             $replyData = new TemplateMessageBuilder('Carousel',
