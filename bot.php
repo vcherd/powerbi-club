@@ -287,12 +287,12 @@ if(!is_null($events)){
                                     'https://liff.line.me/1654945197-dV18AlkY'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
-                                    'https://www.thepexcel.com/what-is-power-bi/'
+                                    'Refinery Dashboard', // ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-dV18AlkY'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'อ่านต่อที่ DataProteins', // ข้อความแสดงในปุ่ม
-                                    'https://www.facebook.com/DataProteins/'
+                                    'Marketing Dashboard', // ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-dV18AlkY'
                                 ),     
                             );
                             $actionBuilder4 = array(
