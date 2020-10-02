@@ -373,19 +373,12 @@ if(!is_null($events)){
                                     ),     
                                 );
                                 $actionBuilder6 = array(
-                                    new DatetimePickerTemplateActionBuilder(
-                                        'Datetime Picker', // ข้อความแสดงในปุ่ม
-                                        http_build_query(array(
-                                            'action'=>'reservation',
-                                            'person'=>5
-                                        )), // ข้อมูลที่จะส่งไปใน webhook ผ่าน postback event
-                                        'datetime', // date | time | datetime รูปแบบข้อมูลที่จะส่ง ในที่นี้ใช้ datatime
-                                        substr_replace(date("Y-m-d H:i"),'T',10,1), // วันที่ เวลา ค่าเริ่มต้นที่ถูกเลือก
-                                        substr_replace(date("Y-m-d H:i",strtotime("+30 day")),'T',10,1), //วันที่ เวลา มากสุดที่เลือกได้
-                                        substr_replace(date("Y-m-d H:i"),'T',10,1) //วันที่ เวลา น้อยสุดที่เลือกได้
+                                    new UriTemplateActionBuilder(
+                                        'นัดหมาย', // ข้อความแสดงในปุ่ม
+                                        'https://liff.line.me/1654945197-rOnmzbw2'
                                     ),
                                     new UriTemplateActionBuilder(
-                                        'ฝากข้อความ', // ข้อความแสดงในปุ่ม
+                                        'ดูตารางนัดหมาย', // ข้อความแสดงในปุ่ม
                                         'https://liff.line.me/1654928111-2QB1R7BR'
                                     ),     
                                 );
