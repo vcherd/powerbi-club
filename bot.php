@@ -309,6 +309,20 @@ if(!is_null($events)){
                                     'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/ebook70.pdf'
                                 ),     
                             );
+                            $actionBuilder5 = array(
+                                new UriTemplateActionBuilder(
+                                    'Coming Soon',// ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-be2v6lWG'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    'Coming Soon', // ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-be2v6lWG'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    'Coming Soon', // ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-be2v6lWG'
+                                ),     
+                            );
                             $replyData = new TemplateMessageBuilder('Carousel',
                                 new CarouselTemplateBuilder(
                                     array(
@@ -340,7 +354,7 @@ if(!is_null($events)){
                                             'EP.05',
                                             'ทำความรู้จัก ETL',
                                             'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis05.jpg',
-                                            $actionBuilder4
+                                            $actionBuilder5
                                         ),                                         
                                     )
                                 )
