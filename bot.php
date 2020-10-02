@@ -379,7 +379,7 @@ if(!is_null($events)){
                                     ),
                                     new UriTemplateActionBuilder(
                                         'ดูตารางนัดหมาย', // ข้อความแสดงในปุ่ม
-                                        'https://liff.line.me/1654928111-2QB1R7BR'
+                                        'https://liff.line.me/1654945197-Kww4WeoA'
                                     ),     
                                 );
                                 $replyData = new TemplateMessageBuilder('Carousel',
