@@ -311,15 +311,15 @@ if(!is_null($events)){
                             );
                             $actionBuilder5 = array(
                                 new UriTemplateActionBuilder(
-                                    'Coming Soon',// ข้อความแสดงในปุ่ม
+                                    '- Coming Soon -',// ข้อความแสดงในปุ่ม
                                     'https://liff.line.me/1654945197-be2v6lWG'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Coming Soon', // ข้อความแสดงในปุ่ม
+                                    '- Coming Soon -', // ข้อความแสดงในปุ่ม
                                     'https://liff.line.me/1654945197-be2v6lWG'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Coming Soon', // ข้อความแสดงในปุ่ม
+                                    '- Coming Soon -', // ข้อความแสดงในปุ่ม
                                     'https://liff.line.me/1654945197-be2v6lWG'
                                 ),     
                             );
