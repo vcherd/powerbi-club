@@ -409,7 +409,7 @@ if(!is_null($events)){
                             )
                         );       
                         break;
-                        case "menu":
+                        case "whatis":
                             // กำหนด action 4 ปุ่ม 4 ประเภท
                             $actionBuilder0 = array(
                                 new MessageTemplateActionBuilder(
@@ -419,63 +419,164 @@ if(!is_null($events)){
                                 new UriTemplateActionBuilder(
                                     'Uri Template', // ข้อความแสดงในปุ่ม
                                     'https://www.ninenik.com'
-                                ), 
+                                ),
+                                new PostbackTemplateActionBuilder(
+                                    'Postback', // ข้อความแสดงในปุ่ม
+                                    http_build_query(array(
+                                        'action'=>'buy',
+                                        'item'=>100
+                                    )), // ข้อมูลที่จะส่งไปใน webhook ผ่าน postback event
+                                    'Postback Text'  // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                                ),      
                             );
                             $actionBuilder1 = array(
                                 new UriTemplateActionBuilder(
-                                    'ลงทะเบียน', // ข้อความแสดงในปุ่ม
-                                    'https://liff.line.me/1654959076-a1OMkNOx'
+                                    'ทำความรู้จัก Power BI', // ข้อความแสดงในปุ่ม
+                                    'https://youtu.be/yKTSLffVGbk'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'ดู Location ล่าสุด',// ข้อความแสดงในปุ่ม
-                                    'https://liff.line.me/1654959076-W82Oao2p'
+                                    'Cooking Steps',// ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-be2v6lWG'
                                 ),
+                                new UriTemplateActionBuilder(
+                                    'ดาวน์โหลดไปใช้งาน',// ข้อความแสดงในปุ่ม
+                                    'https://powerbi.microsoft.com/en-us/downloads/'
+                                ),      
                             );
                             $actionBuilder2 = array(
                                 new UriTemplateActionBuilder(
-                                    'ไปอาคาร 2',// ข้อความแสดงในปุ่ม
-                                    'https://liff.line.me/1654959076-jb2qR72X'
+                                    'ตัวอย่างการใช้งานเบื้องต้น',// ข้อความแสดงในปุ่ม
+                                    'https://www.youtube.com/watch?v=WSvkcRjTBMQ'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'ไปอาคาร 4', // ข้อความแสดงในปุ่ม
-                                    'https://liff.line.me/1654959076-wJE6GREW'
+                                    'อ่านต่อที่ ThepExcel', // ข้อความแสดงในปุ่ม
+                                    'https://www.thepexcel.com/what-is-power-bi/'
                                 ),
+                                new UriTemplateActionBuilder(
+                                    'อ่านต่อที่ DataProteins', // ข้อความแสดงในปุ่ม
+                                    'https://www.facebook.com/DataProteins/'
+                                ),     
                             );
                             $actionBuilder3 = array(
                                 new UriTemplateActionBuilder(
-                                    'ยกเลิกคิวที่จองไว้',// ข้อความแสดงในปุ่ม
-                                    'https://liff.line.me/1654959076-OkNj2qNg'
+                                    'EIS Smartport',// ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-dV18AlkY'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'ดูประวัติการจองคิวของคุณ', // ข้อความแสดงในปุ่ม
-                                    'https://liff.line.me/1654959076-pKd6kyd4'
-                                ),    
+                                    'Refinery Dashboard', // ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-dV18AlkY'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    'Marketing Dashboard', // ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-dV18AlkY'
+                                ),     
+                            );
+                            $actionBuilder4 = array(
+                                new UriTemplateActionBuilder(
+                                    'eBook (MS)',// ข้อความแสดงในปุ่ม
+                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/eBook_MS.pdf'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    'Power BI ง่ายนิดเดียว ', // ข้อความแสดงในปุ่ม
+                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/EBOOK2.pdf'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    'Power 70 บทเรียน', // ข้อความแสดงในปุ่ม
+                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/ebook70.pdf'
+                                ),     
+                            );
+                            $actionBuilder5 = array(
+                                new UriTemplateActionBuilder(
+                                    '- Coming Soon -',// ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-be2v6lWG'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    '- Coming Soon -', // ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-be2v6lWG'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    '- Coming Soon -', // ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-be2v6lWG'
+                                ),     
                             );
                             $replyData = new TemplateMessageBuilder('Carousel',
                                 new CarouselTemplateBuilder(
                                     array(
                                         new CarouselColumnTemplateBuilder(
-                                            'ขั้นที่ 1',
-                                            'ลงทะเบียนผู้ใช้',
-                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/bcpvan/uploadimage/u01.jpg',
+                                            'EP.01',
+                                            'เริ่มต้นกับ Power BI',
+                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis01.jpg',
                                             $actionBuilder1
                                         ),
                                         new CarouselColumnTemplateBuilder(
-                                            'ขั้นที่ 2',
-                                            'จองคิว',
-                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/bcpvan/uploadimage/u02.jpg',
+                                            'EP.02',
+                                            'Power BI ทำอะไรได้บ้าง',
+                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis02.jpg',
                                             $actionBuilder2
                                         ),
                                         new CarouselColumnTemplateBuilder(
-                                            'ขั้นที่ 3',
-                                            'ยกเลิกคิว',
-                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/bcpvan/uploadimage/u03.jpg',
+                                            'EP.03',
+                                            'มาดู Case Study กันดีกว่า',
+                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis03.jpg',
                                             $actionBuilder3
-                                        ),                                   
+                                        ),   
+                                        new CarouselColumnTemplateBuilder(
+                                            'EP.04',
+                                            'Power BI eBooks',
+                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis04.jpg',
+                                            $actionBuilder4
+                                        ),
+                                        new CarouselColumnTemplateBuilder(
+                                            'EP.05',
+                                            'ทำความรู้จัก ETL',
+                                            'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/whatis05.jpg',
+                                            $actionBuilder5
+                                        ),                                         
                                     )
                                 )
                             );
-                            break;                                                                     
+                            break;
+                            
+                            case "help":
+                                $actionBuilder5 = array(
+                                    new UriTemplateActionBuilder(
+                                        'คุยกับ Coach ของเรา', // ข้อความแสดงในปุ่ม
+                                        'https://liff.line.me/1654945197-Ml7QkBvE'
+                                    ),
+                                    new UriTemplateActionBuilder(
+                                        'ฝากข้อความ', // ข้อความแสดงในปุ่ม
+                                        'https://liff.line.me/1654945197-JOLKnvX7'
+                                    ),     
+                                );
+                                $actionBuilder6 = array(
+                                    new UriTemplateActionBuilder(
+                                        'นัดหมาย', // ข้อความแสดงในปุ่ม
+                                        'https://liff.line.me/1654945197-rOnmzbw2'
+                                    ),
+                                    new UriTemplateActionBuilder(
+                                        'ดูตารางนัดหมาย', // ข้อความแสดงในปุ่ม
+                                        'https://liff.line.me/1654945197-Kww4WeoA'
+                                    ),     
+                                );
+                                $replyData = new TemplateMessageBuilder('Carousel',
+                                    new CarouselTemplateBuilder(
+                                        array(
+                                            new CarouselColumnTemplateBuilder(
+                                                'ติดต่อทีมงาน',
+                                                'ถาม-ตอบปัญหา Power BI และ ETL',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help1.jpg',
+                                                $actionBuilder5
+                                            ),                                                                                  
+                                            new CarouselColumnTemplateBuilder(
+                                                'นัดหมายทีมงาน',
+                                                'ระบุวัน-เวลาที่สะดวกเพื่อพูดคุยกับ Coach ของเรา',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/help2.jpg',
+                                                $actionBuilder6
+                                            ),                                                                                  
+                                        )
+                                    ),
+                                );
+                            break;                                                                   
                     default:
                         $textReplyMessage = " คุณไม่ได้พิมพ์ ค่า ตามที่กำหนด";
                         $replyData = new TextMessageBuilder($textReplyMessage);         
