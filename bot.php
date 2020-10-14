@@ -144,8 +144,22 @@ if(!is_null($events)){
      
     // ถ้า bot ถูกเพื่มเป้นเพื่อน หรือถูกติดตาม หรือ ยกเลิกการ บล็อก
     if(!is_null($eventFollow)){
-        $textReplyMessage = "กรุณาลงทะเบียนก่อนเริ่มใช้งาน คลิกที่นี่ https://liff.line.me/1654959076-a1OMkNOx";        
-        $replyData = new TextMessageBuilder($textReplyMessage);         
+        //$textReplyMessage = "กรุณาลงทะเบียนก่อนเริ่มใช้งาน คลิกที่นี่ https://liff.line.me/1654959076-a1OMkNOx";        
+        //$replyData = new TextMessageBuilder($textReplyMessage);         
+
+        $replyData = new TemplateMessageBuilder('Image Carousel',
+                                    new ImageCarouselTemplateBuilder(
+                                        array(
+                                            new ImageCarouselColumnTemplateBuilder(
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/uploadimage/ic1.jpg',
+                                                new UriTemplateActionBuilder(
+                                                    'คลิกที่นี่', // ข้อความแสดงในปุ่ม
+                                                    'https://liff.line.me/1654945197-jV946Eea'
+                                                )
+                                            ),
+                                        )
+                                    )
+                                );
         
     }
      
