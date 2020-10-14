@@ -585,14 +585,14 @@ if(!is_null($events)){
                                                 'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/uploadimage/ic1.jpg',
                                                 new UriTemplateActionBuilder(
                                                     'คลิกที่นี่', // ข้อความแสดงในปุ่ม
-                                                    'https://www.ninenik.com'
+                                                    'https://liff.line.me/1654945197-Ml7QkBvE'
                                                 )
                                             ),
                                             new ImageCarouselColumnTemplateBuilder(
                                                 'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/uploadimage/ic2.jpg',
                                                 new UriTemplateActionBuilder(
                                                     'คลิกที่นี่', // ข้อความแสดงในปุ่ม
-                                                    'https://www.ninenik.com'
+                                                    'https://liff.line.me/1654945197-JOLKnvX7'
                                                 )
                                             )                                       
                                         )
