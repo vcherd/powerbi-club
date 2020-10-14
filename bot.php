@@ -495,8 +495,8 @@ if(!is_null($events)){
                                     'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/EBOOK2.pdf'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Power 70 บทเรียน', // ข้อความแสดงในปุ่ม
-                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/ebook70.pdf'
+                                    'Slide ประกอบการอบรม', // ข้อความแสดงในปุ่ม
+                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/EBOOK2.pdf'
                                 ),     
                             );
                             $actionBuilder5 = array(
