@@ -435,12 +435,12 @@ if(!is_null($events)){
                                     'https://youtu.be/yKTSLffVGbk'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Cooking Steps',// ข้อความแสดงในปุ่ม
-                                    'https://liff.line.me/1654945197-be2v6lWG'
+                                    'ประเภทของ Dashboard',// ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-dKgbrZlR'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'ดาวน์โหลดไปใช้งาน',// ข้อความแสดงในปุ่ม
-                                    'https://powerbi.microsoft.com/en-us/downloads/'
+                                    'Cooking Steps',// ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-be2v6lWG'
                                 ),      
                             );
                             $actionBuilder2 = array(
