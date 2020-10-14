@@ -576,7 +576,7 @@ if(!is_null($events)){
                                         )
                                     ),
                                 );
-                            break;                                                                   
+                            break;
                     default:
                         $textReplyMessage = " คุณไม่ได้พิมพ์ ค่า ตามที่กำหนด";
                         $replyData = new TextMessageBuilder($textReplyMessage);         
