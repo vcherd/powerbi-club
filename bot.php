@@ -582,16 +582,16 @@ if(!is_null($events)){
                                     new ImageCarouselTemplateBuilder(
                                         array(
                                             new ImageCarouselColumnTemplateBuilder(
-                                                'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/ic1.jpg',
                                                 new UriTemplateActionBuilder(
-                                                    'Uri Template', // ข้อความแสดงในปุ่ม
+                                                    'คลิกที่นี่', // ข้อความแสดงในปุ่ม
                                                     'https://www.ninenik.com'
                                                 )
                                             ),
                                             new ImageCarouselColumnTemplateBuilder(
                                                 'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
                                                 new UriTemplateActionBuilder(
-                                                    'Uri Template', // ข้อความแสดงในปุ่ม
+                                                    'คลิกที่นี่', // ข้อความแสดงในปุ่ม
                                                     'https://www.ninenik.com'
                                                 )
                                             )                                       
