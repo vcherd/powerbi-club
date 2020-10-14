@@ -582,14 +582,14 @@ if(!is_null($events)){
                                     new ImageCarouselTemplateBuilder(
                                         array(
                                             new ImageCarouselColumnTemplateBuilder(
-                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/uploadimage/ic1.jpg',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/uploadimage/ic1.jpg',
                                                 new UriTemplateActionBuilder(
                                                     'คลิกที่นี่', // ข้อความแสดงในปุ่ม
                                                     'https://www.ninenik.com'
                                                 )
                                             ),
                                             new ImageCarouselColumnTemplateBuilder(
-                                                'https://www.mywebsite.com/imgsrc/photos/f/sampleimage/700',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/uploadimage/ic2.jpg',
                                                 new UriTemplateActionBuilder(
                                                     'คลิกที่นี่', // ข้อความแสดงในปุ่ม
                                                     'https://www.ninenik.com'
