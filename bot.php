@@ -467,8 +467,8 @@ if(!is_null($events)){
                                     'https://liff.line.me/1654945197-dV18AlkY'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Marketing Dashboard', // ข้อความแสดงในปุ่ม
-                                    'https://liff.line.me/1654945197-dV18AlkY'
+                                    'Example 1', // ข้อความแสดงในปุ่ม
+                                    'https://liff.line.me/1654945197-eEZ5vXkj'
                                 ),     
                             );
                             $actionBuilder4 = array(
