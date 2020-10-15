@@ -488,15 +488,15 @@ if(!is_null($events)){
                             $actionBuilder4 = array(
                                 new UriTemplateActionBuilder(
                                     'eBook (MS)',// ข้อความแสดงในปุ่ม
-                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/eBook_MS.pdf'
+                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/pdf/eBook_MS.pdf'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Power BI ง่ายนิดเดียว ', // ข้อความแสดงในปุ่ม
-                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/EBOOK2.pdf'
+                                    'Power BI ง่ายนิดเดียว', // ข้อความแสดงในปุ่ม
+                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/pdf/EBOOK2.pdf'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Slide ประกอบการอบรม', // ข้อความแสดงในปุ่ม
-                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/pdf/EBOOK2.pdf'
+                                    'Power BI 70 บทเรียน', // ข้อความแสดงในปุ่ม
+                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/pdf/ebook70.pdf'
                                 ),     
                             );
                             $actionBuilder5 = array(
