@@ -3,7 +3,7 @@ $accToken = $_GET["token"];
 $message = $_GET["msg"];
 
 $notifyURL = "https://notify-api.line.me/api/notify";
-$accToken = "xh1EjQw8A4E77Bu8Onc3xXtfxiYXhFSKofGz7LBDr62";
+//$accToken = "xh1EjQw8A4E77Bu8Onc3xXtfxiYXhFSKofGz7LBDr62";
 $headers = array(
  'Content-Type: application/x-www-form-urlencoded',
  'Authorization: Bearer '.$accToken
