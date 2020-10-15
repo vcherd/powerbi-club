@@ -1,4 +1,5 @@
 <?php
+$accToken = $_GET["token"];
 $message = $_GET["msg"];
 
 $notifyURL = "https://notify-api.line.me/api/notify";
