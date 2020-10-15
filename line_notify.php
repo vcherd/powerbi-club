@@ -1,4 +1,5 @@
 <?php
+$message = $_GET["msg"];
 
 $notifyURL = "https://notify-api.line.me/api/notify";
 $accToken = "xh1EjQw8A4E77Bu8Onc3xXtfxiYXhFSKofGz7LBDr62";
@@ -7,7 +8,7 @@ $headers = array(
  'Authorization: Bearer '.$accToken
 );
 
-$data = array('message' => 'test krub pom'); // enter message here
+$data = array('message' => $message); // enter message here
 
 $ch = curl_init();
 curl_setopt( $ch, CURLOPT_URL, $notifyURL);
