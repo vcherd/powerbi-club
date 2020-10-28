@@ -596,14 +596,14 @@ if(!is_null($events)){
                                     new ImageCarouselTemplateBuilder(
                                         array(
                                             new ImageCarouselColumnTemplateBuilder(
-                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/uploadimage/ic01.jpg',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/uploadimage/ic01.png',
                                                 new UriTemplateActionBuilder(
                                                     'คลิกที่นี่', // ข้อความแสดงในปุ่ม
                                                     'https://liff.line.me/1654945197-Ml7QkBvE'
                                                 )
                                             ),
                                             new ImageCarouselColumnTemplateBuilder(
-                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/uploadimage/ic02.jpg',
+                                                'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/uploadimage/ic02.png',
                                                 new UriTemplateActionBuilder(
                                                     'คลิกที่นี่', // ข้อความแสดงในปุ่ม
                                                     'https://liff.line.me/1654945197-JOLKnvX7'
