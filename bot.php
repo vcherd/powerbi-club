@@ -491,12 +491,12 @@ if(!is_null($events)){
                                     'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/pdf/eBook_MS.pdf'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Power BI ง่ายนิดเดียว', // ข้อความแสดงในปุ่ม
-                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/pdf/EBOOK2.pdf'
+                                    '- Coming Soon -', // ข้อความแสดงในปุ่ม
+                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/pdf/eBook_MS.pdf'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    'Power BI 70 บทเรียน', // ข้อความแสดงในปุ่ม
-                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/pdf/ebook70.pdf'
+                                    '- Coming Soon -', // ข้อความแสดงในปุ่ม
+                                    'https://bcpcheckin.bangchak.co.th/bcpcheckin/liff/powerbiclub/pdf/eBook_MS.pdf'
                                 ),     
                             );
                             $actionBuilder5 = array(
