@@ -330,6 +330,7 @@ if(!is_null($events)){
                 $userMessage = strtolower($userMessage); // แปลงเป็นตัวเล็ก สำหรับทดสอบ
                 switch ($userMessage) {
                     case "text":
+                        $userData = $response->getJSONDecodedBody(); 
                         $textReplyMessage = 'สวัสดีครับ คุณ '.$userData['displayName']; 
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
