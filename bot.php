@@ -354,8 +354,8 @@ if(!is_null($events)){
                         $replyData = new TextMessageBuilder($textReplyMessage);                                                 
                         break; 
                     case "image":
-                        $picFullSize = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower';
-                        $picThumbnail = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower/240';
+                        $picFullSize = 'https://t.ly/X1wt';
+                        $picThumbnail = 'https://t.ly/X1wt';
                         $replyData = new ImageMessageBuilder($picFullSize,$picThumbnail);
                         break;
                     case "video":
