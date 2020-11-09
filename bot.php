@@ -330,7 +330,7 @@ if(!is_null($events)){
                 $userMessage = strtolower($userMessage); // แปลงเป็นตัวเล็ก สำหรับทดสอบ
                 switch ($userMessage) {
                     case "text":
-                        $textReplyMessage = "Bot ตอบกลับคุณเป็นข้อความ";
+                        $textReplyMessage = 'สวัสดีครับ คุณ '.$userData['displayName']; 
                         $replyData = new TextMessageBuilder($textReplyMessage);
                         break;
                     case "image":
