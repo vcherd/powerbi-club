@@ -368,10 +368,10 @@ if(!is_null($events)){
                         $replyData = new AudioMessageBuilder($audioUrl,27000);
                         break;
                     case "location":
-                        $placeName = "ที่ตั้งร้าน";
-                        $placeAddress = "แขวง พลับพลา เขต วังทองหลาง กรุงเทพมหานคร ประเทศไทย";
-                        $latitude = 13.780401863217657;
-                        $longitude = 100.61141967773438;
+                        $placeName = "ที่ตั้งบริษัท";
+                        $placeAddress = "อาคาร M-Tower ถนนสุขุมวิท แขวงพระโขนงใต้ เขตพระโขนง กรุงเทพมหานคร ประเทศไทย";
+                        $latitude = 13.695432;
+                        $longitude = 100.606070;
                         $replyData = new LocationMessageBuilder($placeName, $placeAddress, $latitude ,$longitude);              
                         break;
                     case "sticker":
