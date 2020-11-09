@@ -379,6 +379,23 @@ if(!is_null($events)){
                         $packageID = 2;
                         $replyData = new StickerMessageBuilder($packageID,$stickerID);
                         break;      
+                    case "cf":
+                            $replyData = new TemplateMessageBuilder('Confirm Template',
+                                new ConfirmTemplateBuilder(
+                                        'Confirm template builder', // ข้อความแนะนหรือบอกวิธีการ หรือคำอธิบาย
+                                        array(
+                                            new MessageTemplateActionBuilder(
+                                                'Yes', // ข้อความสำหรับปุ่มแรก
+                                                'YES'  // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                                            ),
+                                            new MessageTemplateActionBuilder(
+                                                'No', // ข้อความสำหรับปุ่มแรก
+                                                'NO' // ข้อความที่จะแสดงฝั่งผู้ใช้ เมื่อคลิกเลือก
+                                            )
+                                        )
+                                )
+                            );
+                            break;          
                     case "imagemap":
                         $imageMapUrl = 'https://www.mywebsite.com/imgsrc/photos/w/sampleimagemap';
                         $replyData = new ImagemapMessageBuilder(
