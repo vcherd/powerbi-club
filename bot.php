@@ -330,10 +330,29 @@ if(!is_null($events)){
                 $userMessage = strtolower($userMessage); // แปลงเป็นตัวเล็ก สำหรับทดสอบ
                 switch ($userMessage) {
                     case "text":
-                        $userData = $response->getJSONDecodedBody(); 
-                        $textReplyMessage = 'สวัสดีครับ คุณ '.$userData['displayName']; 
-                        $replyData = new TextMessageBuilder($textReplyMessage);
-                        break;
+                        // ถ้าขณะนั้นเป็นการสนทนาใน ROOM หรือ GROUP
+                        if(!is_null($groupId) || !is_null($roomId)){
+                            if($eventObj->isGroupEvent()){// ถ้าอยู่ใน GROUP
+                                $response = $bot->getGroupMemberProfile($groupId, $userId); // ดึงข้อมูลผู้ใช้ที่คุยกับ bot
+                            }
+                            if($eventObj->isRoomEvent()){ // ถ้าอยู่ใน ROOM
+                                $response = $bot->getRoomMemberProfile($roomId, $userId);// ดึงข้อมูลผู้ใช้ที่คุยกับ bot    
+                            }
+                        }else{ // ถ้าเป็นการสนทนา ระหว่าง BOT
+                            $response = $bot->getProfile($userId);
+                        }
+                        if ($response->isSucceeded()) {
+                            $userData = $response->getJSONDecodedBody(); // return array     
+                            // $userData['userId']
+                            // $userData['displayName']
+                            // $userData['pictureUrl']
+                            // $userData['statusMessage']
+                            $textReplyMessage = 'สวัสดีครับ คุณ '.$userData['displayName'];     
+                        }else{
+                            $textReplyMessage = 'สวัสดีครับ คุณคือใคร';
+                        }
+                        $replyData = new TextMessageBuilder($textReplyMessage);                                                 
+                        break; 
                     case "image":
                         $picFullSize = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower';
                         $picThumbnail = 'https://www.mywebsite.com/imgsrc/photos/f/simpleflower/240';
