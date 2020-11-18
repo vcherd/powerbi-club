@@ -1,25 +1,17 @@
 <?php
-
 $cv = curl_init();
 curl_setopt($cv, CURLOPT_URL, "https://covid19.th-stat.com/api/open/today");
- 
-//header (‘Content-type: text/html; charset=utf-8’);
 
 curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
-
  $output = curl_exec($cv);
- 
  $js_array=json_decode($output, true);
 
  $notifyURL = "https://notify-api.line.me/api/notify";
-//$accToken = "WWgojH0PlQInXPJaj53WspD8PuuguBtIsAV7bpB2hzs";
  $accToken = "xh1EjQw8A4E77Bu8Onc3xXtfxiYXhFSKofGz7LBDr62";
 $headers = array(
  'Content-Type: application/x-www-form-urlencoded',
  'Authorization: Bearer '.$accToken
 );
-
-
 
 $data = array(
  'message' => '
