@@ -13,7 +13,7 @@ curl_setopt($cv, CURLOPT_RETURNTRANSFER, 1);
 
  $notifyURL = "https://notify-api.line.me/api/notify";
 //$accToken = "WWgojH0PlQInXPJaj53WspD8PuuguBtIsAV7bpB2hzs";
- $accToken = "99UtKRjmbuxfVSh6bbiUQLtIoonngNvI2ipXhml2rPC";
+ $accToken = "xh1EjQw8A4E77Bu8Onc3xXtfxiYXhFSKofGz7LBDr62";
 $headers = array(
  'Content-Type: application/x-www-form-urlencoded',
  'Authorization: Bearer '.$accToken
