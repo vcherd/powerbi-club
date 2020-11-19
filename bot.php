@@ -640,7 +640,7 @@ if(!is_null($events)){
                                         ),
                                         new CarouselColumnTemplateBuilder(
                                             'EP.05',
-                                            'ทำความรู้จัก ETL',
+                                            'ทำความรู้จัก ETL New',
                                             'https://bcplineoa.bangchak.co.th/powerbi-club/uploadimage/c5.png',
                                             $actionBuilder5
                                         ),                                         
