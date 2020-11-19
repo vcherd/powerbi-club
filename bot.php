@@ -597,6 +597,20 @@ if(!is_null($events)){
                                     'https://liff.line.me/1654945197-be2v6lWG'
                                 ),     
                             );
+                            $actionBuilder6 = array(
+                                new UriTemplateActionBuilder(
+                                    '- New1 -',// ข้อความแสดงในปุ่ม
+                                    'https://bcplineoa.bangchak.co.th/powerbi-club/showimg.php?imgid=6'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    '- New2 -', // ข้อความแสดงในปุ่ม
+                                    'https://bcplineoa.bangchak.co.th/powerbi-club/showimg.php?imgid=6'
+                                ),
+                                new UriTemplateActionBuilder(
+                                    '- New3 -', // ข้อความแสดงในปุ่ม
+                                    'https://bcplineoa.bangchak.co.th/powerbi-club/showimg.php?imgid=6'
+                                ),     
+                            );
                             $replyData = new TemplateMessageBuilder('Carousel',
                                 new CarouselTemplateBuilder(
                                     array(
