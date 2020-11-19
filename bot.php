@@ -648,7 +648,7 @@ if(!is_null($events)){
                                             'EP.06',
                                             'New EP',
                                             'https://bcplineoa.bangchak.co.th/powerbi-club/uploadimage/c6.png',
-                                            $actionBuilder5
+                                            $actionBuilder6
                                         ),                                      )
                                 )
                             );
