@@ -644,7 +644,12 @@ if(!is_null($events)){
                                             'https://bcplineoa.bangchak.co.th/powerbi-club/uploadimage/c5.png',
                                             $actionBuilder5
                                         ),                                         
-                                    )
+                                        new CarouselColumnTemplateBuilder(
+                                            'EP.06',
+                                            'New EP',
+                                            'https://bcplineoa.bangchak.co.th/powerbi-club/uploadimage/c6.png',
+                                            $actionBuilder5
+                                        ),                                      )
                                 )
                             );
                             break;
