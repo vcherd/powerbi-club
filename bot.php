@@ -599,15 +599,15 @@ if(!is_null($events)){
                             );
                             $actionBuilder6 = array(
                                 new UriTemplateActionBuilder(
-                                    '- New1 -',// ข้อความแสดงในปุ่ม
+                                    '- New 1 -',// ข้อความแสดงในปุ่ม
                                     'https://bcplineoa.bangchak.co.th/powerbi-club/showimg.php?imgid=6'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    '- New2 -', // ข้อความแสดงในปุ่ม
+                                    '- New 2 -', // ข้อความแสดงในปุ่ม
                                     'https://bcplineoa.bangchak.co.th/powerbi-club/showimg.php?imgid=6'
                                 ),
                                 new UriTemplateActionBuilder(
-                                    '- New3 -', // ข้อความแสดงในปุ่ม
+                                    '- New 3 -', // ข้อความแสดงในปุ่ม
                                     'https://bcplineoa.bangchak.co.th/powerbi-club/showimg.php?imgid=6'
                                 ),     
                             );
@@ -646,7 +646,7 @@ if(!is_null($events)){
                                         ),                                         
                                         new CarouselColumnTemplateBuilder(
                                             'EP.06',
-                                            'New EP',
+                                            'My New EP',
                                             'https://bcplineoa.bangchak.co.th/powerbi-club/uploadimage/c6.png',
                                             $actionBuilder6
                                         ),                                      )
